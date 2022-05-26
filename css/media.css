@@ -393,7 +393,19 @@
   }
 
   .card-rating {
-    font-size: 14px;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (479 - 320)));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: calc(25px + (32 - 25) * ((100vw - 320px) / (479 - 320)));
+  }
+  .card-rating::before {
+    background-size: calc(15px + (20 - 15) * ((100vw - 320px) / (479 - 320)));
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .card {
