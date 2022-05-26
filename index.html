@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" sizes="192x192"
+		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png">
+	<link rel="shortcut icon"
+		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png"
+		type="image/png" />
+	<link rel="apple-touch-icon"
+		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png"
+		type="image/png" />
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+	<title>Главная</title>
+</head>
+
+<body>
+	<!-- меню для планшетов и телефонов -->
+	<div class="bottom-menu">
+		<ul class="bottom-menu__list">
+			<li class="bottom-menu__item">
+				<a class="menu__bottom-link" href="#">
+					<img class="bottom-menu__img" src="img/profile.svg" alt="">
+					<p>Профиль</p>
+				</a>
+			</li>
+			<li class="bottom-menu__item">
+				<a class="menu__bottom-link" href="#">
+					<img class="bottom-menu__img" src="img/sms.svg" alt="">
+					<p>Чат</p>
+				</a>
+			</li>
+			<li class="bottom-menu__item">
+				<a class="menu__bottom-link" href="#">
+					<img class="bottom-menu__img" src="img/plus.svg" alt="">
+					<p>Продать</p>
+				</a>
+			</li>
+			<li class="bottom-menu__item">
+				<a class="menu__bottom-link" href="#">
+					<img class="bottom-menu__img" src="img/garage__menu.svg" alt="">
+					<p>Гараж</p>
+				</a>
+			</li>
+			<li class="bottom-menu__item">
+				<a class="menu__bottom-link" href="#">
+					<img class="bottom-menu__img" src="img/basket__menu.svg" alt="">
+					<p>Корзина</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<!-- верхний блок навигации -->
+		<div class="nav-top">
+			<div class="container">
+				<div class="nav-top__inner">
+					<div class="region">
+						<button class="region__button" onclick="showDescription()">
+							<img class="region__icon-location" src="img/location.svg" alt="" draggable="false">
+							<span class="region__text">Тольятти</span>
+							<img class="region__icon" src="img/arrow.svg" alt="" draggable="false">
+						</button>
+						<!-- список городов -->
+						<div class="region__overflow">
+							<ul class="region__list">
+								<li class="region__title">
+									<button value="English" class="btnlang">Москва</button>
+								</li>
+								<li class="region__title">
+									<button value="Русский" class="btnlang">Санкт-Петербург</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<h1 class="nav-top__title">
+						Всё для техники!
+					</h1>
+					<nav class="nav-top__menu">
+						<ul class="nav-top__list">
+							<li class="nav-top__item">
+								<a class="nav-top__link" href="#">
+									<img class="nav-top__img" src="img/chat.svg" alt="chat" draggable="false">
+									<span class="nav-top__text">
+										Чат
+									</span>
+								</a>
+							</li>
+							<li class="nav-top__item">
+								<a class="nav-top__link" href="#">
+									<img class="nav-top__img" src="img/sell.svg" alt="sell" draggable="false">
+									<span class="nav-top__text">
+										Продать
+									</span>
+								</a>
+							</li>
+							<li class="nav-top__item">
+								<a class="nav-top__link" href="#">
+									<img class="nav-top__img" src="img/garage.svg" alt="garage" draggable="false">
+									<span class="nav-top__text">
+										Гараж
+									</span>
+								</a>
+							</li>
+							<li class="nav-top__item">
+								<a class="nav-top__link" href="#">
+									<span class="nav-top__text">
+										Мои заказы
+									</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__wrapper">
+						<a href="#" class="logo">
+							<img class="logo__img" src="img/logo.svg" alt="" draggable="false">
+						</a>
+						<div class="region-2">
+							<button class="region__button-2" onclick="showDescription2()">
+								<img class="region__icon-location-2" src="img/location__grey.svg" alt=""
+									draggable="false">
+								<span class="region__text-2">Тольятти</span>
+							</button>
+							<!-- список городов -->
+							<div class="region__overflow-2">
+								<ul class="region__list">
+									<li class="region__title">
+										<button value="English" class="btnlang btnlang-2">Москва</button>
+									</li>
+									<li class="region__title">
+										<button value="Русский" class="btnlang btnlang-2">Санкт-Петербург</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button class="catalog">
+						<img class="catalog__img" src="img/burger_icon.svg" alt="">
+						<span>Каталог</span>
+					</button>
+					<form class="header__search" action="#">
+						<input class="header__input" type="text" placeholder="Искать товары и категории">
+						<button class="header__btn vin">
+							VIN
+						</button>
+						<button class="header__btn photo">
+							<img class="header__btn-img" src="img/photo.svg" alt="">
+						</button>
+						<button class="header__btn-search" type="submit">
+							<img class="header__btn-loop" src="img/loop.svg" alt="">
+						</button>
+						<button class="header__btn voice">
+							<img class="header__btn-img" src="img/voice.svg" alt="">
+						</button>
+					</form>
+					<nav class="header__nav">
+						<ul class="header__list">
+							<li class="header__item">
+								<a class="header__link" href="#">
+									<img class="header__img" src="img/login.svg" alt="" draggable="false">
+									<span class="header__text">
+										Войти
+									</span>
+								</a>
+							</li>
+							<li class="header__item">
+								<a class="header__link" href="#">
+									<img class="header__img" src="img/basket.svg" alt="" draggable="false">
+									<span class="header__text">
+										Корзина
+									</span>
+								</a>
+							</li>
+							<li class="header__item">
+								<a class="header__link" href="#">
+									<img class="header__img" src="img/heart.svg" alt="" draggable="false">
+									<span class="header__text">
+										Избранное
+									</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<!-- меню поиска на телефнах -->
+			<section class="search">
+				<div class="container">
+					<div class="search__inner">
+						<button class="catalog-2">
+							<img class="catalog__img" src="img/burger_icon.svg" alt="">
+						</button>
+						<form class="header__search-2" action="#">
+							<input class="header__input-2" type="text" placeholder="Искать на 7bolt">
+							<button class="header__btn vin">
+								VIN
+							</button>
+							<button class="header__btn photo">
+								<img class="header__btn-img" src="img/photo.svg" alt="">
+							</button>
+							<button class="header__btn-search" type="submit">
+								<img class="header__btn-loop" src="img/loop.svg" alt="">
+							</button>
+							<button class="header__btn voice">
+								<img class="header__btn-img" src="img/voice.svg" alt="">
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- меню с ссылками -->
+			<nav class="main__menu">
+				<div class="container">
+					<ul class="main__list">
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Запчасти для грузового транспорта
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Электроника
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Инструменты
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Автозапчасти
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Станки
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Запчасти для мототехники
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								РТИ
+							</a>
+						</li>
+						<li class="main__item">
+							<a class="main__link" href="#">
+								Спецтехника
+							</a>
+						</li>
+						<li class="main__item overflow">
+							Еще
+							<img class="main__item-img" src="img/arrow_menu.svg" alt="">
+							<ul class="main__overflow-list">
+								<li class="main__overflow-item">
+									<a class="main__overflow-link" href="#">
+										Спецодежда
+									</a>
+								</li>
+								<li class="main__overflow-item">
+									<a class="main__overflow-link" href="#">
+										Электроника
+									</a>
+								</li>
+								<li class="main__overflow-item">
+									<a class="main__overflow-link" href="#">
+										Запчасти для загрузочного транспорта
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- первый слайдер -->
+			<div class="container">
+				<div class="slider">
+					<a href="#" class="slider__item">
+						<img class="slider__img" src="img/slide-1.jpg" alt="" draggable="false">
+					</a>
+					<a href="#" class="slider__item">
+						<img class="slider__img" src="img/slide-1.jpg" alt="" draggable="false">
+					</a>
+					<a href="#" class="slider__item">
+						<img class="slider__img" src="img/slide-1.jpg" alt="" draggable="false">
+					</a>
+				</div>
+			</div>
+			<!-- секция с категориями -->
+			<section class="categories">
+				<div class="container">
+					<div class="categories__inner">
+						<a class="categories__item catalog-3" href="#">
+							<h2 class="categories__title">
+								Категории
+							</h2>
+						</a>
+						<a class="categories__item" href="#">
+							<h2 class="categories__title">
+								Для авто
+							</h2>
+							<img class="categories__img car" src="img/car.jpg" alt="" draggable="false">
+						</a>
+						<a class="categories__item" href="#">
+							<h2 class="categories__title">
+								Для мото
+							</h2>
+							<img class="categories__img moto" src="img/moto.jpg" alt="" draggable="false">
+						</a>
+						<a class="categories__item" href="#">
+							<h2 class="categories__title">
+								Электроника
+							</h2>
+							<img class="categories__img electronic" src="img/electronic.jpg" alt="" draggable="false">
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- секция с популярными товарами -->
+			<section class="popular">
+				<div class="container">
+					<h2 class="title popular__title">
+						<a class="title__link" href="#">Популярное</a>
+					</h2>
+					<div class="popular__inner">
+						<div class="cards">
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/popular1.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Светодиодные лампы Philips</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											599 ₽
+										</span>
+										<span class="card-old-price">
+											890 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/Osram_Qs_LED_Lamps.png" alt=""
+										draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Светодиодные лампы Ohram Qs</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1099 ₽
+										</span>
+										<span class="card-old-price">
+											1590 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/Set of Torx Curved Socket Wrenches.png" alt=""
+										draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Набор торцевых ключей изогнутых Torx</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											563 ₽
+										</span>
+										<span class="card-old-price">
+											1405 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/A set of end heads with a ratchet.png" alt=""
+										draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.5
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>
+												Набор торцевых головок с трещоткой (12 предметов)
+											</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											951 ₽
+										</span>
+										<span class="card-old-price">
+											971 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/Long Way Tire Booster Gun.png" alt=""
+										draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Пистолет для подкачки шин LongWay</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											866 ₽
+										</span>
+										<span class="card-old-price">
+											999 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/acum.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										5.0
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Аккумулятор Stalwart EFB 60 Ач 580А прямая полярность</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											3889 ₽
+										</span>
+										<span class="card-old-price">
+											4329 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/manometn.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Манометр, металлический, в пластиковом футляре, до 6 атм</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											359 ₽
+										</span>
+										<span class="card-old-price">
+											409 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/scan.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Диагностический сканер VAG COM KKL 409.1</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1239 ₽
+										</span>
+										<span class="card-old-price">
+											1350 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/brush.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Щетка стеклоочистителя бескаркасная BiBiCare</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											599 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/candle.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.7
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Свечи зажигания (NGK N 11) 16-клап. (к-т 4шт.)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											749 ₽
+										</span>
+										<span class="card-old-price">
+											1000 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- секция с новинками -->
+			<section class="new-products">
+				<div class="container">
+					<div class="new-products__inner">
+						<h2 class="title new-products__title">
+							<a class="title__link" href="#">Новинки</a>
+						</h2>
+						<div class="cards">
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news1.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Автомобильное зарядное устройство</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											2400 ₽
+										</span>
+										<span class="card-old-price">
+											3000 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news2.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Щетка стеклоочистителя (дворник) для автомобиля, 24/60 см START
+												Alca</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1099 ₽
+										</span>
+										<span class="card-old-price">
+											1590 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news3.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Колпачки на ниппель (вентиль) шестигранные из нержавеющей стали 4 шт.
+												черного цвета</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											59 ₽
+										</span>
+										<span class="card-old-price">
+											79 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news4.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.5
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Автомобильное зарядное устройство Baseus CCALL-ML01/ML02,
+												черный</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											349 ₽
+										</span>
+										<span class="card-old-price">
+											390 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news5.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Разъем XT60 (пара)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											94 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news6.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										5.0
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Разветвитель прикуривателя на 2 гнезда AWA WF-325</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news7.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Камера заднего вида, камера заднего вида для автомобиля, камера
+												заднего вида с номерной рамкой, универсальная установка</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1750 ₽
+										</span>
+										<span class="card-old-price">
+											2500 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news8.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Съемник масляного фильтра трехлапый</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											438 ₽
+										</span>
+										<span class="card-old-price">
+											634 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news9.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Оплетка на руль автомобиля накидная</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											348 ₽
+										</span>
+										<span class="card-old-price">
+											500 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news10.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.7
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Парктроник Led дисплей 4 датчика (разные цвета)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1249 ₽
+										</span>
+										<span class="card-old-price">
+											1800 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news1.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Автомобильное зарядное устройство</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											2400 ₽
+										</span>
+										<span class="card-old-price">
+											3000 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news2.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Щетка стеклоочистителя каркасная ALCA Special Star 115190 480 мм, 1
+												шт.</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1099 ₽
+										</span>
+										<span class="card-old-price">
+											1590 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news3.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Колпачки на ниппель (вентиль) шестигранные из нержавеющей стали 4 шт.
+												черного цвета</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											59 ₽
+										</span>
+										<span class="card-old-price">
+											79 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news4.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.5
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Автомобильное зарядное устройство Baseus CCALL-ML01/ML02,
+												черный</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											349 ₽
+										</span>
+										<span class="card-old-price">
+											390 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news5.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Разъем XT60 (пара)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											94 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news6.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										5.0
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Разветвитель прикуривателя на 2 гнезда AWA WF-325</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news7.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Камера заднего вида, камера заднего вида для автомобиля, камера
+												заднего вида с номерной рамкой, универсальная установка</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1750 ₽
+										</span>
+										<span class="card-old-price">
+											2500 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news8.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Съемник масляного фильтра трехлапый</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											438 ₽
+										</span>
+										<span class="card-old-price">
+											634 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news9.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Оплетка на руль автомобиля накидная</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											348 ₽
+										</span>
+										<span class="card-old-price">
+											500 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news10.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.7
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Парктроник Led дисплей 4 датчика (разные цвета)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1249 ₽
+										</span>
+										<span class="card-old-price">
+											1800 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news1.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Автомобильное зарядное устройство</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											2400 ₽
+										</span>
+										<span class="card-old-price">
+											3000 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news2.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Щетка стеклоочистителя каркасная ALCA Special Star 115190 480 мм, 1
+												шт.</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1099 ₽
+										</span>
+										<span class="card-old-price">
+											1590 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news3.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Колпачки на ниппель (вентиль) шестигранные из нержавеющей стали 4 шт.
+												черного цвета</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											59 ₽
+										</span>
+										<span class="card-old-price">
+											79 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news4.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.5
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Автомобильное зарядное устройство Baseus CCALL-ML01/ML02,
+												черный</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											349 ₽
+										</span>
+										<span class="card-old-price">
+											390 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news5.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Разъем XT60 (пара)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											94 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news6.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										5.0
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Разветвитель прикуривателя на 2 гнезда AWA WF-325</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news7.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Камера заднего вида, камера заднего вида для автомобиля, камера
+												заднего вида с номерной рамкой, универсальная установка</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1750 ₽
+										</span>
+										<span class="card-old-price">
+											2500 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news8.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Съемник масляного фильтра трехлапый</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											438 ₽
+										</span>
+										<span class="card-old-price">
+											634 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news9.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Оплетка на руль автомобиля накидная</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											348 ₽
+										</span>
+										<span class="card-old-price">
+											500 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card new-products__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/news10.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.7
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Парктроник Led дисплей 4 датчика (разные цвета)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1249 ₽
+										</span>
+										<span class="card-old-price">
+											1800 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- кнопка для показа карточек -->
+					<button class="button-show show">показать еще</button>
+				</div>
+			</section>
+			<!-- секция с распродажей -->
+			<section class="sale">
+				<div class="container">
+					<h2 class="title popular__title">
+						<a class="title__link" href="#">Распродажа</a>
+					</h2>
+					<div class="sale__inner">
+						<div class="cards">
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale1.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на панель
+												авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+												(Цыпленок)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale2.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Компрессор автомобильный 40 л/мин</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											2675₽
+										</span>
+										<span class="card-old-price">
+											6699 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale3.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Катушка модуль зажигания 2110 2111 2112</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1100 ₽
+										</span>
+										<span class="card-old-price">
+											1350 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale4.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.5
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Индикатор-пробник автомобильный от Power</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											323 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale5.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Предохранитель AGU-типа KICX AGU60PL</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											49 ₽
+										</span>
+										<span class="card-old-price">
+											69 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale6.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										5.0
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Аккумулятор Stalwart Drive 60 Ач 500А прямая полярность</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											3889 ₽
+										</span>
+										<span class="card-old-price">
+											4329 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale7.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Шинный манометр ТОП авто, ТА-203, до 7,5 АТМ</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											359 ₽
+										</span>
+										<span class="card-old-price">
+											409 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale8.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Диагностический сканер VAG COM KKL 409.1</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1239 ₽
+										</span>
+										<span class="card-old-price">
+											1350 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale9.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Щетка стеклоочистителя бескаркасная BiBiCare</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											599 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale10.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.7
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Свечи зажигания (NGK N 11) 16-клап. (к-т 4шт.)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											749 ₽
+										</span>
+										<span class="card-old-price">
+											1000 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale1.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на панель
+												авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+												(Цыпленок)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale2.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Компрессор автомобильный 40 л/мин</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											2675₽
+										</span>
+										<span class="card-old-price">
+											6699 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale3.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Катушка модуль зажигания 2110 2111 2112</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1100 ₽
+										</span>
+										<span class="card-old-price">
+											1350 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale4.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.5
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Индикатор-пробник автомобильный от Power</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											323 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale5.png" alt="" draggable="false">
+								</a>
+								<div class="wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Предохранитель AGU-типа KICX AGU60PL</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											49 ₽
+										</span>
+										<span class="card-old-price">
+											69 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale6.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										5.0
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Аккумулятор Stalwart Drive 60 Ач 500А прямая полярность</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											3889 ₽
+										</span>
+										<span class="card-old-price">
+											4329 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale7.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.8
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Шинный манометр ТОП авто, ТА-203, до 7,5 АТМ</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											359 ₽
+										</span>
+										<span class="card-old-price">
+											409 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale8.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.3
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Диагностический сканер VAG COM KKL 409.1</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											1239 ₽
+										</span>
+										<span class="card-old-price">
+											1350 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="products/sale9.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.9
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Щетка стеклоочистителя бескаркасная BiBiCare</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											599 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/favorites.svg" alt="">
+								</button>
+								<a class="sale__card-link" href="#">
+									<img class="card-img" src="products/sale10.png" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<span class="card-rating">
+										4.7
+									</span>
+									<h3 class="card-title">
+										<a class="card-title-link" href="#">
+											<span>Свечи зажигания (NGK N 11) 16-клап. (к-т 4шт.)</span>
+										</a>
+									</h3>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											749 ₽
+										</span>
+										<span class="card-old-price">
+											1000 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- кнопка показать еще -->
+					<button class="button-show show2">показать еще</button>
+				</div>
+			</section>
+			<!-- второй слайдер, который будет виден на мобильной версии -->
+			<section class="info">
+				<div class="container">
+					<div class="info__slider">
+						<a href="#" class="slider__item">
+							<img class="slider__img" src="img/slider-2-img.jpg" alt="" draggable="false">
+						</a>
+						<a href="#" class="slider__item">
+							<img class="slider__img" src="img/slider-2-img.jpg" alt="" draggable="false">
+						</a>
+						<a href="#" class="slider__item">
+							<img class="slider__img" src="img/slider-2-img.jpg" alt="" draggable="false">
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__wrapper">
+						<div class="footer__contacts">
+							<a href="#" class="footer__logo logo">
+								<img class="logo__img" src="img/logo2.svg" alt="" draggable="false">
+							</a>
+							<p class="footer__address">
+								РФ, г. Тольятти, Южное шоссе 161 оф 13
+								Технопарк Жигулевская долина
+							</p>
+							<a class="footer__phone" href="tel:+927-891-8933">
+								+927-891-8933
+							</a>
+							<a class="footer__email" href="mailto:7Bolt@gmail.com">
+								7Bolt@gmail.com
+							</a>
+						</div>
+						<div class="footer__nav">
+							<ul class="footer__list">
+								<li class="footer__item">
+									О нас
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										О компании
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Пункты выдачи
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Вакансии
+									</a>
+								</li>
+							</ul>
+							<ul class="footer__list">
+								<li class="footer__item">
+									Пользователи
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Связаться с нами
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Как сделать заказ?
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Вопрос - ответ
+									</a>
+								</li>
+							</ul>
+							<ul class="footer__list">
+								<li class="footer__item">
+									Для предпринимателей
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Вход в кабинет продавца
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Хочу открыть пункт выдачи
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">
+										Продажа для юридических лиц
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<h4 class="footer__copyright">
+							© 7Bolt 2022.
+						</h4>
+						<ul class="footer__social">
+							<li class="footer__social-item">
+								<a class="footer__social-link" href="#">
+									<img class="footer__social-img" src="img/twitter.svg" alt="">
+								</a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link" href="#">
+									<img class="footer__social-img" src="img/Facebook.svg" alt="">
+								</a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link" href="#">
+									<img class="footer__social-img" src="img/instagram.svg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/region.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/cards.js"></script>
+</body>
+
+</html>
