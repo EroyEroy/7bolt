@@ -373,6 +373,9 @@
 	.categories__title{
 		font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (479 - 320)));
 	}
+	.footer__item-title{
+		font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (479 - 320)));
+	}
 }
 @media (min-width: 860px) and (max-width: 1920px) {
 	.nav-top__title{
