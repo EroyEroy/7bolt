@@ -344,7 +344,7 @@
     display: grid;
     -ms-grid-columns: minmax(160px, 256px) 30px minmax(160px, 256px) 30px minmax(160px, 256px) 30px minmax(160px, 256px) 30px minmax(160px, 256px);
     grid-template-columns: repeat(5, minmax(160px, 256px));
-    grid-auto-rows: 300px;
+    grid-auto-rows: calc(270px + (280 - 270) * ((100vw - 320px) / (479 - 320)));
     grid-gap: 30px;
     grid-auto-columns: minmax(160px, 256px);
   }
@@ -370,7 +370,7 @@
   }
 
   .card-title-link span {
-    font-size: 12px;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (479 - 320)));
   }
 
   .price__wrapper {
@@ -381,7 +381,7 @@
 
   .card-new-price,
 .card-old-price {
-    font-size: 12px;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (479 - 320)));
   }
 
   .card-new-price {
