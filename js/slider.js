@@ -5,6 +5,47 @@ let dots = document.querySelectorAll(".dots-item"),
 let count = 0;
 let width;
 
+// swiper
+window.addEventListener('resize', function(event){
+	if (window.innerWidth < 480) {
+		sliderLine.addEventListener("touchstart", handleTouchStart, false);
+		sliderLine.addEventListener("touchmove", handleTouchMove, false);
+		
+		let x1 = null;
+		let y1 = null;
+		
+		function handleTouchStart(event) {
+		  const firstTouch = event.touches[0];
+		  // вытягивание координат клика
+		  x1 = firstTouch.clientX;
+		  y1 = firstTouch.clientY;
+		}
+		function handleTouchMove(event) {
+		  if (!x1 || !y1) {
+			return false;
+		  }
+		  // координаты того, куда пользователь тянет
+		  let x2 = event.touches[0].clientX;
+		  let y2 = event.touches[0].clientY;
+		
+		  // нахождение разницы координат (в какую сторону)
+		  let xDiff = x2 - x1;
+		  let yDiff = y2 - y1;
+		  // движиние вправо и влево
+		  if (Math.abs(xDiff) >= Math.abs(yDiff)) {
+			console.log(xDiff, yDiff);
+			if (xDiff > 0) {
+			  scrollSlide(-1);
+			} else {
+			  scrollSlide(1);
+			}
+		  }
+		  x1 = null;
+		  y1 = null;
+		}
+	}
+  });
+
 function init() {
   //console.log('resize');
   width = document.querySelector(".slider").offsetWidth;
@@ -61,49 +102,6 @@ function moveSlide() {
 function rollSlider() {
   sliderLine.style.transform = "translate(-" + count * width + "px)";
 }
-// swiper
-var mediaQuery = window.matchMedia('(max-width: 480px)');
-
-if (mediaQuery.matches) {
-	sliderLine.addEventListener("touchstart", handleTouchStart, false);
-	sliderLine.addEventListener("touchmove", handleTouchMove, false);
-	
-	let x1 = null;
-	let y1 = null;
-	
-	function handleTouchStart(event) {
-	  const firstTouch = event.touches[0];
-	  // вытягивание координат клика
-	  x1 = firstTouch.clientX;
-	  y1 = firstTouch.clientY;
-	}
-	function handleTouchMove(event) {
-	  if (!x1 || !y1) {
-		return false;
-	  }
-	  // координаты того, куда пользователь тянет
-	  let x2 = event.touches[0].clientX;
-	  let y2 = event.touches[0].clientY;
-	
-	  // нахождение разницы координат (в какую сторону)
-	  let xDiff = x2 - x1;
-	  let yDiff = y2 - y1;
-	  // движиние вправо и влево
-	  if (Math.abs(xDiff) >= Math.abs(yDiff)) {
-		console.log(xDiff, yDiff);
-		if (xDiff > 0) {
-		  scrollSlide(-1);
-		} else {
-		  scrollSlide(1);
-		}
-	  }
-	  x1 = null;
-	  y1 = null;
-	}
-}
-	if (window.innerWidth < 480) {
-
-	}
 
 // свайп на пк версии
 // let startMousePos = 0;
