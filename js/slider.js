@@ -62,7 +62,7 @@ function rollSlider() {
   sliderLine.style.transform = "translate(-" + count * width + "px)";
 }
 // swiper
-var mediaQuery = window.matchMedia('(min-width: 480px)');
+var mediaQuery = window.matchMedia('(max-width: 480px)');
 
 if (mediaQuery.matches) {
 	sliderLine.addEventListener("touchstart", handleTouchStart, false);
