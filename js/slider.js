@@ -15,11 +15,11 @@ function init() {
   });
   rollSlider();
 
-  var isMobile = window.matchMedia("only screen and (max-width: 479px)");
-
+  const isMobile = window.matchMedia("only screen and (max-width: 479px)");
+  const slider = document.querySelector('.slider');
   if (isMobile.matches) {
-    sliderLine.addEventListener("touchstart", handleTouchStart, false);
-    sliderLine.addEventListener("touchmove", handleTouchMove, false);
+    slider.addEventListener("touchstart", handleTouchStart, false);
+    slider.addEventListener("touchmove", handleTouchMove, false);
 
     let x1 = null;
     let y1 = null;
@@ -50,8 +50,8 @@ function init() {
           scrollSlide(1);
         }
       } else {
-		x1 = null;
-		y1 = null;
+		handleTouchStart(true);
+		handleTouchMove(true);
 	  }
       x1 = null;
       y1 = null;
