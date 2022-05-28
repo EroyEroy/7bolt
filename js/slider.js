@@ -49,7 +49,10 @@ function init() {
         } else {
           scrollSlide(1);
         }
-      }
+      } else {
+		x1 = null;
+		y1 = null;
+	  }
       x1 = null;
       y1 = null;
     }
