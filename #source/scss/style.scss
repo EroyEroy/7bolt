@@ -101,7 +101,7 @@ html{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 10px;
+	padding: 10px;
 }
 .menu__bottom-link{
 	display: flex;
@@ -435,7 +435,7 @@ html{
 	text-align: right;
 	padding: 0 10px;
 }
-// стилизация слайдера
+// стилизация слайдера (библиотека)
 .slider{
 	width: 100%;
 }
@@ -494,6 +494,61 @@ html{
 // второй слайдер
 .info{
 	display: none;
+}
+// стилизация слайдера (чистый js)
+.slider {
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+}
+.slider-line {
+	width: 100%;
+	max-height: 716px;
+    display: flex;
+    position: relative;
+    transition: all ease 1.5s;
+}
+.button__slider{
+	position: absolute;
+	top: 50%;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	background-repeat: no-repeat;
+	background-position: center center;
+	transform: translateY(-50%);
+	background-size: 35%;
+}
+.slider-prev{
+	left: 20px;
+	background-image: url('../img/prev.svg');
+}
+.slider-next{
+	right: 20px;
+	background-image: url('../img/next.svg');
+}
+.dots-block{
+	position: absolute;
+	display: flex;
+	bottom: 30px;
+	right: 50%;
+	transform: translateX(50%);
+}
+.dots-item{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #6F6F6F;
+}
+.dots-item + .dots-item{
+	margin-left: 5px;
+}
+.dots-item.active{
+	background: rgba(255, 255, 255, 1);
 }
 // стилизация
 .categories__inner{
@@ -704,6 +759,33 @@ html{
 	line-height: 130%;
 	color: #6F6F6F;
 	text-decoration-line: line-through;
+}
+.new-products__card,
+.sale__card{
+	display: none;
+}
+// для карточек
+.new-products__card:nth-child(1),
+.new-products__card:nth-child(2),
+.new-products__card:nth-child(3),
+.new-products__card:nth-child(4),
+.new-products__card:nth-child(5),
+.new-products__card:nth-child(6),
+.new-products__card:nth-child(7),
+.new-products__card:nth-child(8),
+.new-products__card:nth-child(9),
+.new-products__card:nth-child(10),
+.sale__card:nth-child(1),
+.sale__card:nth-child(2),
+.sale__card:nth-child(3),
+.sale__card:nth-child(4),
+.sale__card:nth-child(5),
+.sale__card:nth-child(6),
+.sale__card:nth-child(7),
+.sale__card:nth-child(8),
+.sale__card:nth-child(9),
+.sale__card:nth-child(10){
+	display: flex;
 }
 .button-show{
 	width: 700px;

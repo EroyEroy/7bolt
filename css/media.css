@@ -33,6 +33,15 @@
     margin-bottom: calc(50px + (140 - 50) * ((100vw - 480px) / (1920 - 480)));
     font-size: calc(18px + (24 - 18) * ((100vw - 480px) / (1920 - 480)));
   }
+
+  .dots-block {
+    bottom: calc(10px + (30 - 10) * ((100vw - 480px) / (1920 - 480)));
+  }
+
+  .button__slider {
+    width: calc(40px + (70 - 40) * ((100vw - 480px) / (1920 - 480)));
+    height: calc(40px + (70 - 40) * ((100vw - 480px) / (1920 - 480)));
+  }
 }
 @media (max-width: 1200px) {
   .header__nav {
@@ -328,7 +337,7 @@
   }
 
   .title__link {
-    font-size: calc(14px + (36 - 14) * ((100vw - 320px) / (479 - 320)));
+    font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (479 - 320)));
   }
 
   .cards {
@@ -506,6 +515,26 @@
 
   .footer__item-title {
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (479 - 320)));
+  }
+
+  .slider-line {
+    margin-left: -30px;
+  }
+
+  .slider__img {
+    padding-left: 10px;
+  }
+
+  .dots-item {
+    border: 1px solid #6F6F6F;
+  }
+
+  .dots-block {
+    bottom: 25px;
+  }
+
+  .button__slider {
+    display: none;
   }
 }
 @media (min-width: 860px) and (max-width: 1920px) {
