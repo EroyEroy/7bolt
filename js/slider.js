@@ -53,53 +53,28 @@ function init() {
     //   x1 = null;
     //   y1 = null;
     // }
-	sliderLine.addEventListener('touchstart', handleTouchStart, false);        
-sliderLine.addEventListener('touchmove', handleTouchMove, false);
+	let touchstartX = 0
+let touchendX = 0
 
-var xDown = null;                                                        
-var yDown = null;
+const slider = document.querySelector('.slider')
 
-function getTouches(evt) {
-  return evt.touches ||             // browser API
-         evt.originalEvent.touches; // jQuery
-}                                                     
-                                                                         
-function handleTouchStart(evt) {
-    const firstTouch = getTouches(evt)[0];                                      
-    xDown = firstTouch.clientX;                                      
-    yDown = firstTouch.clientY;                                      
-};                                                
-                                                                         
-function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
+function handleGesture() {
+  if (touchendX < touchstartX){
+	  scrollSlide(1);
+  }
+  if (touchendX > touchstartX){
+	scrollSlide(-1);
+  }
+}
 
-    var xUp = evt.touches[0].clientX;                                    
-    var yUp = evt.touches[0].clientY;
+slider.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
 
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-                                                                         
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
-            scrollSlide(1);
-        } else {
-            scrollSlide(-1);
-        }                       
-    } else {
-        if ( yDiff > 0 ) {
-			xDown = null;
-			yDown = null;   
-        } else { 
-			xDown = null;
-			yDown = null;   
-        }                                                                 
-    }
-    /* reset values */
-    xDown = null;
-    yDown = null;                                             
-};
+slider.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  handleGesture()
+})
   }
 }
 var timer = 0;
