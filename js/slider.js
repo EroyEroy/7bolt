@@ -62,6 +62,7 @@ function rollSlider() {
   sliderLine.style.transform = "translate(-" + count * width + "px)";
 }
 // swiper
+	if (window.innerWidth < 480) {
 		sliderLine.addEventListener("touchstart", handleTouchStart, false);
 		sliderLine.addEventListener("touchmove", handleTouchMove, false);
 		
@@ -97,6 +98,7 @@ function rollSlider() {
 		  x1 = null;
 		  y1 = null;
 		}
+	}
 
 // свайп на пк версии
 // let startMousePos = 0;
