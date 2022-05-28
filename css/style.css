@@ -714,6 +714,8 @@ html {
 }
 
 .slider-line {
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
   width: 100%;
   max-height: 716px;
   display: -webkit-box;
