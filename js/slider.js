@@ -20,6 +20,7 @@ function init() {
   if (isMobile.matches) {
     // sliderLine.addEventListener("touchstart", handleTouchStart, false);
     // sliderLine.addEventListener("touchmove", handleTouchMove, false);
+	
 
     // let x1 = null;
     // let y1 = null;
@@ -53,28 +54,35 @@ function init() {
     //   x1 = null;
     //   y1 = null;
     // }
-	let touchstartX = 0
-let touchendX = 0
 
-const slider = document.querySelector('.slider')
-
-function handleGesture() {
-  if (touchendX < touchstartX){
-	  scrollSlide(1);
-  }
-  if (touchendX > touchstartX){
-	scrollSlide(-1);
-  }
+	var initialPoint;
+var finalPoint;
+sliderLine.addEventListener('touchstart', function(event) {
+event.preventDefault();
+event.stopPropagation();
+initialPoint=event.changedTouches[0];
+}, false);
+sliderLine.addEventListener('touchend', function(event) {
+event.preventDefault();
+event.stopPropagation();
+finalPoint=event.changedTouches[0];
+var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+if (xAbs > 20 || yAbs > 20) {
+if (xAbs > yAbs) {
+if (finalPoint.pageX < initialPoint.pageX){
+scrollSlide(1);}
+else{
+scrollSlide(-1);}
 }
-
-slider.addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX
-})
-
-slider.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX
-  handleGesture()
-})
+else {
+if (finalPoint.pageY < initialPoint.pageY){
+/*СВАЙП ВВЕРХ*/}
+else{
+/*СВАЙП ВНИЗ*/}
+}
+}
+}, false);
   }
 }
 var timer = 0;
