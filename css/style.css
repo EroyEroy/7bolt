@@ -109,7 +109,7 @@ html {
 
 .header {
   width: 100%;
-  z-index: 2;
+  z-index: 9999;
 }
 
 .bottom-menu {
@@ -538,10 +538,11 @@ html {
 }
 
 .main__menu {
-  padding: 30px 0;
+  padding: 10px 0;
 }
 
 .main__list {
+  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,77 +561,118 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  padding: 20px;
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
-.main__link:hover,
-.main__overflow-link:hover {
-  text-decoration: underline;
+.main__item:hover {
+  background-color: #fff;
+}
+.main__item:hover .main__link {
+  color: #090B0D;
+}
+.main__item:hover .drop-menu {
+  visibility: visible;
+  pointer-events: all;
+  max-height: 500px;
+  padding-bottom: 20px;
+  z-index: 100;
 }
 
 .main__link,
 .main__item {
   color: #6F6F6F;
-}
-
-.main__item-img {
-  margin-left: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.overflow {
-  position: relative;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.overflow:hover .main__overflow-list {
-  opacity: 1;
-  pointer-events: all;
-}
-.overflow:hover .main__item-img {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.main__overflow-list {
-  background-color: #fff;
-  position: absolute;
-  right: 0;
-  top: 16px;
-  padding: 15px 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
-}
-
-.main__overflow-item {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.main__overflow-item + .main__overflow-item {
-  padding-top: 20px;
-}
-
-.main__overflow-link {
-  display: inline-block;
-  color: #6F6F6F;
   white-space: nowrap;
-  text-align: right;
-  padding: 0 10px;
+  font-size: 12px;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.main__menu-inner {
+  position: relative;
+}
+
+.drop-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  z-index: 1;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.0784313725);
+  padding: 20px 20px 0 20px;
+  visibility: hidden;
+  pointer-events: none;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.drop-menu__side {
+  margin-right: 70px;
+}
+
+.drop-menu__item {
+  height: 40px;
+}
+
+.drop-menu__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  color: #090B0D;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.drop-menu__link:hover {
+  color: #FD8223;
+}
+
+.drop-menu__content {
+  padding: 30px 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 111px);
+  grid-auto-rows: 111px;
+  grid-gap: 70px 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: auto;
+}
+.drop-menu__content::-webkit-scrollbar {
+  display: none;
+}
+
+.drop-menu__content-item:hover .drop-menu__content-img {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.drop-menu__content-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.drop-menu__content-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .slider {
@@ -774,7 +816,7 @@ html {
 }
 
 .dots-item.active {
-  background: white;
+  background: rgb(255, 255, 255);
 }
 
 .categories__inner {
