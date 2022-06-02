@@ -524,11 +524,6 @@
     display: none;
   }
 }
-@media (min-width: 860px) and (max-width: 1920px) {
-  .nav-top__title {
-    margin-right: calc(80px + 102 * (100vw - 860px) / 1060);
-  }
-}
 @media (min-width: 1174px) and (max-width: 1920px) {
   .categories__title {
     font-size: calc(25px + 7 * (100vw - 1174px) / 746);

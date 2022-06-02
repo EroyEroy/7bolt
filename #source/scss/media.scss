@@ -391,9 +391,6 @@
 	}
 }
 @media (min-width: 860px) and (max-width: 1920px) {
-	.nav-top__title{
-		margin-right: calc(80px + (182 - 80) * ((100vw - 860px) / (1920 - 860)));
-	}
 }
 @media (min-width: 1174px) and (max-width: 1920px) {
 	.categories__title{
