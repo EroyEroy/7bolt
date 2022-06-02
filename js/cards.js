@@ -8,7 +8,6 @@ loadmore.addEventListener('click', (e) => {
 		}
 	}
 	currentItems += 20;
-
 	if (currentItems >= elementList.length) {
 		event.target.style.display = 'none';
 		const saleInner = document.querySelector('.new-products__inner').style.padding = '0 0 85px 0';

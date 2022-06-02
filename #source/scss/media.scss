@@ -27,13 +27,6 @@
 		margin-bottom: calc(50px + (140 - 50) * ((100vw - 480px) / (1920 - 480)));
 		font-size: calc(18px + (24 - 18) * ((100vw - 480px) / (1920 - 480)));
 	}
-	.dots-block{
-		bottom: calc(10px + (30 - 10) * ((100vw - 480px) / (1920 - 480)));
-	}
-	.button__slider{
-		width: calc(40px + (70 - 40) * ((100vw - 480px) / (1920 - 480)));
-		height: calc(40px + (70 - 40) * ((100vw - 480px) / (1920 - 480)));
-	}
 	.drop-menu__content{
 		grid-column-gap: calc(30px + (80 - 30) * ((100vw - 480px) / (1920 - 480)));
 		grid-row-gap: calc(40px + (70 - 30) * ((100vw - 480px) / (1920 - 480)));
