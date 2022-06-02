@@ -91,7 +91,6 @@ if (isMobile.matches) {
 	let yDiff = y2 - y1;
 	// движиние вправо и влево
 	if (Math.abs(xDiff) >= Math.abs(yDiff)) {
-	  console.log(xDiff, yDiff);
 	  if (xDiff > 0) {
 		scrollSlide(-1);
 	  } else {
@@ -102,6 +101,7 @@ if (isMobile.matches) {
 	y1 = null;
   }
 }
+
 // swiper
 
 // свайп на пк версии
