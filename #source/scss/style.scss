@@ -771,33 +771,6 @@ html{
 	color: #6F6F6F;
 	text-decoration-line: line-through;
 }
-.new-products__card,
-.sale__card{
-	display: none;
-}
-// для карточек
-.new-products__card:nth-child(1),
-.new-products__card:nth-child(2),
-.new-products__card:nth-child(3),
-.new-products__card:nth-child(4),
-.new-products__card:nth-child(5),
-.new-products__card:nth-child(6),
-.new-products__card:nth-child(7),
-.new-products__card:nth-child(8),
-.new-products__card:nth-child(9),
-.new-products__card:nth-child(10),
-.sale__card:nth-child(1),
-.sale__card:nth-child(2),
-.sale__card:nth-child(3),
-.sale__card:nth-child(4),
-.sale__card:nth-child(5),
-.sale__card:nth-child(6),
-.sale__card:nth-child(7),
-.sale__card:nth-child(8),
-.sale__card:nth-child(9),
-.sale__card:nth-child(10){
-	display: flex;
-}
 .button-show{
 	width: 700px;
 	max-width: 100%;
