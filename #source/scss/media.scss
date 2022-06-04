@@ -310,7 +310,7 @@
 	}
 	.title__link::after{
 		width: calc(5px + (8 - 5) * ((100vw - 320px) / (479 - 320)));
-		top: 55%;
+		top: 50%;
 		margin-left: calc(5px + (10 - 5) * ((100vw - 320px) / (479 - 320)));
 	}
 	.title__link{
@@ -388,6 +388,10 @@
 	}
 	.button__slider{
 		display: none;
+	}
+	.new-products__inner,
+	.sale__inner{
+		padding-bottom: 30px;
 	}
 }
 @media (min-width: 860px) and (max-width: 1920px) {

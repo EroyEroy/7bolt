@@ -49,9 +49,9 @@ if (isNoMobile.matches) {
       }
       if ((countD = box.length)) {
         btn.style.display = "none";
+		document.querySelector('.new-products__inner').style.padding = '0 0 85px 0';
       }
     });
-
     let box2 = document.querySelectorAll(".sale__card");
     const btn2 = document.querySelector(".show2");
     for (let i = 10; i < box2.length; i++) {
@@ -68,6 +68,7 @@ if (isNoMobile.matches) {
       }
       if ((countD2 = box2.length)) {
         btn2.style.display = "none";
+		document.querySelector('.sale__inner').style.padding = '0 0 85px 0';
       }
     });
   });
