@@ -36,37 +36,37 @@ if (isNoMobile.matches) {
     let box = document.querySelectorAll(".new-products__card");
     const btn = document.querySelector(".show");
     for (let i = 10; i < box.length; i++) {
-      box[i].style.display = "none";
+      box[i].classList.add("hide");
     }
-	let countD = 10;
+    let countD = 10;
     btn.addEventListener("click", function () {
       let box = document.querySelectorAll(".new-products__card");
-	  countD += 20;
+      countD += 20;
       if (countD <= box.length) {
         for (let i = 0; i < countD; i++) {
-          box[i].style.display = "flex";
+          box[i].classList.add("show");
         }
       }
-      if (countD >= box.length) {
+      if ((countD = box.length)) {
         btn.style.display = "none";
       }
     });
 
-	let box2 = document.querySelectorAll(".sale__card");
+    let box2 = document.querySelectorAll(".sale__card");
     const btn2 = document.querySelector(".show2");
     for (let i = 10; i < box2.length; i++) {
-      box2[i].style.display = "none";
+      box2[i].classList.add("hide");
     }
-	let countD2 = 10;
+    let countD2 = 10;
     btn2.addEventListener("click", function () {
       let box2 = document.querySelectorAll(".sale__card");
-	  countD2 += 20;
+      countD2 += 20;
       if (countD2 <= box2.length) {
         for (let i = 0; i < countD2; i++) {
-          box2[i].style.display = "flex";
+          box2[i].classList.add("show");
         }
       }
-      if (countD2 >= box2.length) {
+      if ((countD2 = box2.length)) {
         btn2.style.display = "none";
       }
     });
