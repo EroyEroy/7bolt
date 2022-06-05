@@ -79,6 +79,10 @@
 	.header__search{
 		margin-right: 0;
 	}
+	.scroll_active{
+		bottom: 70px;
+		visibility: visible;
+	}
 }
 @media (max-width: 900px) {
 	.header__wrapper{
@@ -393,8 +397,18 @@
 	.sale__inner{
 		padding-bottom: 30px;
 	}
-}
-@media (min-width: 860px) and (max-width: 1920px) {
+	.scroll{
+		padding: 9px 7px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		width: 40px;
+		img{
+			width: 50%;
+			height: 50%;
+		}
+	}
 }
 @media (min-width: 1174px) and (max-width: 1920px) {
 	.categories__title{
