@@ -729,9 +729,9 @@ html {
 .card-title-link {
   color: #090b0d;
   font-size: 18px;
-  transition: all .2s ease-in-out;
-  &:hover{
-	  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: underline;
   }
   //
   span {
@@ -932,21 +932,39 @@ html {
 }
 // анимация для появления карточек
 .hide {
-	position: absolute;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  pointer-events: none;
+  transform: scale(0.9);
+  top: -100%;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  clip-path: none;
+  position: static;
+  pointer-events: auto;
+  transform: scale(1);
+  top: 0%;
+}
+// ***
+// кнопка якорь в начало страницы
+.scroll{
+	background-color: #fd8223;
+	border-radius: 50%;
+	padding: 26px 18px;
+	transition: all .3s ease-in-out;
+	position: fixed;
+	right: 10px;
+	bottom: -100%;
 	visibility: hidden;
-	opacity: 0;
-	clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
-	pointer-events: none;
-	transform: scale(0.9);
-	top: -100%;
-  }
-  .show {
+	&:hover{
+		filter: brightness(0.97);
+	}
+}
+.scroll_active{
+	bottom: 10px;
 	visibility: visible;
-	opacity: 1;
-	clip-path: none;
-	position: static;
-	pointer-events: auto;
-	transform: scale(1);
-	top: 0%;
-  }
-  // ***
+}

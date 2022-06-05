@@ -1238,3 +1238,24 @@ html {
           transform: scale(1);
   top: 0%;
 }
+
+.scroll {
+  background-color: #fd8223;
+  border-radius: 50%;
+  padding: 26px 18px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  right: 10px;
+  bottom: -100%;
+  visibility: hidden;
+}
+.scroll:hover {
+  -webkit-filter: brightness(0.97);
+          filter: brightness(0.97);
+}
+
+.scroll_active {
+  bottom: 10px;
+  visibility: visible;
+}
