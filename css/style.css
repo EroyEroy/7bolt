@@ -1249,6 +1249,7 @@ html {
   right: 10px;
   bottom: -100%;
   visibility: hidden;
+  z-index: 10;
 }
 .scroll:hover {
   -webkit-filter: brightness(0.97);
