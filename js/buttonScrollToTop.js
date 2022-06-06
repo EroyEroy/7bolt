@@ -1,5 +1,4 @@
-const isBtnScroll = window.matchMedia("only screen and (min-width: 480px)");
-if (isBtnScroll.matches) {
+if (window.matchMedia("only screen and (min-width: 480px)").matches) {
 	document.addEventListener("DOMContentLoaded", function () {
 		let btn = document.querySelector(".scroll");
 		window.addEventListener("scroll", function () {
@@ -31,4 +30,4 @@ if (isBtnScroll.matches) {
 		  scrollTo(0, 0);
 		};
 	  });
-}
+  }
