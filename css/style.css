@@ -568,6 +568,7 @@ html {
 }
 
 .main__list {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,6 +578,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 54px;
+  width: 100%;
 }
 
 .main__item {
@@ -587,9 +592,10 @@ html {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 20px;
+  padding: 20px 15px;
   max-width: 100%;
   border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 
 .main__item:hover {
@@ -620,13 +626,14 @@ html {
   white-space: nowrap;
   font-size: 14px;
   position: relative;
-  padding-right: 15px;
+  padding: 20px 15px;
+  display: none;
 }
 .main__btn::after {
   content: "";
   width: 12px;
   height: 12px;
-  top: 40%;
+  top: 45%;
   background-image: url("../../img/icons/arrow_menu.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -645,6 +652,9 @@ html {
 
 .main__menu-inner {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .drop-menu {
@@ -714,12 +724,13 @@ html {
   width: 100%;
   display: -ms-grid;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(auto-fit, 111px);
   grid-auto-rows: 111px;
   grid-gap: 70px 80px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow-y: auto;
   padding-bottom: 40px;
 }

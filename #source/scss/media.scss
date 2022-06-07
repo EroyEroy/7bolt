@@ -34,6 +34,11 @@
 	bottom: calc(10px + (30 - 10) * ((100vw - 480px) / (1920 - 480)));
   }
 }
+@media (max-width: 1362px) {
+	.main__btn{
+		display: block;
+	}
+}
 @media (max-width: 1250px) {
   .categories__img {
     height: 150px;
@@ -50,9 +55,6 @@
 @media (max-width: 1200px) {
   .header__nav {
     margin-left: auto;
-  }
-  .main__item + .main__item {
-    margin-left: 20px;
   }
   .main__menu {
     .container {
