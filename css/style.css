@@ -34,7 +34,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 16px;
+  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -377,6 +377,16 @@ html {
   background-color: #fff;
 }
 
+.header__wrapper2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .header__inner {
   padding: 1.875em 0;
   display: -webkit-box;
@@ -459,7 +469,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .header__search button,
 .header__search-2 button {
@@ -521,11 +531,11 @@ html {
 }
 .header__btn img {
   width: 25px;
-  height: 22px;
+  height: 19px;
 }
 
 .header__btn + .header__btn {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .header__list {
@@ -558,7 +568,6 @@ html {
 }
 
 .main__list {
-  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -597,11 +606,39 @@ html {
   z-index: 100;
 }
 
+.main__list::-webkit-scrollbar {
+  display: none;
+}
+
+.main__item-btn {
+  display: none;
+}
+
+.main__btn {
+  background: none;
+  color: #6f6f6f;
+  white-space: nowrap;
+  font-size: 14px;
+  position: relative;
+  padding-right: 15px;
+}
+.main__btn::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 40%;
+  background-image: url("../../img/icons/arrow_menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin-left: 5px;
+}
+
 .main__link,
 .main__item {
   color: #6f6f6f;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
@@ -635,7 +672,7 @@ html {
 }
 
 .drop-menu__content-text {
-  font-size: 12px;
+  font-size: 14px;
   white-space: normal;
   line-height: 1;
   font-weight: 500;
@@ -857,7 +894,7 @@ html {
 
 .categories__title {
   position: absolute;
-  font-size: 2em;
+  font-size: 28px;
   padding: 25px 0 0 30px;
   z-index: 1;
   -webkit-transition: all 0.3s ease-in-out;
@@ -874,7 +911,7 @@ html {
 }
 
 .title__link {
-  font-size: 36px;
+  font-size: 28px;
   color: #6f6f6f;
   position: relative;
 }
@@ -894,8 +931,8 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translate(0, -40%);
+          transform: translate(0, -40%);
   margin-left: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -919,7 +956,7 @@ html {
 
 .card-title-link {
   color: #090b0d;
-  font-size: 18px;
+  font-size: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -938,7 +975,7 @@ html {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, 256px);
-  grid-auto-rows: 480px;
+  grid-auto-rows: 460px;
   grid-gap: 30px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -1047,13 +1084,12 @@ html {
   color: #090b0d;
   font-size: 20px;
   line-height: 130%;
-  margin-bottom: 17px;
 }
 
 .card-new-price {
   color: #090b0d;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 130%;
 }
 
@@ -1075,7 +1111,7 @@ html {
 
 .card-old-price {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 130%;
   color: #6f6f6f;
   -webkit-text-decoration-line: line-through;
@@ -1086,13 +1122,13 @@ html {
   width: 700px;
   max-width: 100%;
   padding: 20px;
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
   background: rgba(253, 130, 35, 0.9);
   border-radius: 10px;
   margin: 0 auto;
   display: block;
-  margin: 100px auto 140px;
+  margin: 0px auto 50px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -1133,7 +1169,7 @@ html {
 .footer__address {
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .footer__contacts {
@@ -1151,7 +1187,7 @@ html {
 
 .footer__item,
 .footer__link {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .footer__item,
