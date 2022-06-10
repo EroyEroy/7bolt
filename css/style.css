@@ -1142,11 +1142,33 @@ html {
   border-radius: 10px;
   margin: 0 auto;
   display: block;
-  margin: 0px auto 50px;
+  margin: 50px auto 50px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .button-show:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+.button-show-link,
+.button-show-link-2 {
+  width: 700px;
+  max-width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(253, 130, 35, 0.9);
+  border-radius: 10px;
+  margin: 0 auto;
+  display: none;
+  margin: 50px auto 50px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.button-show-link:hover,
+.button-show-link-2:hover {
   -webkit-filter: brightness(0.95);
           filter: brightness(0.95);
 }

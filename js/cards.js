@@ -49,7 +49,8 @@ if (isNoMobile.matches) {
       }
       if ((countD = box.length)) {
         btn.style.display = "none";
-		document.querySelector('.new-products__inner').style.padding = '0 0 85px 0';
+		const fullCategoriesBtns2 = document.querySelector('.button-show-link').style.display = 'block';
+		// document.querySelector('.new-products__inner').style.padding = '0 0 85px 0';
       }
     });
     let box2 = document.querySelectorAll(".sale__card");
@@ -68,7 +69,8 @@ if (isNoMobile.matches) {
       }
       if ((countD2 = box2.length)) {
         btn2.style.display = "none";
-		document.querySelector('.sale__inner').style.padding = '0 0 85px 0';
+		// document.querySelector('.sale__inner').style.padding = '0 0 85px 0';
+		const fullCategoriesBtns2 = document.querySelector('.button-show-link-2').style.display = 'block';
       }
     });
   });
