@@ -8,6 +8,11 @@ btnOpenCatalog.onclick = () => {
   catalog.classList.toggle("active");
   document.querySelector(".catalog__img").classList.toggle("change");
 };
+// кнопка еще
+const still = document.querySelector(".main__btn");
+still.onclick = () => {
+	btnOpenCatalog.onclick();
+}
 items.forEach((item) => {
   item.addEventListener("click", () => {
     if (
@@ -21,10 +26,7 @@ items.forEach((item) => {
   });
 });
 window.onclick = function (event) {
-  if (
-    event.target !== btnOpenCatalog &&
-    !event.target.closest(".modal__catalog")
-  ) {
+  if (event.target !== btnOpenCatalog && !event.target.closest(".modal__catalog") && event.target !== still) {
     if (
       catalogTransition.classList.contains("active") &&
       catalog.classList.contains("active")
@@ -35,10 +37,6 @@ window.onclick = function (event) {
     }
   }
 };
-
-// кнопка еще
-const still = document.querySelector(".main__btn");
-still.addEventListener("click", () => btnOpenCatalog.onclick());
 // перключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
