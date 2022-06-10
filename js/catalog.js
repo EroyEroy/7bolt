@@ -11,8 +11,8 @@ btnOpenCatalog.onclick = () => {
 // кнопка еще
 const still = document.querySelector(".main__btn");
 still.onclick = () => {
-	btnOpenCatalog.onclick();
-}
+  btnOpenCatalog.onclick();
+};
 items.forEach((item) => {
   item.addEventListener("click", () => {
     if (
@@ -25,8 +25,34 @@ items.forEach((item) => {
     }
   });
 });
+// кнопка еще, но для каталога
+const categoryGroupList = document.querySelectorAll(".child-item__container");
+categoryGroupList.forEach((item) => {
+  const listItems = item.querySelectorAll(".child-item__text");
+  const listItemButton = item.querySelectorAll(".child-item-show");
+  for (i = 4; i < listItems.length; i++) {
+    listItems[i].classList.add("hide");
+    listItemButton.forEach((btn) => {
+      btn.style.display = "inline-block";
+      btn.textContent = "Показать ещё " + (listItems.length - 4);
+      btn.addEventListener("click", (event) => {
+        if (event.target === btn) {
+          for (i = 4; i < listItems.length; i++) {
+            listItems[i].classList.remove("hide");
+            btn.style.display = "none";
+          }
+        }
+      });
+    });
+  }
+});
+
 window.onclick = function (event) {
-  if (event.target !== btnOpenCatalog && !event.target.closest(".modal__catalog") && event.target !== still) {
+  if (
+    event.target !== btnOpenCatalog &&
+    !event.target.closest(".modal__catalog") &&
+    event.target !== still
+  ) {
     if (
       catalogTransition.classList.contains("active") &&
       catalog.classList.contains("active")
@@ -37,7 +63,7 @@ window.onclick = function (event) {
     }
   }
 };
-// перключение пунктов в каталоге
+// переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
   link3 = document.querySelector(".link-3"),
@@ -51,7 +77,18 @@ const link1 = document.querySelector(".link-1"),
   link11 = document.querySelector(".link-11"),
   link12 = document.querySelector(".link-12"),
   link13 = document.querySelector(".link-13"),
-  link14 = document.querySelector(".link-14");
+  link14 = document.querySelector(".link-14"),
+  link15 = document.querySelector(".link-15"),
+  link16 = document.querySelector(".link-16"),
+  link17 = document.querySelector(".link-17"),
+  link18 = document.querySelector(".link-18"),
+  link19 = document.querySelector(".link-19"),
+  link20 = document.querySelector(".link-20"),
+  link21 = document.querySelector(".link-21"),
+  link22 = document.querySelector(".link-22"),
+  link23 = document.querySelector(".link-23"),
+  link24 = document.querySelector(".link-24"),
+  link25 = document.querySelector(".link-25");
 let mainCategories = document.querySelectorAll(".main-categories");
 
 link1.addEventListener("mouseover", () => {
@@ -69,6 +106,17 @@ link1.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.add("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -84,6 +132,17 @@ link1.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link2.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -100,6 +159,17 @@ link2.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.add("active");
@@ -115,6 +185,17 @@ link2.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link3.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -131,6 +212,17 @@ link3.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -146,6 +238,17 @@ link3.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link4.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -162,6 +265,17 @@ link4.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -177,6 +291,17 @@ link4.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link5.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -193,6 +318,17 @@ link5.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -208,6 +344,17 @@ link5.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link6.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -224,6 +371,17 @@ link6.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -239,6 +397,17 @@ link6.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link7.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -255,6 +424,17 @@ link7.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -270,6 +450,17 @@ link7.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link8.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -286,6 +477,17 @@ link8.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -301,6 +503,17 @@ link8.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link9.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -317,6 +530,17 @@ link9.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -332,6 +556,17 @@ link9.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link10.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -348,6 +583,17 @@ link10.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -363,6 +609,17 @@ link10.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link11.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -379,6 +636,17 @@ link11.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -394,6 +662,17 @@ link11.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link12.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -410,6 +689,17 @@ link12.addEventListener("mouseover", () => {
   link12.classList.add("active");
   link13.classList.remove("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -425,6 +715,17 @@ link12.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.add("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link13.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -441,6 +742,17 @@ link13.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.add("active");
   link14.classList.remove("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -456,6 +768,17 @@ link13.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.add("active");
   document.querySelector(".categories-link-14").classList.remove("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
 link14.addEventListener("mouseover", () => {
   link1.classList.remove("active");
@@ -472,6 +795,17 @@ link14.addEventListener("mouseover", () => {
   link12.classList.remove("active");
   link13.classList.remove("active");
   link14.classList.add("active");
+  link15.classList.remove("active");
+  link16.classList.remove("active");
+  link17.classList.remove("active");
+  link18.classList.remove("active");
+  link19.classList.remove("active");
+  link20.classList.remove("active");
+  link21.classList.remove("active");
+  link22.classList.remove("active");
+  link23.classList.remove("active");
+  link24.classList.remove("active");
+  link25.classList.remove("active");
 
   document.querySelector(".categories-link-1").classList.remove("active");
   document.querySelector(".categories-link-2").classList.remove("active");
@@ -487,4 +821,598 @@ link14.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-12").classList.remove("active");
   document.querySelector(".categories-link-13").classList.remove("active");
   document.querySelector(".categories-link-14").classList.add("active");
+  document.querySelector(".categories-link-15").classList.remove("active");
+  document.querySelector(".categories-link-16").classList.remove("active");
+  document.querySelector(".categories-link-17").classList.remove("active");
+  document.querySelector(".categories-link-18").classList.remove("active");
+  document.querySelector(".categories-link-19").classList.remove("active");
+  document.querySelector(".categories-link-20").classList.remove("active");
+  document.querySelector(".categories-link-21").classList.remove("active");
+  document.querySelector(".categories-link-22").classList.remove("active");
+  document.querySelector(".categories-link-23").classList.remove("active");
+  document.querySelector(".categories-link-24").classList.remove("active");
+  document.querySelector(".categories-link-25").classList.remove("active");
 });
+link15.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.add("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.add("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link16.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.add("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.add("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link17.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.add("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.add("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link18.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.add("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.add("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link19.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.add("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.add("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link20.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.add("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.add("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link21.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.add("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.add("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link22.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.add("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.add("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link23.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.add("active");
+	link24.classList.remove("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.add("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link24.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.add("active");
+	link25.classList.remove("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.add("active");
+	document.querySelector(".categories-link-25").classList.remove("active");
+  });
+  link25.addEventListener("mouseover", () => {
+	link1.classList.remove("active");
+	link2.classList.remove("active");
+	link3.classList.remove("active");
+	link4.classList.remove("active");
+	link5.classList.remove("active");
+	link6.classList.remove("active");
+	link7.classList.remove("active");
+	link8.classList.remove("active");
+	link9.classList.remove("active");
+	link10.classList.remove("active");
+	link11.classList.remove("active");
+	link12.classList.remove("active");
+	link13.classList.remove("active");
+	link14.classList.remove("active");
+	link15.classList.remove("active");
+	link16.classList.remove("active");
+	link17.classList.remove("active");
+	link18.classList.remove("active");
+	link19.classList.remove("active");
+	link20.classList.remove("active");
+	link21.classList.remove("active");
+	link22.classList.remove("active");
+	link23.classList.remove("active");
+	link24.classList.remove("active");
+	link25.classList.add("active");
+  
+	document.querySelector(".categories-link-1").classList.remove("active");
+	document.querySelector(".categories-link-2").classList.remove("active");
+	document.querySelector(".categories-link-3").classList.remove("active");
+	document.querySelector(".categories-link-4").classList.remove("active");
+	document.querySelector(".categories-link-5").classList.remove("active");
+	document.querySelector(".categories-link-6").classList.remove("active");
+	document.querySelector(".categories-link-7").classList.remove("active");
+	document.querySelector(".categories-link-8").classList.remove("active");
+	document.querySelector(".categories-link-9").classList.remove("active");
+	document.querySelector(".categories-link-10").classList.remove("active");
+	document.querySelector(".categories-link-11").classList.remove("active");
+	document.querySelector(".categories-link-12").classList.remove("active");
+	document.querySelector(".categories-link-13").classList.remove("active");
+	document.querySelector(".categories-link-14").classList.remove("active");
+	document.querySelector(".categories-link-15").classList.remove("active");
+	document.querySelector(".categories-link-16").classList.remove("active");
+	document.querySelector(".categories-link-17").classList.remove("active");
+	document.querySelector(".categories-link-18").classList.remove("active");
+	document.querySelector(".categories-link-19").classList.remove("active");
+	document.querySelector(".categories-link-20").classList.remove("active");
+	document.querySelector(".categories-link-21").classList.remove("active");
+	document.querySelector(".categories-link-22").classList.remove("active");
+	document.querySelector(".categories-link-23").classList.remove("active");
+	document.querySelector(".categories-link-24").classList.remove("active");
+	document.querySelector(".categories-link-25").classList.add("active");
+  });
