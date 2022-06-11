@@ -1712,6 +1712,7 @@ html {
 
 .accordion__item-fix {
   background: none;
+  margin-top: 0;
 }
 .accordion__item-fix .accordion__header {
   padding: 10px 10px 10px 30px;
@@ -1719,10 +1720,6 @@ html {
 }
 .accordion__item-fix .accordion__content > a {
   padding-left: 40px;
-}
-
-.accordion__item-fix + .accordion__item-fix {
-  margin-top: 0;
 }
 
 .accordion__header,
