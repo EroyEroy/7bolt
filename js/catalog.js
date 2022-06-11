@@ -63,6 +63,35 @@ window.onclick = function (event) {
     }
   }
 };
+
+// мобильная версия каталога
+const mobileCatalogBtn = document.querySelector('.catalog-2'),
+mobileCatalogBtnClose = document.querySelector('.mobile-catalog__close'),
+mobileCatalogBackground = document.querySelector('.mobile-catalog__background'),
+mobileCatalogModal = document.querySelector('.mobile-catalog__modal'),
+mobileCategoriesBtn = document.querySelectorAll('.mobile-catalog__categories');
+mobileCatalogBtn.addEventListener('click', () => {
+	mobileCatalogBackground.classList.add('active');
+	mobileCatalogModal.classList.add('active');
+	document.body.style.overflowY = "hidden";
+});
+mobileCatalogBtnClose.addEventListener('click', () => {
+	mobileCatalogBackground.classList.remove('active');
+	mobileCatalogModal.classList.remove('active');
+	document.body.style.overflowY = "scroll";
+});
+const mobileCatalogModal2 = document.querySelector('.mobile-catalog__modal-2');
+window.onclick = function (event) {
+	if (event.target === document.querySelector('.mobile-btn-2')) {
+		mobileCatalogModal.classList.remove('active');
+		mobileCatalogModal2.classList.add('active');
+	}
+	if (event.target === document.querySelector('.mobile-catalog__back')) {
+		mobileCatalogModal.classList.add('active');
+		mobileCatalogModal2.classList.remove('active');
+	}
+}
+
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
