@@ -97,6 +97,8 @@ CatalogLinks.forEach((CatalogLink) => {
 		mobileCatalogBackground.classList.remove('active');
 		mobileCatalogModal.classList.remove('active');
 		document.body.style.overflowY = "scroll";
+		// 
+		mobileCatalogModal2.classList.remove('active');
 	});
 });
 // переключение пунктов в каталоге

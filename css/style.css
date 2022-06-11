@@ -1695,6 +1695,7 @@ html {
   margin-right: 10px;
   width: 22px;
   height: 15px;
+  pointer-events: none;
   -o-object-fit: contain;
      object-fit: contain;
 }
