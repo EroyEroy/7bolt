@@ -91,7 +91,14 @@ window.onclick = function (event) {
 		mobileCatalogModal2.classList.remove('active');
 	}
 }
-
+const CatalogLinks = document.querySelectorAll('.accordion__content-link');
+CatalogLinks.forEach((CatalogLink) => {
+	CatalogLink.addEventListener('click', () => {
+		mobileCatalogBackground.classList.remove('active');
+		mobileCatalogModal.classList.remove('active');
+		document.body.style.overflowY = "scroll";
+	});
+});
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
