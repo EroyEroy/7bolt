@@ -1,8 +1,9 @@
-const childCategories = document.querySelector('.child__categories');
-let items = document.querySelectorAll('.child-item');
-let height = 0;
-
-for (i = 0; i < items.length; i++) {
-	height += items[i].offsetHeight / 2;
-	childCategories.style.height = height + 'px';
-}
+const childContainer = document.querySelectorAll('.child__categories'),
+	  childItems = document.querySelectorAll('.child-item');
+for (i = 0; i < childContainer.length; i++) {
+	for (i = 0; i < childItems.length; i++) {
+		let height = 0
+		childItems[i].offsetHeight += height;
+		console.log(height);
+	};
+};
