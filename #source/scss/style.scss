@@ -1264,6 +1264,7 @@ html {
 .mobile-catalog__close-img {
   margin-right: 5px;
   transform: rotate(90deg);
+  pointer-events: none;
 }
 .mobile-catalog__content {
   padding: 10px 0 70px 0;

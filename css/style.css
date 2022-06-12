@@ -1665,6 +1665,7 @@ html {
   margin-right: 5px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  pointer-events: none;
 }
 
 .mobile-catalog__content {
