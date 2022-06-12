@@ -1510,6 +1510,12 @@ html {
 .catalog__item-left {
   margin-left: 5px;
 }
+.catalog__item-left img {
+  width: 22px;
+  height: 22px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 .main-categories {
   padding: 30px 0 30px 10px;
