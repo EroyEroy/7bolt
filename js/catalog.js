@@ -107,6 +107,16 @@ CatalogLinks.forEach((CatalogLink) => {
 		mobileCatalogModal2.classList.remove('active');
 	});
 });
+
+history.pushState(null, null, null); // добавляем пустой стейт в историю
+window.onpopstate = function(event) {
+    if (mobileCatalogBackground.classList.contains('.active') && mobileCatalogModal.classList.contains('.active')) {
+		mobileCatalogBackground.classList.remove('active');
+		mobileCatalogModal.classList.remove('active'); // закрываем попап
+    }
+    window.onpopstate = null; // удаляем обработчик события перехода по истории
+};
+
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
