@@ -66,6 +66,7 @@ window.onclick = function (event) {
 
 // мобильная версия каталога
 const mobileCatalogBtn = document.querySelector('.catalog-2'),
+mobileCatalogBtn2 = document.querySelector('.catalog-3'),
 mobileCatalogBtnClose = document.querySelector('.mobile-catalog__close'),
 mobileCatalogBackground = document.querySelector('.mobile-catalog__background'),
 mobileCatalogModal = document.querySelector('.mobile-catalog__modal'),
@@ -79,6 +80,11 @@ mobileCatalogBtnClose.addEventListener('click', () => {
 	mobileCatalogBackground.classList.remove('active');
 	mobileCatalogModal.classList.remove('active');
 	document.body.style.overflowY = "scroll";
+});
+mobileCatalogBtn2.addEventListener('click', () => {
+	mobileCatalogBackground.classList.add('active');
+	mobileCatalogModal.classList.add('active');
+	document.body.style.overflowY = "hidden";
 });
 const mobileCatalogModal2 = document.querySelector('.mobile-catalog__modal-2');
 window.onclick = function (event) {

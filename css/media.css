@@ -449,7 +449,9 @@
   }
 
   .catalog-3 {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .title__link {

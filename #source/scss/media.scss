@@ -363,7 +363,7 @@
     }
   }
   .catalog-3 {
-    display: block;
+    display: flex;
   }
   .title__link {
     font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (479 - 320)));
