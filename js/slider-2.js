@@ -79,38 +79,4 @@ if (isMobile2.matches) {
 		touchEndX2 = e.changedTouches[0].screenX;
 		checkDirection2();
 	});
-//   sliderLine2.addEventListener("touchstart", handleTouchStart, false);
-//   sliderLine2.addEventListener("touchmove", handleTouchMove, false);
-
-//   let x1 = null;
-//   let y1 = null;
-
-//   function handleTouchStart(event) {
-// 	const firstTouch = event.touches[0];
-// 	// вытягивание координат клика
-// 	x1 = firstTouch.clientX;
-// 	y1 = firstTouch.clientY;
-//   }
-//   function handleTouchMove(event) {
-// 	if (!x1 || !y1) {
-// 	  return false;
-// 	}
-// 	// координаты того, куда пользователь тянет
-// 	let x2 = event.touches[0].clientX;
-// 	let y2 = event.touches[0].clientY;
-
-// 	// нахождение разницы координат (в какую сторону)
-// 	let xDiff = x2 - x1;
-// 	let yDiff = y2 - y1;
-// 	// движиние вправо и влево
-// 	if (Math.abs(xDiff) >= Math.abs(yDiff)) {
-// 	  if (xDiff > 0) {
-// 		scrollSlide2(-1);
-// 	  } else {
-// 		scrollSlide2(1);
-// 	  }
-// 	}
-// 	x1 = null;
-// 	y1 = null;
-//   }
 }
