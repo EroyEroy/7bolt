@@ -239,9 +239,14 @@ html {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.region_active .region__overflow,
-.region_active .region__overflow-2,
-.region-2_active .region__overflow,
+
+.region_active .region__overflow {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  z-index: 1000;
+}
+
 .region-2_active .region__overflow-2 {
   opacity: 1;
   visibility: visible;
@@ -780,8 +785,8 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
 }
 
 .slider-line,

@@ -218,13 +218,22 @@ html {
   .region__icon {
     transform: rotate(180deg);
   }
-  .region__overflow,
-  .region__overflow-2 {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    z-index: 1000;
-  }
+}
+.region_active{
+	.region__overflow{
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+		z-index: 1000;
+	}
+}
+.region-2_active{
+	.region__overflow-2{
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+		z-index: 1000;
+	}
 }
 .region__text {
   margin: 0 em(10);
@@ -615,7 +624,7 @@ html {
   border-radius: 10px;
   position: relative;
   user-select: none;
-  touch-action: pan-y;
+  touch-action: pan-x;
 }
 .slider-line,
 .slider-line2 {
