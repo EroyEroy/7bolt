@@ -68,7 +68,6 @@ const isMobile = window.matchMedia("only screen and (max-width: 479px)");
 if (isMobile.matches) {
 	let touchStartX = 0;
 	let touchEndX = 0;
-
 	function checkDirection() {
 		if (touchEndX < touchStartX) {
 			scrollSlide(1);

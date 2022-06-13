@@ -1,17 +1,22 @@
-let langContainer = document.querySelector('.region');
-let langContainer2 = document.querySelector('.region-2');
-function showDescription() {
-	langContainer.classList.toggle('region_active');
-	langContainer2.classList.toggle('region-2_active');
-}
-
-document.querySelector('.region__button').addEventListener( 'click', (e) => {
-	const withinBoundaries = e.composedPath().includes(langContainer);
-	const withinBoundaries2 = e.composedPath().includes(langContainer2);
-	if ( ! withinBoundaries ) {
-		langContainer.classList.remove('region_active');
-	}
-	if ( ! withinBoundaries2 ) {
-		langContainer2.classList.remove('region-2_active');
-	}
-})
+const langContainers = document.querySelectorAll('.region');
+langContainers.forEach((item) => {
+	const langBtns = item.querySelectorAll('.region__button');
+	langBtns.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			item.classList.toggle('region_active');
+		});
+	});
+	document.addEventListener( 'click', (e) => {
+		const withinBoundaries = e.composedPath().includes(item);
+	 
+		if (!withinBoundaries) {
+			item.classList.remove('region_active');
+		}
+	})
+	const langLinks = document.querySelectorAll('.btnlang');
+	langLinks.forEach((langLink) => {
+		langLink.addEventListener('click', () => {
+			item.classList.remove('region_active');
+		});
+	});
+});

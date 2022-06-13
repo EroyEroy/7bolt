@@ -108,6 +108,10 @@ CatalogLinks.forEach((CatalogLink) => {
 	});
 });
 
+const footerInner = document.querySelector(".footer__inner"),
+bottomMenu = document.querySelector(".bottom-menu");
+footerInner.style.paddingBottom = bottomMenu.offsetHeight + "px";
+
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),

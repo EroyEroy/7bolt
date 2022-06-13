@@ -489,6 +489,9 @@
   .footer__nav .footer__list + .footer__list {
     margin-top: calc(20px + (50 - 20) * ((100vw - 320px) / (479 - 320)));
   }
+  .footer__wrapper{
+	margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (479 - 320)));
+  }
   .button-show {
     display: none;
   }

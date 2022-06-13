@@ -419,7 +419,7 @@
 			<div class="container">
 				<div class="nav-top__inner">
 					<div class="region">
-						<button class="region__button" onclick="showDescription()">
+						<button class="region__button">
 							<img class="region__icon-location" src="img/icons/location.svg" alt="" draggable="false">
 							<span class="region__text">Тольятти</span>
 							<img class="region__icon" src="img/icons/arrow.svg" alt="" draggable="false">
@@ -4138,14 +4138,14 @@
 						<a class="logo" onclick="window.scrollTo(0, 0);">
 							<img class="logo__img" src="img/icons/logo.svg" alt="" draggable="false">
 						</a>
-						<div class="region-2">
-							<button class="region__button-2">
-								<img class="region__icon-location-2" src="img/icons/location__grey.svg" alt=""
-									draggable="false">
-								<span class="region__text-2">Тольятти</span>
+						<div class="region region-2">
+							<button class="region__button">
+								<img class="region__icon-location" src="img/icons/location.svg" alt="" draggable="false">
+								<span class="region__text region__text-2">Тольятти</span>
+								<img class="region__icon" src="img/icons/arrow.svg" alt="" draggable="false">
 							</button>
 							<!-- список городов -->
-							<div class="region__overflow-2">
+							<div class="region__overflow region__overflow-2">
 								<ul class="region__list">
 									<li class="region__title">
 										<button value="English" class="btnlang btnlang-2">Москва</button>
@@ -5337,7 +5337,7 @@
 			<section class="categories">
 				<div class="container">
 					<div class="categories__inner">
-						<button class="categories__item catalog-3" href="#">
+						<button class="categories__item catalog-3">
 							<h2 class="categories__title">
 								Категории
 							</h2>
@@ -7519,11 +7519,6 @@
 	<script src="js/buttonScrollToTop.js"></script>
 	<script src="js/catalog.js"></script>
 	<script src="js/accordion.js"></script>
-	<script>
-		new ItcAccordion(document.querySelector('.accordion'), {
-			alwaysOpen: true
-		});
-	</script>
 </body>
 
 </html>

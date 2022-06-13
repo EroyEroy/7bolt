@@ -623,6 +623,10 @@
     margin-top: calc(20px + 30 * (100vw - 320px) / 159);
   }
 
+  .footer__wrapper {
+    margin-bottom: calc(20px + 10 * (100vw - 320px) / 159);
+  }
+
   .button-show {
     display: none;
   }
