@@ -17,6 +17,10 @@ langContainers.forEach((item) => {
 	langLinks.forEach((langLink) => {
 		langLink.addEventListener('click', () => {
 			item.classList.remove('region_active');
+			const langText = document.querySelectorAll('.region__text');
+			langText.forEach((text) => {
+				text.innerText = langLink.innerText;
+			});
 		});
 	});
 });
