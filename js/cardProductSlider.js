@@ -38,9 +38,9 @@ document
 
 dotsCard.forEach((dotCard, indexCard) => dotCard.addEventListener("click", () => {
 	setSlideCard(indexCard);
-	// dotCard.addEventListener("click", () =>  {	 
-	// 	dotCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
-	// });
+	dotCard.addEventListener("click", () =>  {	 
+		dotCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+	});
 }));
 
 function scrollSlideCard(directionCard) {
@@ -52,10 +52,37 @@ function setSlideCard(indexCard) {
   countCard = indexCard;
   dotsCard.forEach((dotCard, indexCard) => {
 	dotCard.addEventListener("click", () =>  {	 
-		dotCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+		dotCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 	});
   });
   moveSlideCard();
+}
+
+// const btnColors = document.querySelectorAll('.product-card__button-cards-item');
+// btnColors.forEach((btnColor) => {
+// 	btnColor.addEventListener('click', (event) => {	
+// 		if (event.target === btnColor.classList.closest('targetBtn2')){ 
+// 			console.log(1);
+// 		}
+// 	});
+// });
+const btnColors = document.querySelectorAll('.product-card__button-cards-item');
+btn2 = document.querySelector('.btn2');
+const colorCard = document.querySelector('.color-card');
+const texts = document.querySelectorAll('.text');
+if (btn2 != null) {
+	btn2.addEventListener('click', () => {
+		document.querySelector('.imgBtn2').click();
+		for (i = 0; i < btnColors.length; i++) {
+			btnColors[i].classList.remove('target');
+		}
+		btn2.classList.add('target');
+		texts.forEach((text) => {
+			if (text.closest('.btn2')) {
+				colorCard.innerHTML = text.innerHTML;
+			}
+		});
+	});
 }
 
 function moveSlideCard() {
