@@ -8,6 +8,30 @@ btnOpenCatalog.onclick = () => {
   catalog.classList.toggle("active");
   document.querySelector(".catalog__img").classList.toggle("change");
 };
+window.onclick = function (event) {
+	if (
+	  event.target !== btnOpenCatalog &&
+	  !event.target.closest(".modal__catalog") &&
+	  event.target !== still
+	) {
+	  if (
+		catalogTransition.classList.contains("active") &&
+		catalog.classList.contains("active")
+	  ) {
+		catalogTransition.classList.remove("active");
+		catalog.classList.remove("active");
+		document.querySelector(".catalog__img").classList.remove("change");
+	  }
+	  if (event.target === document.querySelector('.mobile-btn-2')) {
+		mobileCatalogModal.classList.remove('active');
+		mobileCatalogModal2.classList.add('active');
+	}
+	if (event.target === document.querySelector('.mobile-catalog__back')) {
+		mobileCatalogModal.classList.add('active');
+		mobileCatalogModal2.classList.remove('active');
+	}
+	}
+  };
 // кнопка еще
 const still = document.querySelector(".main__btn");
 still.onclick = () => {
@@ -47,23 +71,6 @@ categoryGroupList.forEach((item) => {
   }
 });
 
-window.onclick = function (event) {
-  if (
-    event.target !== btnOpenCatalog &&
-    !event.target.closest(".modal__catalog") &&
-    event.target !== still
-  ) {
-    if (
-      catalogTransition.classList.contains("active") &&
-      catalog.classList.contains("active")
-    ) {
-      catalogTransition.classList.remove("active");
-      catalog.classList.remove("active");
-      document.querySelector(".catalog__img").classList.remove("change");
-    }
-  }
-};
-
 // мобильная версия каталога
 const mobileCatalogBtn = document.querySelector('.catalog-2'),
 mobileCatalogBtn2 = document.querySelector('.catalog-3'),
@@ -92,16 +99,7 @@ if (/^\/index\.html$/g.test(location.pathname)) {
 	}, false);
   }
 const mobileCatalogModal2 = document.querySelector('.mobile-catalog__modal-2');
-window.onclick = function (event) {
-	if (event.target === document.querySelector('.mobile-btn-2')) {
-		mobileCatalogModal.classList.remove('active');
-		mobileCatalogModal2.classList.add('active');
-	}
-	if (event.target === document.querySelector('.mobile-catalog__back')) {
-		mobileCatalogModal.classList.add('active');
-		mobileCatalogModal2.classList.remove('active');
-	}
-}
+
 const CatalogLinks = document.querySelectorAll('.accordion__content-link');
 CatalogLinks.forEach((CatalogLink) => {
 	CatalogLink.addEventListener('click', () => {
