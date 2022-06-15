@@ -81,11 +81,16 @@ mobileCatalogBtnClose.addEventListener('click', () => {
 	mobileCatalogModal.classList.remove('active');
 	document.body.style.overflowY = "scroll";
 });
-mobileCatalogBtn2.addEventListener('click', () => {
-	mobileCatalogBackground.classList.add('active');
-	mobileCatalogModal.classList.add('active');
-	document.body.style.overflowY = "hidden";
-});
+// выполнение скрипта кнопки категории на главной странице
+if (/^\/index\.html$/g.test(location.pathname)) {
+	document.addEventListener("DOMContentLoaded", function(){
+		mobileCatalogBtn2.addEventListener('click', () => {
+			mobileCatalogBackground.classList.add('active');
+			mobileCatalogModal.classList.add('active');
+			document.body.style.overflowY = "hidden";
+		});
+	}, false);
+  }
 const mobileCatalogModal2 = document.querySelector('.mobile-catalog__modal-2');
 window.onclick = function (event) {
 	if (event.target === document.querySelector('.mobile-btn-2')) {
