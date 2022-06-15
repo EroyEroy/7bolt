@@ -1394,6 +1394,7 @@ html {
 }
 
 .modal__wrapper {
+  width: 100%;
   margin: 0 auto;
   max-width: 1400px;
   display: -ms-grid;
