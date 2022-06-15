@@ -512,6 +512,23 @@
 	max-width: 250px;
 	margin: 0 auto;
   }
+  .footer__logo{
+	max-width: 250px;
+	text-align: left;
+	margin: 0 auto 20px auto;
+  }
+  .product-card__dots{
+	display: none;
+  }
+  .footer__bottom{
+	align-items: flex-start;
+	max-width: 250px;
+	margin: 0 auto;
+  }
+  .footer__copyright{
+	max-width: 250px;
+	margin: 0;
+  }
   .footer__list,
   .footer__item{
 	width: 100%;
@@ -604,6 +621,15 @@
   }
   .product-card__dots-item{
 	height: 100px;
+  }
+  .slider__wrapper{
+	width: 100%;
+  }
+  .product-card__slider,
+  .product-card__wrapper-img-slide,
+  .product-card__slider-line,
+  .product-card__slider-img{
+	width: 100%;
   }
 }
 @media (max-width: 360px) {
