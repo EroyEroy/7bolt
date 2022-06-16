@@ -1914,15 +1914,13 @@ html {
 }
 
 .product-card__slider-img {
-  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
 }
 
 .product-card__dots-img {
-  width: 156px;
-  height: 150px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
 }
 
 .product-card__dots {
@@ -1930,6 +1928,7 @@ html {
   top: 0;
   margin-right: 25px;
   height: 562px;
+  width: 100px;
   overflow-y: auto;
 }
 .product-card__dots::-webkit-scrollbar {

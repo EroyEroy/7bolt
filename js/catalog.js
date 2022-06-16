@@ -96,9 +96,11 @@ mobileCatalogBtnClose.addEventListener("click", () => {
 // if (/^\/index\.html$/g.test(location.pathname)) {
 // document.addEventListener("DOMContentLoaded", function(){
 mobileCatalogBtn2.addEventListener("click", () => {
-  mobileCatalogBackground.classList.add("active");
-  mobileCatalogModal.classList.add("active");
-  document.body.style.overflowY = "hidden";
+	if (mobileCatalogBtn2 != null) {
+		mobileCatalogBackground.classList.add("active");
+		mobileCatalogModal.classList.add("active");
+		document.body.style.overflowY = "hidden";
+	}
 });
 // }, false);
 //   }

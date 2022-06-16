@@ -1452,19 +1452,18 @@ html {
   transition: all ease 1.5s;
 }
 .product-card__slider-img {
-  height: auto;
+  object-fit: contain;
   width: 100%;
 }
 .product-card__dots-img {
-  width: 156px;
-  height: 150px;
-  object-fit: contain;
+  width: 100%;
 }
 .product-card__dots {
   position: sticky;
   top: 0;
   margin-right: 25px;
   height: 562px;
+  width: 100px;
   overflow-y: auto;
   &::-webkit-scrollbar {
     display: none;

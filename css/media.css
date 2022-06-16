@@ -314,11 +314,6 @@
     height: 400px;
   }
 
-  .product-card__dots-img {
-    width: 100%;
-    height: 100%;
-  }
-
   .product-card__title,
 .feedback__title,
 .compilation__title {
@@ -782,13 +777,6 @@
   }
 
   .slider__wrapper {
-    width: 100%;
-  }
-
-  .product-card__slider,
-.product-card__wrapper-img-slide,
-.product-card__slider-line,
-.product-card__slider-img {
     width: 100%;
   }
 
