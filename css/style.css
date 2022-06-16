@@ -795,8 +795,8 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -ms-touch-action: pan-x;
-      touch-action: pan-x;
+  touch-action: auto;
+  -ms-touch-action: auto;
 }
 
 .slider__img {
@@ -805,8 +805,12 @@ html {
 
 .slider-line,
 .slider-line2 {
-  -ms-touch-action: pan-x;
-      touch-action: pan-x;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
   width: 100%;
   max-height: 716px;
   display: -webkit-box;
