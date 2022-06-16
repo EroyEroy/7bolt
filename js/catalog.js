@@ -89,15 +89,17 @@ mobileCatalogBtnClose.addEventListener('click', () => {
 	document.body.style.overflowY = "scroll";
 });
 // выполнение скрипта кнопки категории на главной странице
-if (/^\/index\.html$/g.test(location.pathname)) {
+// if (/^\/index\.html$/g.test(location.pathname)) {
 	document.addEventListener("DOMContentLoaded", function(){
-		mobileCatalogBtn2.addEventListener('click', () => {
-			mobileCatalogBackground.classList.add('active');
-			mobileCatalogModal.classList.add('active');
-			document.body.style.overflowY = "hidden";
-		});
+		if (mobileCatalogBtn2 != null) {
+			mobileCatalogBtn2.addEventListener('click', () => {
+				mobileCatalogBackground.classList.add('active');
+				mobileCatalogModal.classList.add('active');
+				document.body.style.overflowY = "hidden";
+			});
+		}
 	}, false);
-  }
+//   }
 const mobileCatalogModal2 = document.querySelector('.mobile-catalog__modal-2');
 
 const CatalogLinks = document.querySelectorAll('.accordion__content-link');

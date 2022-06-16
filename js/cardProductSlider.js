@@ -99,9 +99,16 @@ function rollSliderCard() {
 }
 // счетчик товара
 let count = document.querySelector(".counter-result"),
+// переменные для расчета цены
+// актуальная цена
 PriceCard = document.querySelector('.product-card__price-new').textContent;
 Price = parseInt(String(PriceCard).replace(/ /g, ''));
 newPriceCard = document.querySelector('.product-card__price-new');
+// старая цена
+PriceCardOld = document.querySelector('.product-card__price-old').textContent;
+PriceOld = parseInt(String(PriceCardOld).replace(/ /g, ''));
+oldPriceCard = document.querySelector('.product-card__price-old');
+// 
 count.setAttribute('max', document.querySelector('#allItemsProducts').innerHTML);
 count.setAttribute('min', 1);
 count.value = 1;
@@ -112,20 +119,24 @@ count.addEventListener('focus', () => {
 count.addEventListener('blur', () => {
 	document.querySelector('.product-card__counter').classList.remove('focus');
 });
+// изменение количества в инпуте путем добавление числа вводом
 count.addEventListener('keydown', (event) => {
 	if (event.keyCode === 13) {
 		event.preventDefault();
 		count.value = count.value;
 		newPriceCard.textContent = (Price * count.value + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		oldPriceCard.textContent = (PriceOld * count.value + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 	}
 	if (event.keyCode === 13 && count.value > document.querySelector('#allItemsProducts').innerHTML - 1) {
 		count.value = count.max;
 		newPriceCard.textContent = (Price * count.max + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		oldPriceCard.textContent = (PriceOld * count.max + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 		return;
 	}
 	if (event.keyCode === 13 && count.value == 0) {
 		count.value = 1;
 		newPriceCard.textContent = (Price + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		oldPriceCard.textContent = (PriceOld + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 		return;
 	}
 });
@@ -135,6 +146,7 @@ document.getElementById("buttonCountPlus").onclick = function() {
   if(+countPlus <= document.querySelector('#allItemsProducts').innerHTML - 1){
 	count.value++;
 	newPriceCard.textContent = (Price * count.value + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+	oldPriceCard.textContent = (PriceOld * count.value + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 }
 // убаить -1 к значению инпута
@@ -142,9 +154,14 @@ document.getElementById("buttonCountMinus").onclick = function() {
   let countMinus = count.value;
   if(+countMinus >= 2){
 	count.value--
+	// отнятие суммы от новый цены
 	let priceAll = newPriceCard.textContent;
 	priceAllConvert = parseInt(String(priceAll).replace(/ /g, ''));
 	newPriceCard.textContent = (priceAllConvert - Price + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+	// отнятие суммые от старой цены
+	let priceAllOld = oldPriceCard.textContent;
+	priceAllConvertOld = parseInt(String(priceAllOld).replace(/ /g, ''));
+	oldPriceCard.textContent = (priceAllConvertOld - PriceOld + ' ₽').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 }
 // рассчитывание скидки
