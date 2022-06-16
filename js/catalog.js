@@ -95,6 +95,8 @@ mobileCatalogBtnClose.addEventListener("click", () => {
 // выполнение скрипта кнопки категории на главной странице
 // if (/^\/index\.html$/g.test(location.pathname)) {
 // document.addEventListener("DOMContentLoaded", function(){
+// выполнение скрипта кнопки на главной странице, которая открывает каталог
+// preg_match() для php
 if (window.location.toString().indexOf("index.htm") > 0) {
   mobileCatalogBtn2.addEventListener("click", () => {
     if (mobileCatalogBtn2 != null) {

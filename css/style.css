@@ -2134,7 +2134,13 @@ html {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 40px;
+}
+.product-card__price-info p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .product-card__price-new,

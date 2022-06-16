@@ -1598,7 +1598,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 40px;
+  p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+  }
 }
 .product-card__price-new,
 .product-card__price-old {
