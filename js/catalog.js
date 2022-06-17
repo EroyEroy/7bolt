@@ -6,7 +6,7 @@ let items = document.querySelectorAll(".item-link-dropdown");
 btnOpenCatalog.onclick = () => {
   catalogTransition.classList.toggle("active");
   catalog.classList.toggle("active");
-  document.querySelector(".catalog__img").classList.toggle("change");
+  document.querySelector('.catalog-icon').classList.toggle('open');
 };
 window.onclick = function (event) {
   if (
@@ -20,7 +20,7 @@ window.onclick = function (event) {
     ) {
       catalogTransition.classList.remove("active");
       catalog.classList.remove("active");
-      document.querySelector(".catalog__img").classList.remove("change");
+	  document.querySelector('.catalog-icon').classList.remove('open');
     }
     if (event.target === document.querySelector(".mobile-btn-2")) {
       mobileCatalogModal.classList.remove("active");
@@ -45,7 +45,7 @@ items.forEach((item) => {
     ) {
       catalogTransition.classList.remove("active");
       catalog.classList.remove("active");
-      document.querySelector(".catalog__img").classList.remove("change");
+	  document.querySelector('.catalog-icon').classList.remove('open');
     }
   });
 });

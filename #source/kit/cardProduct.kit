@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" sizes="192x192"
+		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png">
+	<link rel="shortcut icon"
+		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png"
+		type="image/png" />
+	<link rel="apple-touch-icon"
+		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png"
+		type="image/png" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+	<title>Карточка товара</title>
+</head>
+
+<body>
+	<!-- кнопка для скролла вверх -->
+	<!-- @import "../../components/buttonScrollTop.html" -->
+	
+	<!-- меню для планшетов и телефонов -->
+	<!-- @import "../../components/bottomMenuPhone" -->
+
+	<!-- каталог для мобильной версии -->
+	<!-- @import "../../components/catalogMenuPhoneVersion" -->
+	
+	<div class="wrapper">
+		<!-- верхний блок навигации -->
+		<!-- @import "../../components/navTopMenu.html" -->
+
+		<!-- каталог -->
+		<!-- @import "../../components/catalogMenuDekstopVersion.html" -->
+		
+		<!-- header -->
+		<!-- @import "../../components/header.html" -->
+
+		<main class="main">
+			<!-- меню поиска на телефнах -->
+			<!-- @import "../../components/searchMenuPhoneVersion.html" -->
+
+			<!-- хот бар -->
+			<!-- @import "../../components/hotbar.html" -->
+
+			<!-- дерево навигации карточки товара -->
+			<section class="tree-link">
+				<div class="container">
+					<div class="tree-link__inner">
+						<a class="tree-link__item" href="#">
+							Автотовары
+							<img class="tree-link__img" src="img/icons/tree-link_arrow.svg" alt="arrow right">
+						</a>
+						<a class="tree-link__item" href="#">
+							Для машины
+							<img class="tree-link__img" src="img/icons/tree-link_arrow.svg" alt="arrow right">
+						</a>
+						<a class="tree-link__item" href="#">
+							Аксессуары
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- секция со слайдером карточки -->
+			<section class="product-card">
+				<div class="container">
+					<div class="product-card__inner">
+						<div class="slider__wrapper">
+							<div class="product-card__dots">
+								<div class="product-card__dots-item active">
+									<img class="product-card__dots-img" src="img/cardSlider-1.webp" alt="" draggable="false">
+								</div>
+								<div class="product-card__dots-item">
+									<img class="product-card__dots-img" src="img/cardSlider-2.webp" alt="" draggable="false">
+								</div>
+								<div class="product-card__dots-item">
+									<img class="product-card__dots-img" src="img/cardSlider-3.webp" alt="" draggable="false">
+								</div>
+								<div class="product-card__dots-item">
+									<img class="product-card__dots-img" src="img/cardSlider-4.webp" alt="" draggable="false">
+								</div>
+								<!-- 2 -->
+								<div class="product-card__dots-item imgBtn2">
+									<img class="product-card__dots-img" src="img/card2.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__dots-item">
+									<img class="product-card__dots-img" src="img/card2.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__dots-item">
+									<img class="product-card__dots-img" src="img/card2.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__dots-item">
+									<img class="product-card__dots-img" src="img/card2.png" alt="" draggable="false">
+								</div>
+							</div>
+							<div class="product-card__slider">
+								<div class="product-card__wrapper-img-slide">
+									<div class="product-card__slider-line">
+										<img class="product-card__slider-img" src="img/cardSlider-1.webp" alt="" draggable="false">
+										<img class="product-card__slider-img" src="img/cardSlider-2.webp" alt="" draggable="false">
+										<img class="product-card__slider-img" src="img/cardSlider-3.webp" alt="" draggable="false">
+										<img class="product-card__slider-img" src="img/cardSlider-4.webp" alt="" draggable="false">
+										<!-- 2 -->
+										<img class="product-card__slider-img targetBtn2" src="img/card2.png" alt="" draggable="false">
+										<img class="product-card__slider-img" src="img/card2.png" alt="" draggable="false">
+										<img class="product-card__slider-img" src="img/card2.png" alt="" draggable="false">
+										<img class="product-card__slider-img" src="img/card2.png" alt="" draggable="false">
+									</div>
+									<!-- кнопки в слайдере -->
+									<button class="product-card__button product-card__button-prev">
+										<img src="img/icons/greyArrowSliderProduct.svg" alt="" draggable="false">
+									</button>
+									<button class="product-card__button product-card__button-next">
+										<img src="img/icons/greyArrowSliderProduct.svg" alt="" draggable="false">
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-card__info">
+							<div class="product-card__top">
+								<p class="product-card__top__text">
+									<img class="product-card__top__text-img" src="img/icons/star.svg" alt=""
+										draggable="false">
+									<button class="product-card__top-link">
+										(214 оценок)
+									</button>
+									Более 100 заказов
+								</p>
+							</div>
+							<h1 class="product-card__title">
+								Игрушка, Утка в шлеме, с пропеллером и в очках
+							</h1>
+							<p class="product-card__all-products">
+								Количество: <span id="allItemsProducts">87</span>
+							</p>
+							<div class="product-card__wrapper">
+								<div class="product-card__counter">
+									<button class="counter-minus" id="buttonCountMinus">
+										<img src="img/icons/minus-counter.svg" alt="" draggable="false">
+									</button>
+									<input class="counter-result" placeholder="1" type="number" minlength="1"></input>
+									<button class="counter-plus" id="buttonCountPlus">
+										<img src="img/icons/plus-counter.svg" alt="" draggable="false">
+									</button>
+								</div>
+								<p class="counter__buy-info">
+									<img src="img/icons/but_no_mistake.svg" alt="" draggable="false">
+									Покупка без риска
+								</p>
+							</div>
+							<p class="product-card__price-text">
+								Цена:
+							</p>
+							<div class="product-card__price-info">
+								<span class="product-card__price-new">
+									299 ₽
+								</span>
+								<span class="product-card__price-old">
+									499 ₽
+								</span>
+								<p class="product-card__sale">
+									-40%
+								</p>
+								<p class="product-card__liquidation">
+									Ликвидация
+								</p>
+							</div>
+							<div class="product-card__wrapper">
+								<button class="product-card__basket">
+									Добавить в корзину
+								</button>
+								<button class="product-card__buy">
+									Купить в один клик
+								</button>
+							</div>
+							<p class="product-card__number">
+								Каталожный номер: HG2244-5545
+							</p>
+							<p class="product-card__location">
+								Местоположение: Россия, Самарская область, г. Самара
+							</p>
+							<p class="product-card__human">
+								Продавец:
+								<a href="#">
+									akskar
+								</a>
+							</p>
+							<p class="product-card__delivery">
+								Доставка: 1 день, бесплатно
+							</p>
+							<p class="product-card__color">
+								Цвет:
+								<span class="color-card">Белый</span>
+							</p>
+							<div class="product-card__button-cards">
+								<div class="product-card__button-cards-item disabled" disabled>
+									<img src="img/card1.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item btn2">
+									<p class="text">Серый</p>
+									<img src="img/card2.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item disabled" disabled>
+									<img src="img/card3.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item">
+									<img src="img/card4.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item">
+									<img src="img/card5.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item">
+									<img src="img/card6.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item disabled" disabled>
+									<img src="img/card7.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item">
+									<img src="img/card8.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item">
+									<img src="img/card9.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item">
+									<img src="img/card10.png" alt="" draggable="false">
+								</div>
+								<div class="product-card__button-cards-item target">
+									<img src="img/cardSlider-1.webp" alt="" draggable="false">
+								</div>
+							</div>
+							<div class="product-card__about">
+								<span>Кратко о товаре:</span>
+								<ul class="product-card__list">
+									<li class="product-card__list-item">
+										Внимание! Если при поставки не обнаружили болтик(крепеж пропеллера) напишите
+										пожалуйста нам, мы за свой счет вышлим болтик!!!
+										• Материал: резина
+									</li>
+									<li class="product-card__list-item">
+										• Монтаж на руль велосипеда
+									</li>
+									<li class="product-card__list-item">
+										• Монтаж на плоскую поверхность
+									</li>
+									<li class="product-card__list-item">
+										• В комплекте: утка, шлем, крепеж на плоскую поверхность, крепеж на трубу, очки
+										с цепочкой, фонарь, пропеллер
+									</li>
+									<li class="product-card__list-item">
+										• Фонарь с сенсором движения
+									</li>
+									<li class="product-card__list-item">
+										• Звуковой сигнал: 45 db
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- описание товара -->
+			<section class="points">
+				<div class="container">
+					<div class="points__inner">
+						<ul class="points__list">
+							<li class="points__item active points-description">
+								<button class="point__item-btn" id="btn-description">
+									Описание товара
+								</button>
+							</li>
+							<li class="points__item points-feedback">
+								<button class="point__item-btn" id="btn-feedback">
+									Отзывы
+									<span>(214)</span>
+								</button>
+							</li>
+							<!-- <li class="points__item">
+								<button class="point__item-btn">
+									Оценки
+									<span>(26)</span>
+								</button>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- секция с другим описанием товара -->
+			<section class="description active">
+				<div class="container">
+					<div class="description__inner">
+						<div class="description__wrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/o4ovWIuZjIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<img class="description__img" src="img/description__card.jpg" alt="" draggable="false">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- секция с отзывами -->
+			<section class="feedback">
+				<div class="container">
+					<div class="feedback__inner">
+						<h2 class="feedback__title">
+							Все отзывы <span>(214)</span>
+						</h2>
+					</div>
+				</div>
+			</section>
+			<!-- секция с товарами продавца -->
+			<section class="compilation">
+				<div class="container">
+					<div class="compilation__inner">
+						<h2 class="compilation__title">
+							Товары
+							<a class="compilation__link" href="#">askar</a>
+						</h2>
+						<div class="cards">
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/icons/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="img/products/sale1.webp" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<div class="card__info">
+										<span class="card-rating">
+											4.8
+										</span>
+										<h3 class="card-title">
+											<a class="card-title-link" href="#">
+												<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на
+													панель
+													авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+													(Цыпленок)</span>
+											</a>
+										</h3>
+									</div>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/icons/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="img/products/sale1.webp" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<div class="card__info">
+										<span class="card-rating">
+											4.8
+										</span>
+										<h3 class="card-title">
+											<a class="card-title-link" href="#">
+												<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на
+													панель
+													авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+													(Цыпленок)</span>
+											</a>
+										</h3>
+									</div>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/icons/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="img/products/sale1.webp" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<div class="card__info">
+										<span class="card-rating">
+											4.8
+										</span>
+										<h3 class="card-title">
+											<a class="card-title-link" href="#">
+												<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на
+													панель
+													авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+													(Цыпленок)</span>
+											</a>
+										</h3>
+									</div>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/icons/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="img/products/sale1.webp" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<div class="card__info">
+										<span class="card-rating">
+											4.8
+										</span>
+										<h3 class="card-title">
+											<a class="card-title-link" href="#">
+												<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на
+													панель
+													авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+													(Цыпленок)</span>
+											</a>
+										</h3>
+									</div>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card sale__card">
+								<button class="favourites">
+									<img class="favorites-img" src="img/icons/favorites.svg" alt="">
+								</button>
+								<a class="card-link" href="#">
+									<img class="card-img" src="img/products/sale1.webp" alt="" draggable="false">
+								</a>
+								<div class="card__wrapper">
+									<div class="card__info">
+										<span class="card-rating">
+											4.8
+										</span>
+										<h3 class="card-title">
+											<a class="card-title-link" href="#">
+												<span>Утка в шлеме / Утка в очках / Утка с пропеллером / Игрушка на
+													панель
+													авто / Подарок / Игрушка в машину на присосках / Тик Ток Уточка
+													(Цыпленок)</span>
+											</a>
+										</h3>
+									</div>
+									<div class="price__wrapper">
+										<span class="card-new-price">
+											299 ₽
+										</span>
+										<span class="card-old-price">
+											499 ₽
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	</main>
+	<!-- footer -->
+	<!-- @import "../../components/footer.html" -->
+	</div>
+	<script src="js/region.js"></script>
+	<!-- <script src="js/header.js"></script> -->
+	<script src="js/buttonScrollToTop.js"></script>
+	<script src="js/catalog.js"></script>
+	<script src="js/accordion.js"></script>
+	<script src="js/cardProductSlider.js"></script>
+</body>
+
+</html>
