@@ -97,15 +97,15 @@ mobileCatalogBtnClose.addEventListener("click", () => {
 // document.addEventListener("DOMContentLoaded", function(){
 // выполнение скрипта кнопки на главной странице, которая открывает каталог
 // preg_match() для php
-if (window.location.toString().indexOf("index.htm") > 0) {
-  mobileCatalogBtn2.addEventListener("click", () => {
-    if (mobileCatalogBtn2 != null) {
-      mobileCatalogBackground.classList.add("active");
-      mobileCatalogModal.classList.add("active");
-      document.body.style.overflowY = "hidden";
-    }
-  });
-}
+// if (window.location.toString().indexOf("index.htm") > 0) {
+	if (mobileCatalogBtn2 != null) {
+		mobileCatalogBtn2.addEventListener("click", () => {
+			mobileCatalogBackground.classList.add("active");
+			mobileCatalogModal.classList.add("active");
+			document.body.style.overflowY = "hidden";
+		});
+	}
+// }
 // }, false);
 //   }
 const mobileCatalogModal2 = document.querySelector(".mobile-catalog__modal-2");
