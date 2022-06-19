@@ -866,8 +866,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-transition: all ease 1.5s;
-  transition: all ease 1.5s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 .button__slider {
@@ -1962,8 +1962,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-transition: all ease 1.5s;
-  transition: all ease 1.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .product-card__slider-img {
@@ -2350,7 +2350,7 @@ html {
 }
 
 .point__item-btn {
-  font-size: 24px;
+  font-size: 14px;
   background: none;
   padding: 25px 0;
 }
@@ -2426,7 +2426,7 @@ iframe {
 }
 
 .compilation__title {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 50px;
 }
 
@@ -2458,7 +2458,7 @@ iframe {
 }
 
 .feedback__title {
-  font-size: 36px;
+  font-size: 32px;
 }
 .feedback__title span {
   color: #fd8223;

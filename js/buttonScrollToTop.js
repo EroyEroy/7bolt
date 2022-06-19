@@ -15,7 +15,6 @@ if (window.matchMedia("only screen and (min-width: 480px)").matches) {
 		};
 	  });	
 } else {
-	document.addEventListener("DOMContentLoaded", function () {
 		let btn = document.querySelector(".scroll");
 		window.addEventListener("scroll", function () {
 		  if (window.pageYOffset > 300) {
@@ -29,5 +28,4 @@ if (window.matchMedia("only screen and (min-width: 480px)").matches) {
 		  click.preventDefault();
 		  scrollTo(0, 0);
 		};
-	  });
   }
