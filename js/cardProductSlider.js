@@ -27,7 +27,13 @@ function initCard() {
 // }
 
 initCard();
-window.addEventListener("resize", initCard);
+window.addEventListener("resize", () => {
+	initCard();
+	// проверка разрешения для зума картинки в слайдере
+	if (window.innerWidth >= 1277) {
+		zoomImgSlider();
+	}
+});
 
 document
   .querySelector(".product-card__button-next")
@@ -247,29 +253,68 @@ btnFeedBack2.addEventListener("click", () => {
 });
 
 // зум картинки в слайдере
-const sliderCardImg = document.querySelectorAll(".product-card__slider-img");
-const zoomContainer = document.querySelector('.img-zoom-result');
-const el = document.querySelector('.img-zoom-lens');
-
-sliderCardImg.forEach(item => {
-	item.addEventListener('mousemove', (e) => {
-		e.preventDefault();
-		zoomContainer.style.display = 'block';
-		let imageSrc = item.getAttribute("src");
-		zoomContainer.style.backgroundImage = `url("${imageSrc}")`;
-		e.offsetX ? offsetX = e.offsetX : offsetX = e.pageX;
-		e.offsetY ? offsetY = e.offsetY : offsetX = e.pageX;
-		x = offsetX/item.offsetWidth*100;
-		y = offsetY/item.offsetHeight*100;
-		zoomContainer.style.backgroundPosition = x + '% ' + y + '%';
-
-		el.style.display = 'block';
-		el.style.left = e.pageX - 50 + "px";
-		el.style.top = e.pageY - 30 + "px";
+	const sliderCardImg = document.querySelectorAll(".product-card__slider-img");
+	const zoomContainer = document.querySelector('.img-zoom-result');
+	const el = document.querySelector('.img-zoom-lens');
+function zoomImgSlider() {
+	sliderCardImg.forEach(item => {
+		item.addEventListener('mousemove', (e) => {
+			e.preventDefault();
+			zoomContainer.style.display = 'block';
+			let imageSrc = item.getAttribute("src");
+			zoomContainer.style.backgroundImage = `url("${imageSrc}")`;
+			e.offsetX ? offsetX = e.offsetX : offsetX = e.pageX;
+			e.offsetY ? offsetY = e.offsetY : offsetX = e.pageX;
+			x = offsetX/item.offsetWidth*100;
+			y = offsetY/item.offsetHeight*100;
+			zoomContainer.style.backgroundPosition = x + '% ' + y + '%';
+	
+			el.style.display = 'block';
+			el.style.left = e.pageX - 50 + "px";
+			el.style.top = e.pageY - 30 + "px";
+		});
+		item.addEventListener('mouseleave', () => {
+			zoomContainer.style.backgroundImage = `url("")`;
+			zoomContainer.style.display = 'none';
+			el.style.display = 'none';
+		});
 	});
-	item.addEventListener('mouseleave', () => {
-		zoomContainer.style.backgroundImage = `url("")`;
-		zoomContainer.style.display = 'none';
-		el.style.display = 'none';
+}
+// проверка разрешения для зума картинки в слайдере
+if (window.matchMedia("only screen and (min-width: 1277px)").matches) {
+	zoomImgSlider();
+}
+const clickImgPopupSlider = document.querySelectorAll('.product-card__slider-img');
+const sliderWrapper = document.querySelector('.slider__wrapper');
+const popupClose = document.querySelector('.popup-close');
+clickImgPopupSlider.forEach((img) => {
+	img.addEventListener('click', (e) => {
+		if (e.target === img) {
+			sliderWrapper.classList.add('popup');
+			document.body.style.overflow = 'hidden';
+			el.style.visibility = 'hidden';
+			popupClose.style.display = 'block';
+			initCard();
+		}
 	});
+});
+// закрытие окна при нажатии на крестик
+popupClose.addEventListener('click', () => {
+	sliderWrapper.classList.remove('popup');
+	document.body.style.overflow = '';
+	el.style.visibility = 'visible';
+	popupClose.style.display = 'none';
+	moveSlideCard();
+	initCard();
+});
+// закрытие окна при нажатии на кнопку ESC
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'Escape') {
+		sliderWrapper.classList.remove('popup');
+		document.body.style.overflow = '';
+		el.style.visibility = 'visible';
+		popupClose.style.display = 'none';
+		moveSlideCard();
+		initCard();
+	}
 });
