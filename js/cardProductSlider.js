@@ -33,6 +33,9 @@ window.addEventListener("resize", () => {
 	if (window.innerWidth >= 1277) {
 		zoomImgSlider();
 	}
+	if (window.innerWidth <= 1024) {
+		swipeSlider();
+	}
 });
 
 document
@@ -283,6 +286,27 @@ function zoomImgSlider() {
 // проверка разрешения для зума картинки в слайдере
 if (window.matchMedia("only screen and (min-width: 1277px)").matches) {
 	zoomImgSlider();
+	// let touchStartX = 0;
+	// let touchEndX = 0;
+	// function checkDirection() {
+	// 	if (touchEndX < touchStartX) {
+	// 		scrollSlideCard(1);
+	// 	}
+	// 	if (touchEndX > touchStartX) {
+	// 		scrollSlideCard(-1);
+	// 	}
+	// }
+
+	// sliderLineCard.addEventListener('touchstart', (e) => {
+	// 	touchStartX = e.changedTouches[0].screenX;
+	// });
+	// sliderLineCard.addEventListener('touchend', (e) => {
+	// 	touchEndX = e.changedTouches[0].screenX;
+	// 	checkDirection();
+	// });
+}
+if (window.matchMedia("only screen and (max-width: 1024px)").matches) {
+	swipeSlider();
 }
 const clickImgPopupSlider = document.querySelectorAll('.product-card__slider-img');
 const sliderWrapper = document.querySelector('.slider__wrapper');
@@ -318,3 +342,50 @@ document.addEventListener('keydown', (event) => {
 		initCard();
 	}
 });
+// свайп слайдера
+function swipeSlider() {
+	sliderLineCard.addEventListener('touchstart', handleTouchStart, false);        
+sliderLineCard.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+var yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > 0 ) {
+           scrollSlideCard(1);
+        } else {
+            scrollSlideCard(-1);
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            console.log(1); 
+        } else { 
+           console.log(-1);
+        }                                                                 
+    }
+    xDown = null;
+    yDown = null;                                             
+};
+}
