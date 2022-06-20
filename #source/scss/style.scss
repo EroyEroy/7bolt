@@ -337,46 +337,44 @@ html {
   margin-left: 25px;
 }
 // стили для иконки
-.catalog-icon{
-	width: 18px;
-	height: 12px;
-	position: relative;
-	margin-right: 5px;
+.catalog-icon {
+  width: 18px;
+  height: 12px;
+  position: relative;
+  margin-right: 5px;
 }
-.catalog-icon__line{
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	left: 0;
-	transition: all .3s ease-in-out;
+.catalog-icon__line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
 }
-.catalog-icon__line-1{
-	top: 0;
+.catalog-icon__line-1 {
+  top: 0;
 }
 .catalog-icon__line-2,
-.catalog-icon__line-3{
-	top: 50%;
-	transform: translateY(-50%);
+.catalog-icon__line-3 {
+  top: 50%;
+  transform: translateY(-50%);
 }
-.catalog-icon__line-4{
-	top: 10px;
+.catalog-icon__line-4 {
+  top: 10px;
 }
-.catalog-icon.open{
-	.catalog-icon__line-1,
-	.catalog-icon__line-4{
-		top: 50%;
-		transform: translateY(-50%);
-		opacity: 0;
-	}
-	.catalog-icon__line-2{
-		transform: translateY(-50%)
-		rotate(45deg);
-	}
-	.catalog-icon__line-3{
-		transform: translateY(-50%)
-		rotate(-45deg);
-	}
+.catalog-icon.open {
+  .catalog-icon__line-1,
+  .catalog-icon__line-4 {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .catalog-icon__line-2 {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .catalog-icon__line-3 {
+    transform: translateY(-50%) rotate(-45deg);
+  }
 }
 // стилизация main
 .main__menu {
@@ -565,7 +563,7 @@ html {
   max-height: 716px;
   display: flex;
   position: relative;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 .button__slider {
   position: absolute;
@@ -1369,7 +1367,7 @@ html {
   max-height: 564px;
   display: flex;
   position: relative;
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out 0.5s;
 }
 .product-card__slider-img {
   object-fit: contain;
@@ -1740,3 +1738,28 @@ iframe {
 .text {
   display: none;
 }
+// для зум эффекта
+.img-zoom-lens {
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	background-color: #ffffff90;
+	pointer-events: none;
+	z-index: 999;
+	border-radius: em(5);
+	display: none;
+  }
+  
+  .img-zoom-result {
+	background-color: #f4f4f4;
+	background-repeat: no-repeat;
+	background-size: 250%;
+	position: fixed;
+	width: 700px;
+	height: 500px;
+	right: 13.2%;
+	z-index: 999;
+	background-position: 50% 50%;
+	border-radius: em(5);
+	display: none;
+  }

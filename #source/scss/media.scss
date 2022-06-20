@@ -638,6 +638,9 @@
       transform: translateY(-40%);
     }
   }
+  .popup-slider__btn{
+	display: none;
+  }
 }
 @media (max-width: 360px) {
   .product-card__info {
