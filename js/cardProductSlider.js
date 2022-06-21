@@ -33,9 +33,6 @@ window.addEventListener("resize", () => {
 	if (window.innerWidth >= 1277) {
 		zoomImgSlider();
 	}
-	if (window.innerWidth <= 1024) {
-		swipeSlider();
-	}
 });
 
 document
@@ -287,9 +284,6 @@ function zoomImgSlider() {
 if (window.matchMedia("only screen and (min-width: 1277px)").matches) {
 	zoomImgSlider();
 }
-if (window.matchMedia("only screen and (max-width: 1024px)").matches) {
-	swipeSlider();
-}
 const clickImgPopupSlider = document.querySelectorAll('.product-card__slider-img');
 const sliderWrapper = document.querySelector('.slider__wrapper');
 const popupClose = document.querySelector('.popup-close');
@@ -324,25 +318,3 @@ document.addEventListener('keydown', (event) => {
 		initCard();
 	}
 });
-// свайп слайдера
-function swipeSlider() {
-	let touchStartX = 0;
-	let touchEndX = 0;
-	function checkDirection() {
-		if (touchEndX < touchStartX) {
-			scrollSlideCard(1);
-		}
-		if (touchEndX > touchStartX) {
-			scrollSlideCard(-1);
-		}
-	}
-
-	sliderLineCard.addEventListener('touchstart', (e) => {
-		touchStartX = e.changedTouches[0].screenX;
-		moveSlideCard();
-	});
-	sliderLineCard.addEventListener('touchend', (e) => {
-		touchEndX = e.changedTouches[0].screenX;
-		checkDirection();
-	});
-}
