@@ -295,6 +295,7 @@ clickImgPopupSlider.forEach((img) => {
 			el.style.visibility = 'hidden';
 			popupClose.style.display = 'block';
 			initCard();
+			swipeSlider();
 		}
 	});
 });

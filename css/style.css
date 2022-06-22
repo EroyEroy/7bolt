@@ -1117,6 +1117,7 @@ html {
           flex-direction: column;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 .card:hover {
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -1953,6 +1954,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #fff;
 }
 
 .product-card__slider-line {
@@ -1994,6 +1996,7 @@ html {
 
 .product-card__dots-item {
   border-radius: 15px;
+  background: #fff;
 }
 
 .product-card__dots-item + .product-card__dots-item {
