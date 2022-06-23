@@ -597,9 +597,9 @@ html {
   height: 2px;
   background-color: #fff;
   position: absolute;
-  left: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border-radius: 1px;
 }
 
 .catalog-icon__line-1 {
@@ -608,6 +608,8 @@ html {
 
 .catalog-icon__line-2,
 .catalog-icon__line-3 {
+  width: 80%;
+  right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -615,6 +617,8 @@ html {
 
 .catalog-icon__line-4 {
   top: 10px;
+  width: 60%;
+  right: 0;
 }
 
 .catalog-icon.open .catalog-icon__line-1,
@@ -623,14 +627,17 @@ html {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   opacity: 0;
+  width: 100%;
 }
 .catalog-icon.open .catalog-icon__line-2 {
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
+  width: 100%;
 }
 .catalog-icon.open .catalog-icon__line-3 {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
+  width: 100%;
 }
 
 .main__menu {
@@ -1697,7 +1704,7 @@ html {
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: 9998;
+  z-index: 9990;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   left: -100%;
@@ -1710,7 +1717,7 @@ html {
 }
 
 .mobile-catalog__modal {
-  display: none;
+  left: -100%;
   width: 100%;
   height: 100%;
   padding: 30px 20px 20px 20px;
@@ -1719,15 +1726,14 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-y: auto;
-}
-.mobile-catalog__modal::-webkit-scrollbar {
-  display: none;
-}
-
-.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.mobile-catalog__modal::-webkit-scrollbar {
+  display: none;
 }
 
 .mobile-catalog__close,
@@ -1873,14 +1879,24 @@ html {
   display: block;
   color: #090b0d;
   text-decoration: none;
-  padding: 10px 10px 10px 30px;
+  line-height: 60px;
+  height: 60px;
+  padding: 0px 10px 0px 30px;
+  line-height: 60px;
 }
 .accordion__content > a:last-child {
   border-radius: 0 0 5px 5px;
 }
 
-.accordion__item:not(.accordion__item_show) > .accordion__body {
-  display: none;
+.accordion__body {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+}
+
+.accordion__item_show .accordion__body {
+  height: 900px;
 }
 
 .tree-link__inner {

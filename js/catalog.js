@@ -100,7 +100,8 @@ if (mobileCatalogBtn2 != null) {
   });
 }
 
-const mobileCatalogModal2 = document.querySelector(".mobile-catalog__modal-2");
+// категория мотоциклы
+const mobileCatalogModal2 = document.querySelector("#moto");
 
 const CatalogLinks = document.querySelectorAll(".accordion__content-link");
 CatalogLinks.forEach((CatalogLink) => {
