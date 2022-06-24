@@ -1323,14 +1323,9 @@ html {
   line-height: 60px;
 }
 .accordion__body {
-	height: 0;
+	max-height: 0;
 	overflow: hidden;
-	transition: height .4s ease-in-out;
-}
-.accordion__item_show{
-	.accordion__body{
-		height: 900px;
-	}
+	transition: max-height .4s ease-in-out;
 }
 // стилизация страницы карточки товара
 .tree-link__inner {
