@@ -108,6 +108,12 @@ CatalogLinks.forEach((CatalogLink) => {
   CatalogLink.addEventListener("click", () => {
     mobileCatalogBackground.classList.remove("active");
     mobileCatalogModal.classList.remove("active");
+	const accordionItems = document.querySelectorAll('.accordion__item')
+	accordionItems.forEach(accordionItem => {
+		if (accordionItem.classList.contains('accordion__item_show')) {
+			accordionItem.classList.remove('accordion__item_show');
+		}
+	});
     document.body.style.overflowY = "scroll";
     //
     mobileCatalogModal2.classList.remove("active");

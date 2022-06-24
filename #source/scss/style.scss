@@ -1307,25 +1307,23 @@ html {
   flex-direction: column;
   background: #fff;
 }
+.accordion__item:not(.accordion__item_show) .accordion__body {
+	display: none;
+  }
 .accordion__content > a {
   position: relative;
   display: block;
   color: #090b0d;
   text-decoration: none;
-  line-height: 60px;
-  height: 60px;
-  padding: 0px 10px 0px 30px;
+  padding: 25px 10px 25px 30px;
   &:last-child {
     border-radius: 0 0 5px 5px;
   }
-  // для центрирования текста по вертикали
-  // использовать размер, отталкиваясь от высоты самого блока
-  line-height: 60px;
 }
-.accordion__body {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height .4s ease-in-out;
+.accordion__item-fix{
+	.accordion__header{
+		padding: 25px 10px 25px 30px;
+	}
 }
 // стилизация страницы карточки товара
 .tree-link__inner {

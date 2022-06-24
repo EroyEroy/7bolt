@@ -1874,25 +1874,23 @@ html {
   background: #fff;
 }
 
+.accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none;
+}
+
 .accordion__content > a {
   position: relative;
   display: block;
   color: #090b0d;
   text-decoration: none;
-  line-height: 60px;
-  height: 60px;
-  padding: 0px 10px 0px 30px;
-  line-height: 60px;
+  padding: 25px 10px 25px 30px;
 }
 .accordion__content > a:last-child {
   border-radius: 0 0 5px 5px;
 }
 
-.accordion__body {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.4s ease-in-out;
-  transition: max-height 0.4s ease-in-out;
+.accordion__item-fix .accordion__header {
+  padding: 25px 10px 25px 30px;
 }
 
 .tree-link__inner {
