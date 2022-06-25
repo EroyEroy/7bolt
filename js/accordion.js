@@ -74,11 +74,8 @@ class ItcAccordion {
 	toggle(el) {
 	  el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
 	}
-  }
-  
+  }  
   
   new ItcAccordion(document.querySelector('.accordion'), {
 	alwaysOpen: true
   });
-
-  
