@@ -2040,10 +2040,10 @@ html {
 }
 
 .product-card__wrapper-img-slide {
-  position: relative;
   width: 431px;
   height: 564px;
   max-height: 100%;
+  position: relative;
 }
 
 .product-card__button-prev {
@@ -2486,29 +2486,20 @@ iframe {
   display: none;
 }
 
-.img-zoom-lens {
-  position: absolute;
-  width: 100px;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.5647058824);
-  pointer-events: none;
-  z-index: 999;
-  border-radius: 0.3125em;
-  display: none;
-}
-
 .img-zoom-result {
-  background-color: #f4f4f4;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: 250%;
-  position: fixed;
-  width: 700px;
-  height: 500px;
-  right: 13.2%;
+  position: absolute;
+  width: inherit;
+  height: inherit;
   z-index: 999;
   background-position: 50% 50%;
   border-radius: 0.3125em;
   display: none;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
 
 .popup {

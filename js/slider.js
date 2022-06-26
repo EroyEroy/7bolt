@@ -66,24 +66,54 @@ function rollSlider() {
 const isMobile = window.matchMedia("only screen and (max-width: 479px)");
 
 if (isMobile.matches) {
-	let touchStartX = 0;
-	let touchEndX = 0;
-	function checkDirection() {
-		if (touchEndX < touchStartX) {
-			scrollSlide(1);
-		}
-		if (touchEndX > touchStartX) {
-			scrollSlide(-1);
-		}
+	// let touchStartX = 0;
+	// let touchEndX = 0;
+	// function checkDirection() {
+	// 	if (touchEndX < touchStartX) {
+	// 		scrollSlide(1);
+	// 	}
+	// 	if (touchEndX > touchStartX) {
+	// 		scrollSlide(-1);
+	// 	}
+	// }
+
+	// sliderLine.addEventListener('touchstart', (e) => {
+	// 	touchStartX = e.changedTouches[0].screenX;
+	// });
+	// sliderLine.addEventListener('touchend', (e) => {
+	// 	touchEndX = e.changedTouches[0].screenX;
+	// 	checkDirection();
+	// });
+	let startX = 0,
+	startY = 0,
+	moveX = 0,
+	moveY = 0;
+	sliderLine.addEventListener('touchstart', touchStart);
+	sliderLine.addEventListener('touchmove', touchMove);
+	sliderLine.addEventListener('touchend', touchEnd);
+	function touchStart(e){
+		startX = e.changedTouches[0].screenX ;
+		// startY = e.changedTouches[0].clientY ;
 	}
 
-	sliderLine.addEventListener('touchstart', (e) => {
-		touchStartX = e.changedTouches[0].screenX;
-	});
-	sliderLine.addEventListener('touchend', (e) => {
-		touchEndX = e.changedTouches[0].screenX;
-		checkDirection();
-	});
+	function touchMove(e){
+		moveX = e.changedTouches[0].screenX ;
+		// moveY = e.changedTouches[0].clientY ;
+	}
+	function touchEnd(){
+		if(startX+100 < moveX){
+			// console.log('right');
+			scrollSlide(-1);
+		}else if(startX-100 > moveX){
+			// console.log('left');
+			scrollSlide(1);
+		}
+		if(startY+100 < moveY){
+			// console.log('down');
+		}else if(startY-100 > moveY){
+			// console.log('up');
+		}
+	}
 }
 
 // swiper

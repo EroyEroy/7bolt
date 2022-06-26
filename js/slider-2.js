@@ -60,23 +60,53 @@ function rollSlider2() {
 const isMobile2 = window.matchMedia("only screen and (max-width: 479px)");
 
 if (isMobile2.matches) {
-	let touchStartX2 = 0;
-	let touchEndX2 = 0;
+	// let touchStartX2 = 0;
+	// let touchEndX2 = 0;
 
-	function checkDirection2() {
-		if (touchEndX2 < touchStartX2) {
-			scrollSlide2(1);
-		}
-		if (touchEndX2 > touchStartX2) {
-			scrollSlide2(-1);
-		}
+	// function checkDirection2() {
+	// 	if (touchEndX2 < touchStartX2) {
+	// 		scrollSlide2(1);
+	// 	}
+	// 	if (touchEndX2 > touchStartX2) {
+	// 		scrollSlide2(-1);
+	// 	}
+	// }
+
+	// sliderLine2.addEventListener('touchstart', (e) => {
+	// 	touchStartX2 = e.changedTouches[0].screenX;
+	// });
+	// sliderLine2.addEventListener('touchend', (e) => {
+	// 	touchEndX2 = e.changedTouches[0].screenX;
+	// 	checkDirection2();
+	// });
+	let startX = 0,
+	startY = 0,
+	moveX = 0,
+	moveY = 0;
+	sliderLine2.addEventListener('touchstart', touchStart);
+	sliderLine2.addEventListener('touchmove', touchMove);
+	sliderLine2.addEventListener('touchend', touchEnd);
+	function touchStart(e){
+		startX = e.changedTouches[0].screenX ;
+		// startY = e.changedTouches[0].clientY ;
 	}
 
-	sliderLine2.addEventListener('touchstart', (e) => {
-		touchStartX2 = e.changedTouches[0].screenX;
-	});
-	sliderLine2.addEventListener('touchend', (e) => {
-		touchEndX2 = e.changedTouches[0].screenX;
-		checkDirection2();
-	});
+	function touchMove(e){
+		moveX = e.changedTouches[0].screenX ;
+		// moveY = e.changedTouches[0].clientY ;
+	}
+	function touchEnd(){
+		if(startX+100 < moveX){
+			// console.log('right');
+			scrollSlide2(-1);
+		}else if(startX-100 > moveX){
+			// console.log('left');
+			scrollSlide2(1);
+		}
+		if(startY+100 < moveY){
+			// console.log('down');
+		}else if(startY-100 > moveY){
+			// console.log('up');
+		}
+	}
 }
