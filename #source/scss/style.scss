@@ -1849,3 +1849,22 @@ iframe {
     width: 100%;
   }
 }
+// для каталога мобильной версии
+.content1,
+.content2{
+	display: none;
+}
+.accordion__content-link,
+.accordion__header,
+.mobile-catalog__categories,
+.mobile-catalog__close,
+.mobile-catalog__back{
+	font-weight: 600;
+	color: #6f6f6f;
+	text-transform: uppercase;
+}
+.mobile-catalog__back,
+.mobile-catalog__close{
+	color: #090b0d;
+}
+// 

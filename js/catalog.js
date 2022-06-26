@@ -22,14 +22,26 @@ window.onclick = function (event) {
       catalog.classList.remove("active");
       document.querySelector(".catalog-icon").classList.remove("open");
     }
-    if (event.target === document.querySelector(".mobile-btn-2")) {
-      mobileCatalogModal.classList.remove("active");
-      mobileCatalogModal2.classList.add("active");
-    }
-    if (event.target === document.querySelector(".mobile-catalog__back")) {
-      mobileCatalogModal.classList.add("active");
-      mobileCatalogModal2.classList.remove("active");
-    }
+	const btnCloseCatalog = document.querySelectorAll(".mobile-catalog__back");
+	btnCloseCatalog.forEach(btn => {
+		if (event.target === btn) {
+			mobileCatalogModal.classList.add("active");
+			//   
+			mobileCatalogModalAll.classList.remove("active");
+		  }
+	});
+	// категория авто
+	if (event.target === document.querySelector(".mobile-btn-1")) {
+		mobileCatalogModalAll.classList.add("active");
+		document.querySelector('.content1').style.display = 'block';
+		document.querySelector('.content2').style.display = 'none';
+	  }
+	// категория мотоциклы
+	if (event.target === document.querySelector(".mobile-btn-2")) {
+		mobileCatalogModalAll.classList.add("active");
+		document.querySelector('.content1').style.display = 'none';
+		document.querySelector('.content2').style.display = 'block';
+	  }
   }
 };
 // кнопка еще
@@ -101,7 +113,7 @@ if (mobileCatalogBtn2 != null) {
 }
 
 // категория мотоциклы
-const mobileCatalogModal2 = document.querySelector("#moto");
+const mobileCatalogModalAll = document.querySelector("#all");
 
 const CatalogLinks = document.querySelectorAll(".accordion__content-link");
 CatalogLinks.forEach((CatalogLink) => {
@@ -116,7 +128,7 @@ CatalogLinks.forEach((CatalogLink) => {
 	});
     document.body.style.overflowY = "scroll";
     //
-    mobileCatalogModal2.classList.remove("active");
+    mobileCatalogModalAll.classList.remove("active");
   });
 });
 
@@ -129,13 +141,15 @@ window.addEventListener("resize", () => {
 	if (window.innerWidth > 479) {
 		mobileCatalogBackground.classList.remove('active');
 		mobileCatalogModal.classList.remove('active');
-		mobileCatalogModal2.classList.remove('active');
+		// 
+		mobileCatalogModalAll.classList.remove('active');
 	}
 });
 if (window.matchMedia("only screen and (min-width: 480px)").matches) {
 	mobileCatalogBackground.classList.remove('active');
 	mobileCatalogModal.classList.remove('active');
-	mobileCatalogModal2.classList.remove('active');
+	// 
+	mobileCatalogModalAll.classList.remove('active');
 }
 // закрытие каталога пк версии в мобильной
 window.addEventListener("resize", () => {
