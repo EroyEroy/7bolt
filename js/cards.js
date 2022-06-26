@@ -1,120 +1,77 @@
-// const loadmore = document.querySelector('.show');
-// let currentItems = 20;
-// loadmore.addEventListener('click', (event) => {
-// 	const elementList = [...document.querySelectorAll('.new-products__card')];
-// 	for (let i = currentItems; i < currentItems + 20; i++) {
-// 		if (elementList[i]) {
-// 			elementList[i].style.display = 'flex';
-// 		}
-// 	}
-// 	currentItems += 20;
-// 	if (currentItems >= elementList.length) {
-// 		event.target.style.display = 'none';
-// 		const saleInner = document.querySelector('.new-products__inner').style.padding = '0 0 85px 0';
-// 	}
-// })
-// const loadmore2 = document.querySelector('.show2');
-// let currentItems2 = 20;
-// loadmore2.addEventListener('click', (event) => {
-// 	const elementList2 = [...document.querySelectorAll('.sale__card')];
-// 	for (let i = currentItems2; i < currentItems2 + 20; i++) {
-// 		if (elementList2[i]) {
-// 			elementList2[i].style.display = 'flex';
-// 		}
-// 	}
-// 	currentItems2 += 20;
-
-// 	if (currentItems2 >= elementList2.length) {
-// 		event.target.style.display = 'none';
-// 		const saleInner2 = document.querySelector('.sale__inner').style.padding = '0 0 85px 0';
-// 	}
-// })
-
 const isNoMobile = window.matchMedia("only screen and (min-width: 480px)");
 if (isNoMobile.matches) {
-  document.addEventListener("DOMContentLoaded", function () {
-    let box = document.querySelectorAll(".new-products__card");
-    const btn = document.querySelector(".show");
-    for (let i = 10; i < box.length; i++) {
-      box[i].classList.add("hide");
-    }
-    let countD = 10;
-    btn.addEventListener("click", function () {
-      let box = document.querySelectorAll(".new-products__card");
-      countD += 20;
-      if (countD <= box.length) {
-        for (let i = 0; i < countD; i++) {
-          box[i].classList.add("show");
-        }
-      }
-      if ((countD = box.length)) {
-        btn.style.display = "none";
-		const fullCategoriesBtns2 = document.querySelector('.button-show-link').style.display = 'block';
-		// document.querySelector('.new-products__inner').style.padding = '0 0 85px 0';
-      }
-    });
-    let box2 = document.querySelectorAll(".sale__card");
-    const btn2 = document.querySelector(".show2");
-    for (let i = 10; i < box2.length; i++) {
-      box2[i].classList.add("hide");
-    }
-    let countD2 = 10;
-    btn2.addEventListener("click", function () {
-      let box2 = document.querySelectorAll(".sale__card");
-      countD2 += 20;
-      if (countD2 <= box2.length) {
-        for (let i = 0; i < countD2; i++) {
-          box2[i].classList.add("show");
-        }
-      }
-      if ((countD2 = box2.length)) {
-        btn2.style.display = "none";
-		// document.querySelector('.sale__inner').style.padding = '0 0 85px 0';
-		const fullCategoriesBtns2 = document.querySelector('.button-show-link-2').style.display = 'block';
-      }
-    });
-  });
+	newCardsShow();
+	saleCardsShow();
 }
-
-//   if ($(window).width() > 479) {
-//     $(document).ready(function () {
-//       var list = $(".new-products__card");
-//       var numToShow = 20; //сколько показывать элементов
-//       var button = $(".show");
-//       var numInList = list.length;
-//       list.hide();
-//       if (numInList > numToShow) {
-//         button.show();
-//       }
-//       list.slice(0, 10).show();
-//       button.click(function () {
-//         var showing = list.filter(":visible").length;
-//         list.slice(showing - 1, showing + numToShow).fadeIn();
-//         var nowShowing = list.filter(":visible").length;
-//         if (nowShowing >= numInList) {
-//           button.hide();
-//           $(".new-products__inner").css("padding", "0 0 85px 0");
-//         }
-//       });
-//     });
-//     $(document).ready(function () {
-//       var list = $(".sale__card");
-//       var numToShow = 20; //сколько показывать элементов
-//       var button = $(".show2");
-//       var numInList = list.length;
-//       list.hide();
-//       if (numInList > numToShow) {
-//         button.show();
-//       }
-//       list.slice(0, 10).show();
-//       button.click(function () {
-//         var showing = list.filter(":visible").length;
-//         list.slice(showing - 1, showing + numToShow).fadeIn();
-//         var nowShowing = list.filter(":visible").length;
-//         if (nowShowing >= numInList) {
-//           button.hide();
-//           $(".sale__inner").css("padding", "0 0 85px 0");
-//         }
-//       });
-//     });
-//   }
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 480) {
+		newCardsShow();
+		saleCardsShow();
+	}
+}, true);
+// для первой секции
+function newCardsShow() {
+	const showMore = document.querySelector(".show");
+	const productsLength = document.querySelectorAll(
+	  ".new-products__card"
+	).length;
+	let items = 10;
+	// скрытие всех карточек, кроме 10
+	const hideClass = document.querySelectorAll('.new-products__card');
+	for (i = items; i < hideClass.length; i++) {
+	  hideClass[i].classList.add('hide');
+	}
+	// событие клика на кнопку показать еще
+	showMore.addEventListener("click", () => {
+	  items += 20;
+	  const array = Array.from(document.querySelector(".new-products__cards").children);
+	  const visItems = array.slice(0, items);
+  
+	  // карточки открываются
+	  visItems.forEach((el) => {
+		  el.classList.add("show");
+		  // проверка, если карточек больше 20
+		  if (el.length !== 20) {
+			  showMore.innerHTML = 'Показать еще';
+		  }
+	  });
+	  // проверка, если все карточки открыты, то появляется кнопка-ссылка
+	  if (visItems.length === productsLength) {
+		showMore.style.display = "none";
+		const fullCategoriesBtns = document.querySelector('.button-show-link').style.display = 'block';
+	  }
+	});
+}
+// для второй секции
+function saleCardsShow() {
+	const showMore2 = document.querySelector(".show2");
+	const productsLength2 = document.querySelectorAll(
+	  ".sale__card"
+	).length;
+	let items2 = 10;
+	// скрытие всех карточек, кроме 10
+	const hideClass2 = document.querySelectorAll('.sale__card');
+	for (i = items2; i < hideClass2.length; i++) {
+	  hideClass2[i].classList.add('hide');
+	}
+	// событие клика на кнопку показать еще
+	showMore2.addEventListener("click", () => {
+	  items2 += 20;
+	  const array2 = Array.from(document.querySelector(".sale__cards").children);
+	  const visItems2 = array2.slice(0, items2);
+  
+	  // карточки открываются
+	  visItems2.forEach((el) => {
+		  el.classList.add("show");
+		  // проверка, если карточек больше 20
+		  if (el.length !== 20) {
+			  showMore2.innerHTML = 'Показать еще';
+		  }
+	  });
+	  // проверка, если все карточки открыты, то появляется кнопка-ссылка
+	  if (visItems2.length === productsLength2) {
+		showMore2.style.display = "none";
+		const fullCategoriesBtns2 = document.querySelector('.button-show-link-2').style.display = 'block';
+	  }
+	});
+}

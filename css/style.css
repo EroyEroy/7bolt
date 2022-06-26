@@ -100,11 +100,11 @@ input[type=number]:focus {
 }
 
 @font-face {
-  font-family: Helvetica;
+  font-family: "Helvetica";
   src: url(../fonts/Helvetica/helvetica_cyr_boldoblique.ttf);
 }
 body {
-  font-family: Helvetica;
+  font-family: "Helvetica";
   font-weight: 400;
 }
 
@@ -590,6 +590,7 @@ html {
   height: 12px;
   position: relative;
   margin-right: 5px;
+  pointer-events: none;
 }
 
 .catalog-icon__line {
