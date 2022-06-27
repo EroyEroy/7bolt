@@ -8,6 +8,7 @@ btnOpenCatalog.onclick = () => {
   catalog.classList.toggle("active");
   document.querySelector(".catalog-icon").classList.toggle("open");
 };
+const btnCloseCatalog = document.querySelector(".mobile-catalog__back");
 window.onclick = function (event) {
   if (
     event.target !== btnOpenCatalog &&
@@ -22,27 +23,25 @@ window.onclick = function (event) {
       catalog.classList.remove("active");
       document.querySelector(".catalog-icon").classList.remove("open");
     }
-	const btnCloseCatalog = document.querySelectorAll(".mobile-catalog__back");
-	btnCloseCatalog.forEach(btn => {
-		if (event.target === btn) {
-			mobileCatalogModal.classList.add("active");
-			//   
-			mobileCatalogModalAll.classList.remove("active");
-		  }
-	});
-	// замена слова в верхней части
-	btnCloseCatalog.forEach(btn => {
-		btn.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + event.target.innerText;
-	});
+	if (event.target === btnCloseCatalog) {
+		mobileCatalogModal.classList.add("active");
+		//   
+		mobileCatalogModalAll.classList.remove("active");
+	}
+	// сами кнопки в мобильном каталоге
+	const mobileBtn1 = document.querySelector('.mobile-btn-1'),
+	mobileBtn2 = document.querySelector('.mobile-btn-2');
 	// категория авто
-	if (event.target === document.querySelector(".mobile-btn-1")) {
+	if (event.target === mobileBtn1) {
 		mobileCatalogModalAll.classList.add("active");
+		btnCloseCatalog.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + mobileBtn1.innerText;
 		document.querySelector('.content1').style.display = 'block';
 		document.querySelector('.content2').style.display = 'none';
 	  }
 	// категория мотоциклы
-	if (event.target === document.querySelector(".mobile-btn-2")) {
+	if (event.target === mobileBtn2) {
 		mobileCatalogModalAll.classList.add("active");
+		btnCloseCatalog.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + mobileBtn2.innerText;
 		document.querySelector('.content1').style.display = 'none';
 		document.querySelector('.content2').style.display = 'block';
 	  }
