@@ -30,22 +30,18 @@ window.onclick = function (event) {
 			mobileCatalogModalAll.classList.remove("active");
 		  }
 	});
+	// замена слова в верхней части
+	btnCloseCatalog.forEach(btn => {
+		btn.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + event.target.innerText;
+	});
 	// категория авто
 	if (event.target === document.querySelector(".mobile-btn-1")) {
-		// замена слова в верхней части
-		btnCloseCatalog.forEach(btn => {
-			btn.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + document.querySelector('.mobile-btn-1').innerText;
-		});
 		mobileCatalogModalAll.classList.add("active");
 		document.querySelector('.content1').style.display = 'block';
 		document.querySelector('.content2').style.display = 'none';
 	  }
 	// категория мотоциклы
 	if (event.target === document.querySelector(".mobile-btn-2")) {
-		// замена слова в верхней части
-		btnCloseCatalog.forEach(btn => {
-			btn.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + document.querySelector('.mobile-btn-2').innerText;
-		});
 		mobileCatalogModalAll.classList.add("active");
 		document.querySelector('.content1').style.display = 'none';
 		document.querySelector('.content2').style.display = 'block';
