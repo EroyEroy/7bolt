@@ -135,20 +135,18 @@ window.addEventListener("touchmove", (e) => {
 	})
     // mobileCatalogBackground.style.transform = "translate(0px, 0px)";
   } else if (startX > moveX + 50) {
-    console.log(startX);
 	catalogBackground.forEach(item => {
 		item.style.transform = "translate(-100px, 0px)";
 	})
   }
 });
-window.addEventListener("touchend", (e) => {
-	e.preventDefault();
+window.addEventListener("touchend", () => {
   if (startX + 100 < moveX) {
     // console.log('right');
     console.log(1);
-  } else if (startX > moveX-50) {
+  } else if (startX-200 > moveX) {
     // console.log('left');
-    console.log(-1);
+    console.log(startX, moveX);
 	catalogBackground.forEach(item => {
 		item.classList.remove("active");
 		mobileCatalogModal.classList.remove("active");
