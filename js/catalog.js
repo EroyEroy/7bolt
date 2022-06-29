@@ -23,28 +23,32 @@ window.onclick = function (event) {
       catalog.classList.remove("active");
       document.querySelector(".catalog-icon").classList.remove("open");
     }
-	if (event.target === btnCloseCatalog) {
-		mobileCatalogModal.classList.add("active");
-		//   
-		mobileCatalogModalAll.classList.remove("active");
-	}
-	// сами кнопки в мобильном каталоге
-	const mobileBtn1 = document.querySelector('.mobile-btn-1'),
-	mobileBtn2 = document.querySelector('.mobile-btn-2');
-	// категория авто
-	if (event.target === mobileBtn1) {
-		mobileCatalogModalAll.classList.add("active");
-		btnCloseCatalog.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + mobileBtn1.innerText;
-		document.querySelector('.content1').style.display = 'block';
-		document.querySelector('.content2').style.display = 'none';
-	  }
-	// категория мотоциклы
-	if (event.target === mobileBtn2) {
-		mobileCatalogModalAll.classList.add("active");
-		btnCloseCatalog.innerHTML = `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` + mobileBtn2.innerText;
-		document.querySelector('.content1').style.display = 'none';
-		document.querySelector('.content2').style.display = 'block';
-	  }
+    if (event.target === btnCloseCatalog) {
+      mobileCatalogModal.classList.add("active");
+      //
+      mobileCatalogModalAll.classList.remove("active");
+    }
+    // сами кнопки в мобильном каталоге
+    const mobileBtn1 = document.querySelector(".mobile-btn-1"),
+      mobileBtn2 = document.querySelector(".mobile-btn-2");
+    // категория авто
+    if (event.target === mobileBtn1) {
+      mobileCatalogModalAll.classList.add("active");
+      btnCloseCatalog.innerHTML =
+        `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` +
+        mobileBtn1.innerText;
+      document.querySelector(".content1").style.display = "block";
+      document.querySelector(".content2").style.display = "none";
+    }
+    // категория мотоциклы
+    if (event.target === mobileBtn2) {
+      mobileCatalogModalAll.classList.add("active");
+      btnCloseCatalog.innerHTML =
+        `<img class="mobile-catalog__close-img" src="img/icons/arrow_menu.svg" alt="arrow back">` +
+        mobileBtn2.innerText;
+      document.querySelector(".content1").style.display = "none";
+      document.querySelector(".content2").style.display = "block";
+    }
   }
 };
 // кнопка еще
@@ -114,7 +118,51 @@ if (mobileCatalogBtn2 != null) {
     document.body.style.overflowY = "hidden";
   });
 }
-
+// закрытие по свайпу
+let startX = 0,
+  startY = 0,
+  moveX = 0,
+  moveY = 0;
+  const catalogBackground = document.querySelectorAll('.mobile-catalog__background');
+window.addEventListener("touchstart", (e) => {
+  startX = e.changedTouches[0].screenX;
+});
+window.addEventListener("touchmove", (e) => {
+  moveX = e.changedTouches[0].screenX;
+  if (startX < moveX) {
+	catalogBackground.forEach(item => {
+		item.style.transform = "translate(0px, 0px)";
+	})
+    // mobileCatalogBackground.style.transform = "translate(0px, 0px)";
+  } else if (startX > moveX + 50) {
+    console.log(startX);
+	catalogBackground.forEach(item => {
+		item.style.transform = "translate(-100px, 0px)";
+	})
+  }
+});
+window.addEventListener("touchend", () => {
+  if (startX + 100 < moveX) {
+    // console.log('right');
+    console.log(1);
+  } else if (startX > moveX + 350) {
+    // console.log('left');
+    console.log(-1);
+	catalogBackground.forEach(item => {
+		item.classList.remove("active");
+		mobileCatalogModal.classList.remove("active");
+		document.body.style.overflowY = "scroll";
+	})
+  }
+  if (startY + 100 < moveY) {
+    // console.log('down');
+  } else if (startY - 100 > moveY) {
+    // console.log('up');
+  }
+  catalogBackground.forEach(item => {
+	item.style.transform = "none";
+})
+});
 // категория мотоциклы
 const mobileCatalogModalAll = document.querySelector("#all");
 
@@ -123,12 +171,12 @@ CatalogLinks.forEach((CatalogLink) => {
   CatalogLink.addEventListener("click", () => {
     mobileCatalogBackground.classList.remove("active");
     mobileCatalogModal.classList.remove("active");
-	const accordionItems = document.querySelectorAll('.accordion__item')
-	accordionItems.forEach(accordionItem => {
-		if (accordionItem.classList.contains('accordion__item_show')) {
-			accordionItem.classList.remove('accordion__item_show');
-		}
-	});
+    const accordionItems = document.querySelectorAll(".accordion__item");
+    accordionItems.forEach((accordionItem) => {
+      if (accordionItem.classList.contains("accordion__item_show")) {
+        accordionItem.classList.remove("accordion__item_show");
+      }
+    });
     document.body.style.overflowY = "scroll";
     //
     mobileCatalogModalAll.classList.remove("active");
@@ -141,31 +189,31 @@ footerInner.style.paddingBottom = bottomMenu.offsetHeight + "px";
 
 // закрытие мобильного каталога на пк
 window.addEventListener("resize", () => {
-	if (window.innerWidth > 479) {
-		mobileCatalogBackground.classList.remove('active');
-		mobileCatalogModal.classList.remove('active');
-		// 
-		mobileCatalogModalAll.classList.remove('active');
-	}
+  if (window.innerWidth > 479) {
+    mobileCatalogBackground.classList.remove("active");
+    mobileCatalogModal.classList.remove("active");
+    //
+    mobileCatalogModalAll.classList.remove("active");
+  }
 });
 if (window.matchMedia("only screen and (min-width: 480px)").matches) {
-	mobileCatalogBackground.classList.remove('active');
-	mobileCatalogModal.classList.remove('active');
-	// 
-	mobileCatalogModalAll.classList.remove('active');
+  mobileCatalogBackground.classList.remove("active");
+  mobileCatalogModal.classList.remove("active");
+  //
+  mobileCatalogModalAll.classList.remove("active");
 }
 // закрытие каталога пк версии в мобильной
 window.addEventListener("resize", () => {
-	if (window.innerWidth < 480) {
-		catalog.classList.remove('active');
-		catalogTransition.classList.remove('active');
-		document.querySelector(".catalog-icon").classList.remove("open");
-	}
+  if (window.innerWidth < 480) {
+    catalog.classList.remove("active");
+    catalogTransition.classList.remove("active");
+    document.querySelector(".catalog-icon").classList.remove("open");
+  }
 });
 if (window.matchMedia("only screen and (max-width: 479px)").matches) {
-	catalog.classList.remove('active');
-	catalogTransition.classList.remove('active');
-	document.querySelector(".catalog-icon").classList.remove("open");
+  catalog.classList.remove("active");
+  catalogTransition.classList.remove("active");
+  document.querySelector(".catalog-icon").classList.remove("open");
 }
 
 // переключение пунктов в каталоге
