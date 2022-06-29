@@ -141,11 +141,12 @@ window.addEventListener("touchmove", (e) => {
 	})
   }
 });
-window.addEventListener("touchend", () => {
+window.addEventListener("touchend", (e) => {
+	e.preventDefault();
   if (startX + 100 < moveX) {
     // console.log('right');
     console.log(1);
-  } else if (startX > moveX-150) {
+  } else if (startX > moveX-50) {
     // console.log('left');
     console.log(-1);
 	catalogBackground.forEach(item => {
