@@ -145,7 +145,7 @@ window.addEventListener("touchend", () => {
   if (startX + 100 < moveX) {
     // console.log('right');
     console.log(1);
-  } else if (startX > moveX + 350) {
+  } else if (startX > moveX + 200) {
     // console.log('left');
     console.log(-1);
 	catalogBackground.forEach(item => {
