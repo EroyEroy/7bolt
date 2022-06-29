@@ -141,7 +141,7 @@ window.addEventListener("touchmove", (e) => {
   }
 });
 window.addEventListener("touchend", () => {
-  if (startX < moveX-1000) {
+  if (startX+200 < moveX) {
 	console.log(startX, moveX);
     // console.log('right');
 	mobileCatalogBtn.click();
