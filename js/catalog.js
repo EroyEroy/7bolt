@@ -118,51 +118,6 @@ if (mobileCatalogBtn2 != null) {
     document.body.style.overflowY = "hidden";
   });
 }
-// закрытие по свайпу
-let startX = 0,
-  startY = 0,
-  moveX = 0,
-  moveY = 0;
-  const catalogBackground = document.querySelectorAll('.mobile-catalog__background');
-window.addEventListener("touchstart", (e) => {
-  startX = e.changedTouches[0].screenX;
-});
-window.addEventListener("touchmove", (e) => {
-  moveX = e.changedTouches[0].screenX;
-  if (startX < moveX) {
-	catalogBackground.forEach(item => {
-		item.style.transform = "translate(0px, 0px)";
-	})
-    // mobileCatalogBackground.style.transform = "translate(0px, 0px)";
-  } else if (startX > moveX + 50) {
-	catalogBackground.forEach(item => {
-		item.style.transform = "translate(-100px, 0px)";
-	})
-  }
-});
-window.addEventListener("touchend", () => {
-  if (startX+200 < moveX) {
-	console.log(startX, moveX);
-    // console.log('right');
-	mobileCatalogBtn.click();
-  } else if (startX-200 > moveX) {
-    // console.log('left');
-    console.log(startX, moveX);
-	catalogBackground.forEach(item => {
-		item.classList.remove("active");
-		mobileCatalogModal.classList.remove("active");
-		document.body.style.overflowY = "scroll";
-	})
-  }
-  if (startY + 100 < moveY) {
-    // console.log('down');
-  } else if (startY - 100 > moveY) {
-    // console.log('up');
-  }
-  catalogBackground.forEach(item => {
-	item.style.transform = "none";
-})
-});
 // категория мотоциклы
 const mobileCatalogModalAll = document.querySelector("#all");
 
@@ -215,7 +170,6 @@ if (window.matchMedia("only screen and (max-width: 479px)").matches) {
   catalogTransition.classList.remove("active");
   document.querySelector(".catalog-icon").classList.remove("open");
 }
-
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
