@@ -195,6 +195,12 @@
       height: 50%;
     }
   }
+  .catalog-2-header {
+	display: flex;
+  }
+  .catalog{
+	display: none;
+  }
 }
 @media (max-width: 900px) {
   .modal__wrapper {
@@ -366,9 +372,6 @@
   }
   .catalog {
     display: none;
-  }
-  .catalog-2 {
-    display: block;
   }
   .header__btn-search {
     display: none;
@@ -668,6 +671,9 @@
   }
   .popup-slider__btn {
     display: none;
+  }
+  .catalog-2-header{
+	display: none;
   }
 }
 @media (max-width: 360px) {

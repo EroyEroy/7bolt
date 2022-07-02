@@ -90,7 +90,7 @@ categoryGroupList.forEach((item) => {
   }
 });
 // мобильная версия каталога
-const mobileCatalogBtn = document.querySelector(".catalog-2"),
+const mobileCatalogBtn = document.querySelectorAll(".catalog-2"),
   mobileCatalogBtn2 = document.querySelector(".catalog-3"),
   mobileCatalogBtnClose = document.querySelector(".mobile-catalog__close"),
   mobileCatalogBackground = document.querySelector(
@@ -100,15 +100,20 @@ const mobileCatalogBtn = document.querySelector(".catalog-2"),
   mobileCategoriesBtn = document.querySelectorAll(
     ".mobile-catalog__categories"
   );
-mobileCatalogBtn.addEventListener("click", () => {
-  mobileCatalogBackground.classList.add("active");
-  mobileCatalogModal.classList.add("active");
-  document.body.style.overflowY = "hidden";
+  mobileCatalogBtn.forEach(btn => {
+	btn.addEventListener("click", () => {
+		mobileCatalogBackground.classList.add("active");
+		mobileCatalogModal.classList.add("active");
+		document.body.style.overflowY = "hidden";
+		document.querySelector(".catalog-icon").classList.toggle("open");
+		document.querySelector(".catalog-icon-2").classList.toggle("open");
+	  });
 });
 mobileCatalogBtnClose.addEventListener("click", () => {
   mobileCatalogBackground.classList.remove("active");
   mobileCatalogModal.classList.remove("active");
   document.body.style.overflowY = "scroll";
+  document.querySelector(".catalog-icon-2").classList.remove("open");
 });
 // проверка кнопки на главной станицы категории
 if (mobileCatalogBtn2 != null) {
@@ -126,6 +131,7 @@ CatalogLinks.forEach((CatalogLink) => {
   CatalogLink.addEventListener("click", () => {
     mobileCatalogBackground.classList.remove("active");
     mobileCatalogModal.classList.remove("active");
+	document.querySelector(".catalog-icon-2").classList.remove("open");
     const accordionItems = document.querySelectorAll(".accordion__item");
     accordionItems.forEach((accordionItem) => {
       if (accordionItem.classList.contains("accordion__item_show")) {
@@ -144,14 +150,14 @@ footerInner.style.paddingBottom = bottomMenu.offsetHeight + "px";
 
 // закрытие мобильного каталога на пк
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 479) {
+  if (window.innerWidth > 959) {
     mobileCatalogBackground.classList.remove("active");
     mobileCatalogModal.classList.remove("active");
     //
     mobileCatalogModalAll.classList.remove("active");
   }
 });
-if (window.matchMedia("only screen and (min-width: 480px)").matches) {
+if (window.matchMedia("only screen and (min-width: 960px)").matches) {
   mobileCatalogBackground.classList.remove("active");
   mobileCatalogModal.classList.remove("active");
   //
@@ -159,16 +165,18 @@ if (window.matchMedia("only screen and (min-width: 480px)").matches) {
 }
 // закрытие каталога пк версии в мобильной
 window.addEventListener("resize", () => {
-  if (window.innerWidth < 480) {
+  if (window.innerWidth < 960) {
     catalog.classList.remove("active");
     catalogTransition.classList.remove("active");
     document.querySelector(".catalog-icon").classList.remove("open");
+	document.querySelector(".catalog-icon-2").classList.remove("open");
   }
 });
-if (window.matchMedia("only screen and (max-width: 479px)").matches) {
+if (window.matchMedia("only screen and (max-width: 959px)").matches) {
   catalog.classList.remove("active");
   catalogTransition.classList.remove("active");
   document.querySelector(".catalog-icon").classList.remove("open");
+  document.querySelector(".catalog-icon-2").classList.remove("open");
 }
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),

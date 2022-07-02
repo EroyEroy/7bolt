@@ -430,10 +430,13 @@ const mobileCatalogBtn = document.querySelector(".catalog-2"),
   mobileCategoriesBtn = document.querySelectorAll(
     ".mobile-catalog__categories"
   );
-mobileCatalogBtn.addEventListener("click", () => {
-  mobileCatalogBackground.classList.add("active");
-  mobileCatalogModal.classList.add("active");
-  document.body.style.overflowY = "hidden";
+mobileCatalogBtn.forEach(btn => {
+	btn.addEventListener("click", () => {
+		mobileCatalogBackground.classList.add("active");
+		mobileCatalogModal.classList.add("active");
+		document.body.style.overflowY = "hidden";
+		document.querySelector(".catalog-icon-2").classList.toggle("open");
+	  });
 });
 mobileCatalogBtnClose.addEventListener("click", () => {
   mobileCatalogBackground.classList.remove("active");
@@ -474,32 +477,32 @@ footerInner.style.paddingBottom = bottomMenu.offsetHeight + "px";
 
 // закрытие мобильного каталога на пк
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 479) {
+  if (window.innerWidth > 959) {
     mobileCatalogBackground.classList.remove("active");
     mobileCatalogModal.classList.remove("active");
     //
     mobileCatalogModalAll.classList.remove("active");
   }
 });
-if (window.matchMedia("only screen and (min-width: 480px)").matches) {
+if (window.matchMedia("only screen and (min-width: 959px)").matches) {
   mobileCatalogBackground.classList.remove("active");
   mobileCatalogModal.classList.remove("active");
   //
   mobileCatalogModalAll.classList.remove("active");
 }
 // закрытие каталога пк версии в мобильной
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 480) {
-    catalog.classList.remove("active");
-    catalogTransition.classList.remove("active");
-    document.querySelector(".catalog-icon").classList.remove("open");
-  }
-});
-if (window.matchMedia("only screen and (max-width: 479px)").matches) {
-  catalog.classList.remove("active");
-  catalogTransition.classList.remove("active");
-  document.querySelector(".catalog-icon").classList.remove("open");
-}
+// window.addEventListener("resize", () => {
+//   if (window.innerWidth < 959) {
+//     catalog.classList.remove("active");
+//     catalogTransition.classList.remove("active");
+//     document.querySelector(".catalog-icon").classList.remove("open");
+//   }
+// });
+// if (window.matchMedia("only screen and (max-width: 959px)").matches) {
+//   catalog.classList.remove("active");
+//   catalogTransition.classList.remove("active");
+//   document.querySelector(".catalog-icon").classList.remove("open");
+// }
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
