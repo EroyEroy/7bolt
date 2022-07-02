@@ -66,24 +66,6 @@ function rollSlider() {
 const isMobile = window.matchMedia("only screen and (max-width: 479px)");
 
 if (isMobile.matches) {
-	// let touchStartX = 0;
-	// let touchEndX = 0;
-	// function checkDirection() {
-	// 	if (touchEndX < touchStartX) {
-	// 		scrollSlide(1);
-	// 	}
-	// 	if (touchEndX > touchStartX) {
-	// 		scrollSlide(-1);
-	// 	}
-	// }
-
-	// sliderLine.addEventListener('touchstart', (e) => {
-	// 	touchStartX = e.changedTouches[0].screenX;
-	// });
-	// sliderLine.addEventListener('touchend', (e) => {
-	// 	touchEndX = e.changedTouches[0].screenX;
-	// 	checkDirection();
-	// });
 	let startX = 0,
 	startY = 0,
 	moveX = 0,
