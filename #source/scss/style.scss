@@ -1047,12 +1047,15 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  img {
-    width: 100%;
-  }
   &:hover {
     filter: brightness(0.97);
   }
+}
+.scroll__img{
+	width: 33px;
+	height: 17px;
+	max-width: 100%;
+	max-height: 100%;
 }
 .scroll_active {
   bottom: 10px;
@@ -1267,6 +1270,12 @@ html {
 .mobile-catalog__background.active {
   left: 0;
   visibility: visible;
+}
+.mobile-catalog__categories-right{
+	width: 9px;
+	height: 13px;
+	max-width: 100%;
+	max-height: 100%;
 }
 .mobile-catalog__modal {
   left: -100%;
