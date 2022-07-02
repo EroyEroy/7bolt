@@ -832,8 +832,9 @@ html {
   z-index: 1;
 }
 .favorites-img{
-	max-width: 26px;
+	width: 26px;
 	height: auto;
+	max-width: 100%;
 }
 .sale__card-link {
   display: flex;
