@@ -3,11 +3,63 @@
 @import "math.scss";
 // подключение шрифта
 @font-face {
-  font-family: "Helvetica";
-  src: url(../fonts/Helvetica/helvetica_cyr_boldoblique.ttf);
+  font-family: "Helvetica Thin";
+  src: url(../fonts/Helvetica/Helvetica-Thin.woff);
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Extra Light";
+  src: url(../fonts/Helvetica/Helvetica-Ultra-Light.woff);
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Light";
+  src: url(../fonts/Helvetica/Helvetica-Light.woff);
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Regular";
+  src: url(../fonts/Helvetica/Helvetica-Regular.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Medium";
+  src: url(../fonts/Helvetica/Helvetica-Medium.woff);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url(../fonts/Helvetica/Helvetica-Bold.woff);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Extra Bold";
+  src: url(../fonts/Helvetica/Helvetica-Extra-Bold.woff);
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Black";
+  src: url(../fonts/Helvetica/Helvetica-Black.woff);
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
 }
 body {
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-weight: 400;
 }
 // настройка для прижатия footer к низу страницы
@@ -1185,7 +1237,7 @@ html {
   position: fixed;
   top: 0;
   z-index: 9990;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   // анимация
   left: -100%;
   visibility: hidden;
@@ -1310,8 +1362,8 @@ html {
   background: #fff;
 }
 .accordion__item:not(.accordion__item_show) .accordion__body {
-	display: none;
-  }
+  display: none;
+}
 .accordion__content > a {
   position: relative;
   display: block;
@@ -1322,10 +1374,10 @@ html {
     border-radius: 0 0 5px 5px;
   }
 }
-.accordion__item-fix{
-	.accordion__header{
-		padding: 25px 10px 25px 30px;
-	}
+.accordion__item-fix {
+  .accordion__header {
+    padding: 25px 10px 25px 30px;
+  }
 }
 // стилизация страницы карточки товара
 .tree-link__inner {
@@ -1851,20 +1903,20 @@ iframe {
 }
 // для каталога мобильной версии
 .content1,
-.content2{
-	display: none;
+.content2 {
+  display: none;
 }
 .accordion__content-link,
 .accordion__header,
 .mobile-catalog__categories,
 .mobile-catalog__close,
-.mobile-catalog__back{
-	font-weight: 600;
-	color: #6f6f6f;
-	text-transform: uppercase;
+.mobile-catalog__back {
+  font-weight: 600;
+  color: #6f6f6f;
+  text-transform: uppercase;
 }
 .mobile-catalog__back,
-.mobile-catalog__close{
-	color: #090b0d;
+.mobile-catalog__close {
+  color: #090b0d;
 }
-// 
+//
