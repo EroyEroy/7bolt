@@ -30,7 +30,7 @@ initCard();
 window.addEventListener("resize", () => {
 	initCard();
 	// проверка разрешения для зума картинки в слайдере
-	if (window.innerWidth >= 1277) {
+	if (window.innerWidth >= 1024) {
 		zoomImgSlider();
 	}
 });
@@ -276,7 +276,7 @@ function zoomImgSlider() {
 	});
 }
 // проверка разрешения для зума картинки в слайдере
-if (window.matchMedia("only screen and (min-width: 1277px)").matches) {
+if (window.matchMedia("only screen and (min-width: 1024px)").matches) {
 	zoomImgSlider();
 } else {
 	// let touchStartCardX = 0;
@@ -351,7 +351,7 @@ popupClose.addEventListener('click', () => {
 	popupClose.style.display = 'none';
 	moveSlideCard();
 	initCard();
-	if (window.matchMedia("only screen and (min-width: 1277px)").matches) {
+	if (window.matchMedia("only screen and (min-width: 1024px)").matches) {
 		zoomContainer.style.backgroundImage = `url("")`;
 		zoomContainer.style.opacity = '1';
 		zoomContainer.style.zIndex = '9999';
@@ -365,7 +365,7 @@ document.addEventListener('keydown', (event) => {
 		popupClose.style.display = 'none';
 		moveSlideCard();
 		initCard();
-		if (window.matchMedia("only screen and (min-width: 1277px)").matches) {
+		if (window.matchMedia("only screen and (min-width: 1024px)").matches) {
 			zoomContainer.style.backgroundImage = `url("")`;
 			zoomContainer.style.opacity = '1';
 			zoomContainer.style.zIndex = '9999';
