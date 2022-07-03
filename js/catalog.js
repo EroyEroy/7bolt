@@ -53,9 +53,27 @@ window.onclick = function (event) {
 };
 // кнопка еще
 const still = document.querySelector(".main__btn");
-still.onclick = () => {
-  btnOpenCatalog.onclick();
-};
+if (window.matchMedia("only screen and (min-width: 960px)").matches) {
+  still.onclick = () => {
+    btnOpenCatalog.onclick();
+  };
+}
+if (window.matchMedia("only screen and (max-width: 959px)").matches) {
+  still.onclick = () => {
+    document.querySelector(".catalog-2").click();
+  };
+}
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 960) {
+    still.onclick = () => {
+      btnOpenCatalog.onclick();
+    };
+  } else if (window.innerWidth <= 959) {
+    still.onclick = () => {
+      document.querySelector(".catalog-2").click();
+    };
+  }
+});
 items.forEach((item) => {
   item.addEventListener("click", () => {
     if (
