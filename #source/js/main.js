@@ -1,3 +1,4 @@
+// первый слайдер
 const images = document.querySelectorAll(".slider .slider-line img");
 const sliderLine = document.querySelector(".slider .slider-line");
 let dots = document.querySelectorAll(".dots-item"),
@@ -6,7 +7,6 @@ let count = 0;
 let width;
 
 function init() {
-  //console.log('resize');
   width = document.querySelector(".slider").offsetWidth;
   sliderLine.style.width = width * images.length + "px";
   images.forEach((item) => {
@@ -16,9 +16,9 @@ function init() {
   rollSlider();
 }
 var timer = 0;
-makeTimer(); //Создаем интервал
+makeTimer();
 function makeTimer() {
-  clearInterval(timer); //Очистим интервал, это позволит прервать его работу и отменить перелистывание
+  clearInterval(timer);
   timer = setInterval(function () {
     scrollSlide(1);
     rollSlider(count);
@@ -66,73 +66,74 @@ function rollSlider() {
 const isMobile = window.matchMedia("only screen and (max-width: 479px)");
 
 if (isMobile.matches) {
-	let startX = 0,
-	startY = 0,
-	moveX = 0,
-	moveY = 0;
-	sliderLine.addEventListener('touchstart', touchStart);
-	sliderLine.addEventListener('touchmove', touchMove);
-	sliderLine.addEventListener('touchend', touchEnd);
-	function touchStart(e){
-		startX = e.changedTouches[0].screenX ;
-		// startY = e.changedTouches[0].clientY ;
-	}
+  let startX = 0,
+    moveX = 0;
+  sliderLine.addEventListener("touchstart", touchStart);
+  sliderLine.addEventListener("touchmove", touchMove);
+  sliderLine.addEventListener("touchend", touchEnd);
+  function touchStart(e) {
+    startX = e.changedTouches[0].screenX;
+  }
 
-	function touchMove(e){
-		moveX = e.changedTouches[0].screenX ;
-		// moveY = e.changedTouches[0].clientY ;
-	}
-	function touchEnd(){
-		if(startX+100 < moveX){
-			// console.log('right');
-			scrollSlide(-1);
-		}else if(startX-100 > moveX){
-			// console.log('left');
-			scrollSlide(1);
-		}
-		if(startY+100 < moveY){
-			// console.log('down');
-		}else if(startY-100 > moveY){
-			// console.log('up');
-		}
-	}
+  function touchMove(e) {
+    moveX = e.changedTouches[0].screenX;
+  }
+  function touchEnd() {
+    if (startX + 100 < moveX) {
+      // console.log('right');
+      scrollSlide(-1);
+    } else if (startX - 100 > moveX) {
+      // console.log('left');
+      scrollSlide(1);
+    }
+  }
 }
+// ********************
+// ********************
+// ********************
+// ********************
+// ********************
 // второй слайдер
-const images2 = document.querySelectorAll('.slider2 .slider-line2 img');
-const sliderLine2 = document.querySelector('.slider2 .slider-line2');
-let dots2 = document.querySelectorAll('.dots-item2'),
-  dotsArea2 = document.querySelector('.dots-block2');
+const images2 = document.querySelectorAll(".slider2 .slider-line2 img");
+const sliderLine2 = document.querySelector(".slider2 .slider-line2");
+let dots2 = document.querySelectorAll(".dots-item2"),
+  dotsArea2 = document.querySelector(".dots-block2");
 let count2 = 0;
 let width2;
 
-function init() {
-  //console.log('resize');
-  width2 = document.querySelector('.slider2').offsetWidth;
-  sliderLine2.style.width = width * images2.length + 'px';
-  images2.forEach(item => {
-    item.style.width = width + 'px';
-    item.style.height = 'auto';
+function init2() {
+  width2 = document.querySelector(".slider2").offsetWidth;
+  sliderLine2.style.width = width2 * images2.length + "px";
+  images2.forEach((item) => {
+    item.style.width = width2 + "px";
+    item.style.height = "auto";
   });
   rollSlider2();
 }
 var timer2 = 0;
-makeTimer2(); //Создаем интервал 
+makeTimer2();
 function makeTimer2() {
-  clearInterval(timer2) //Очистим интервал, это позволит прервать его работу и отменить перелистывание
-  timer2 = setInterval(function() {
+  clearInterval(timer2);
+  timer2 = setInterval(function () {
     scrollSlide2(1);
     rollSlider2(count2);
   }, 5000);
 }
 
-init();
-window.addEventListener('resize', init);
+init2();
+window.addEventListener("resize", init2);
 
-document.querySelector('.slider-next2').addEventListener('click', () => scrollSlide2(1));
+document
+  .querySelector(".slider-next2")
+  .addEventListener("click", () => scrollSlide2(1));
 
-document.querySelector('.slider-prev2').addEventListener('click', () => scrollSlide2(-1));
+document
+  .querySelector(".slider-prev2")
+  .addEventListener("click", () => scrollSlide2(-1));
 
-dots2.forEach((dot2, index2) => dot2.addEventListener('click', () => setSlide2(index2)));
+dots2.forEach((dot2, index2) =>
+  dot2.addEventListener("click", () => setSlide2(index2))
+);
 
 function scrollSlide2(direction) {
   count2 = (count2 + direction + images2.length) % images2.length;
@@ -144,189 +145,220 @@ function setSlide2(index2) {
   moveSlide2();
 }
 
-function moveSlide2() {  
-  document.querySelector('.dots-item2.active').classList.remove('active');
-  document.querySelectorAll('.dots-item2')[count2].classList.add('active');
-  
+function moveSlide2() {
+  document.querySelector(".dots-item2.active").classList.remove("active");
+  document.querySelectorAll(".dots-item2")[count2].classList.add("active");
+
   rollSlider2();
   makeTimer2();
 }
 
 function rollSlider2() {
-  sliderLine2.style.transform = 'translate(-' + count2 * width2 + 'px)';
+  sliderLine2.style.transform = "translate(-" + count2 * width2 + "px)";
 }
-//   свайп слайдера
 const isMobile2 = window.matchMedia("only screen and (max-width: 479px)");
 
 if (isMobile2.matches) {
-	let startX = 0,
-	startY = 0,
-	moveX = 0,
-	moveY = 0;
-	sliderLine2.addEventListener('touchstart', touchStart);
-	sliderLine2.addEventListener('touchmove', touchMove);
-	sliderLine2.addEventListener('touchend', touchEnd);
-	function touchStart(e){
-		startX = e.changedTouches[0].screenX ;
-		// startY = e.changedTouches[0].clientY ;
-	}
-
-	function touchMove(e){
-		moveX = e.changedTouches[0].screenX ;
-		// moveY = e.changedTouches[0].clientY ;
-	}
-	function touchEnd(){
-		if(startX+100 < moveX){
-			// console.log('right');
-			scrollSlide2(-1);
-		}else if(startX-100 > moveX){
-			// console.log('left');
-			scrollSlide2(1);
-		}
-		if(startY+100 < moveY){
-			// console.log('down');
-		}else if(startY-100 > moveY){
-			// console.log('up');
-		}
-	}
-}
-// кнопка вверх
-if (window.matchMedia("only screen and (min-width: 480px)").matches) {
-	document.addEventListener("DOMContentLoaded", function () {
-		let btn = document.querySelector(".scroll");
-		window.addEventListener("scroll", function () {
-		  if (window.pageYOffset > 1000) {
-			btn.classList.add("scroll_active");
-		  } else {
-			btn.classList.remove("scroll_active");
-		  }
-		});
-	  
-		btn.onclick = function (click) {
-		  click.preventDefault();
-		  scrollTo(0, 0);
-		};
-	  });	
-} else {
-		let btn = document.querySelector(".scroll");
-		window.addEventListener("scroll", function () {
-		  if (window.pageYOffset > 300) {
-			btn.classList.add("scroll_active");
-		  } else {
-			btn.classList.remove("scroll_active");
-		  }
-		});
-	  
-		btn.onclick = function (click) {
-		  click.preventDefault();
-		  scrollTo(0, 0);
-		};
+  let startX = 0,
+    moveX = 0;
+  sliderLine2.addEventListener("touchstart", touchStart);
+  sliderLine2.addEventListener("touchmove", touchMove);
+  sliderLine2.addEventListener("touchend", touchEnd);
+  function touchStart(e) {
+    startX = e.changedTouches[0].screenX;
   }
-//   кнопка региона
-const langContainers = document.querySelectorAll('.region');
-langContainers.forEach((item) => {
-	const langBtns = item.querySelectorAll('.region__button');
-	langBtns.forEach((btn) => {
-		btn.addEventListener('click', () => {
-			item.classList.toggle('region_active');
-		});
-	});
-	document.addEventListener( 'click', (e) => {
-		const withinBoundaries = e.composedPath().includes(item);
-	 
-		if (!withinBoundaries) {
-			item.classList.remove('region_active');
-		}
-	})
-	const langLinks = document.querySelectorAll('.btnlang');
-	langLinks.forEach((langLink) => {
-		langLink.addEventListener('click', () => {
-			item.classList.remove('region_active');
-			const langText = document.querySelectorAll('.region__text');
-			langText.forEach((text) => {
-				text.innerText = langLink.innerText;
-			});
-		});
-	});
-});
-// карточка товаров
+
+  function touchMove(e) {
+    moveX = e.changedTouches[0].screenX;
+  }
+  function touchEnd() {
+    if (startX + 100 < moveX) {
+      // console.log('right');
+      scrollSlide2(-1);
+    } else if (startX - 100 > moveX) {
+      // console.log('left');
+      scrollSlide2(1);
+    }
+  }
+}
+// ********************
+// ********************
+// ********************
+// ********************
+// ********************
+// для карточек на главной странице
 const isNoMobile = window.matchMedia("only screen and (min-width: 480px)");
 if (isNoMobile.matches) {
-	newCardsShow();
-	saleCardsShow();
+  newCardsShow();
+  saleCardsShow();
 }
-window.addEventListener('resize', () => {
+window.addEventListener(
+  "resize",
+  () => {
     if (window.innerWidth > 480) {
-		newCardsShow();
-		saleCardsShow();
-	}
-}, true);
+      newCardsShow();
+      saleCardsShow();
+    }
+  },
+  true
+);
 // для первой секции
 function newCardsShow() {
-	const showMore = document.querySelector(".show");
-	const productsLength = document.querySelectorAll(
-	  ".new-products__card"
-	).length;
-	let items = 10;
-	// скрытие всех карточек, кроме 10
-	const hideClass = document.querySelectorAll('.new-products__card');
-	for (i = items; i < hideClass.length; i++) {
-	  hideClass[i].classList.add('hide');
-	}
-	// событие клика на кнопку показать еще
-	showMore.addEventListener("click", () => {
-	  items += 20;
-	  const array = Array.from(document.querySelector(".new-products__cards").children);
-	  const visItems = array.slice(0, items);
-  
-	  // карточки открываются
-	  visItems.forEach((el) => {
-		  el.classList.add("show");
-		  // проверка, если карточек больше 20
-		  if (el.length !== 20) {
-			  showMore.innerHTML = 'Показать еще';
-		  }
-	  });
-	  // проверка, если все карточки открыты, то появляется кнопка-ссылка
-	  if (visItems.length === productsLength) {
-		showMore.style.display = "none";
-		const fullCategoriesBtns = document.querySelector('.button-show-link').style.display = 'block';
-	  }
-	});
+  const showMore = document.querySelector(".show");
+  const productsLength = document.querySelectorAll(
+    ".new-products__card"
+  ).length;
+  let items = 10;
+  // скрытие всех карточек, кроме 10
+  const hideClass = document.querySelectorAll(".new-products__card");
+  for (i = items; i < hideClass.length; i++) {
+    hideClass[i].classList.add("hide");
+  }
+  // событие клика на кнопку показать еще
+  showMore.addEventListener("click", () => {
+    items += 20;
+    const array = Array.from(
+      document.querySelector(".new-products__cards").children
+    );
+    const visItems = array.slice(0, items);
+
+    // карточки открываются
+    visItems.forEach((el) => {
+      el.classList.add("show");
+      // проверка, если карточек больше 20
+      if (el.length !== 20) {
+        showMore.innerHTML = "Показать еще";
+      }
+    });
+    // проверка, если все карточки открыты, то появляется кнопка-ссылка
+    if (visItems.length === productsLength) {
+      showMore.style.display = "none";
+      const fullCategoriesBtns = (document.querySelector(
+        ".button-show-link"
+      ).style.display = "block");
+    }
+  });
 }
 // для второй секции
 function saleCardsShow() {
-	const showMore2 = document.querySelector(".show2");
-	const productsLength2 = document.querySelectorAll(
-	  ".sale__card"
-	).length;
-	let items2 = 10;
-	// скрытие всех карточек, кроме 10
-	const hideClass2 = document.querySelectorAll('.sale__card');
-	for (i = items2; i < hideClass2.length; i++) {
-	  hideClass2[i].classList.add('hide');
+  const showMore2 = document.querySelector(".show2");
+  const productsLength2 = document.querySelectorAll(".sale__card").length;
+  let items2 = 10;
+  // скрытие всех карточек, кроме 10
+  const hideClass2 = document.querySelectorAll(".sale__card");
+  for (i = items2; i < hideClass2.length; i++) {
+    hideClass2[i].classList.add("hide");
+  }
+  // событие клика на кнопку показать еще
+  showMore2.addEventListener("click", () => {
+    items2 += 20;
+    const array2 = Array.from(document.querySelector(".sale__cards").children);
+    const visItems2 = array2.slice(0, items2);
+
+    // карточки открываются
+    visItems2.forEach((el) => {
+      el.classList.add("show");
+      // проверка, если карточек больше 20
+      if (el.length !== 20) {
+        showMore2.innerHTML = "Показать еще";
+      }
+    });
+    // проверка, если все карточки открыты, то появляется кнопка-ссылка
+    if (visItems2.length === productsLength2) {
+      showMore2.style.display = "none";
+      const fullCategoriesBtns2 = (document.querySelector(
+        ".button-show-link-2"
+      ).style.display = "block");
+    }
+  });
+}
+// ********************
+// ********************
+// ********************
+// ********************
+// ********************
+// кнопки смены регионов
+const langContainers = document.querySelectorAll(".region");
+langContainers.forEach((item) => {
+  const langBtns = item.querySelectorAll(".region__button");
+  langBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      item.classList.toggle("region_active");
+    });
+  });
+  document.addEventListener("click", (e) => {
+    const withinBoundaries = e.composedPath().includes(item);
+
+    if (!withinBoundaries) {
+      item.classList.remove("region_active");
+    }
+  });
+  const langLinks = document.querySelectorAll(".btnlang");
+  langLinks.forEach((langLink) => {
+    langLink.addEventListener("click", () => {
+      item.classList.remove("region_active");
+      const langText = document.querySelectorAll(".region__text");
+      langText.forEach((text) => {
+        text.innerText = langLink.innerText;
+      });
+    });
+  });
+});
+// ********************
+// ********************
+// ********************
+// ********************
+// ********************
+// кнопка вверх
+if (window.matchMedia("only screen and (min-width: 480px)").matches) {
+	buttonScrollTopDesktop();
+} else {
+	buttonScrollTopMobile();
+}
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 480) {
+		buttonScrollTopDesktop();
+	} else if (window.innerWidth < 480) {
+		buttonScrollTopMobile();
 	}
-	// событие клика на кнопку показать еще
-	showMore2.addEventListener("click", () => {
-	  items2 += 20;
-	  const array2 = Array.from(document.querySelector(".sale__cards").children);
-	  const visItems2 = array2.slice(0, items2);
-  
-	  // карточки открываются
-	  visItems2.forEach((el) => {
-		  el.classList.add("show");
-		  // проверка, если карточек больше 20
-		  if (el.length !== 20) {
-			  showMore2.innerHTML = 'Показать еще';
-		  }
-	  });
-	  // проверка, если все карточки открыты, то появляется кнопка-ссылка
-	  if (visItems2.length === productsLength2) {
-		showMore2.style.display = "none";
-		const fullCategoriesBtns2 = document.querySelector('.button-show-link-2').style.display = 'block';
+});
+// появление кнопки на пк
+function buttonScrollTopDesktop() {
+	let btn = document.querySelector(".scroll");
+	window.addEventListener("scroll", function () {
+	  if (window.pageYOffset > 1000) {
+		btn.classList.add("scroll_active");
+	  } else {
+		btn.classList.remove("scroll_active");
 	  }
 	});
+  
+	btn.onclick = function (click) {
+	  click.preventDefault();
+	  scrollTo(0, 0);
+	};
 }
+// появление кнопки на телефонах
+function buttonScrollTopMobile() {
+  let btn = document.querySelector(".scroll");
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 300) {
+      btn.classList.add("scroll_active");
+    } else {
+      btn.classList.remove("scroll_active");
+    }
+  });
+
+  btn.onclick = function (click) {
+    click.preventDefault();
+    scrollTo(0, 0);
+  };
+}
+// ********************
+// ********************
+// ********************
+// ********************
+// ********************
 // каталог
 const btnOpenCatalog = document.querySelector(".catalog"),
   catalog = document.querySelector(".modal__catalog"),
@@ -420,7 +452,7 @@ categoryGroupList.forEach((item) => {
   }
 });
 // мобильная версия каталога
-const mobileCatalogBtn = document.querySelector(".catalog-2"),
+const mobileCatalogBtn = document.querySelectorAll(".catalog-2"),
   mobileCatalogBtn2 = document.querySelector(".catalog-3"),
   mobileCatalogBtnClose = document.querySelector(".mobile-catalog__close"),
   mobileCatalogBackground = document.querySelector(
@@ -430,11 +462,12 @@ const mobileCatalogBtn = document.querySelector(".catalog-2"),
   mobileCategoriesBtn = document.querySelectorAll(
     ".mobile-catalog__categories"
   );
-mobileCatalogBtn.forEach(btn => {
+  mobileCatalogBtn.forEach(btn => {
 	btn.addEventListener("click", () => {
 		mobileCatalogBackground.classList.add("active");
 		mobileCatalogModal.classList.add("active");
 		document.body.style.overflowY = "hidden";
+		document.querySelector(".catalog-icon").classList.toggle("open");
 		document.querySelector(".catalog-icon-2").classList.toggle("open");
 	  });
 });
@@ -442,6 +475,7 @@ mobileCatalogBtnClose.addEventListener("click", () => {
   mobileCatalogBackground.classList.remove("active");
   mobileCatalogModal.classList.remove("active");
   document.body.style.overflowY = "scroll";
+  document.querySelector(".catalog-icon-2").classList.remove("open");
 });
 // проверка кнопки на главной станицы категории
 if (mobileCatalogBtn2 != null) {
@@ -459,6 +493,7 @@ CatalogLinks.forEach((CatalogLink) => {
   CatalogLink.addEventListener("click", () => {
     mobileCatalogBackground.classList.remove("active");
     mobileCatalogModal.classList.remove("active");
+	document.querySelector(".catalog-icon-2").classList.remove("open");
     const accordionItems = document.querySelectorAll(".accordion__item");
     accordionItems.forEach((accordionItem) => {
       if (accordionItem.classList.contains("accordion__item_show")) {
@@ -484,25 +519,27 @@ window.addEventListener("resize", () => {
     mobileCatalogModalAll.classList.remove("active");
   }
 });
-if (window.matchMedia("only screen and (min-width: 959px)").matches) {
+if (window.matchMedia("only screen and (min-width: 960px)").matches) {
   mobileCatalogBackground.classList.remove("active");
   mobileCatalogModal.classList.remove("active");
   //
   mobileCatalogModalAll.classList.remove("active");
 }
 // закрытие каталога пк версии в мобильной
-// window.addEventListener("resize", () => {
-//   if (window.innerWidth < 959) {
-//     catalog.classList.remove("active");
-//     catalogTransition.classList.remove("active");
-//     document.querySelector(".catalog-icon").classList.remove("open");
-//   }
-// });
-// if (window.matchMedia("only screen and (max-width: 959px)").matches) {
-//   catalog.classList.remove("active");
-//   catalogTransition.classList.remove("active");
-//   document.querySelector(".catalog-icon").classList.remove("open");
-// }
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 960) {
+    catalog.classList.remove("active");
+    catalogTransition.classList.remove("active");
+    document.querySelector(".catalog-icon").classList.remove("open");
+	document.querySelector(".catalog-icon-2").classList.remove("open");
+  }
+});
+if (window.matchMedia("only screen and (max-width: 959px)").matches) {
+  catalog.classList.remove("active");
+  catalogTransition.classList.remove("active");
+  document.querySelector(".catalog-icon").classList.remove("open");
+  document.querySelector(".catalog-icon-2").classList.remove("open");
+}
 // переключение пунктов в каталоге
 const link1 = document.querySelector(".link-1"),
   link2 = document.querySelector(".link-2"),
@@ -1856,6 +1893,11 @@ link25.addEventListener("mouseover", () => {
   document.querySelector(".categories-link-24").classList.remove("active");
   document.querySelector(".categories-link-25").classList.add("active");
 });
+// ********************
+// ********************
+// ********************
+// ********************
+// ********************
 // аккордеон
 class ItcAccordion {
 	constructor(target, config) {
