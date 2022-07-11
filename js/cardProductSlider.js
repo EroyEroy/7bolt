@@ -76,14 +76,6 @@ function setSlideCard(indexCard) {
   moveSlideCard();
 }
 
-// const btnColors = document.querySelectorAll('.product-card__button-cards-item');
-// btnColors.forEach((btnColor) => {
-// 	btnColor.addEventListener('click', (event) => {
-// 		if (event.target === btnColor.classList.closest('targetBtn2')){
-// 			console.log(1);
-// 		}
-// 	});
-// });
 const btnColors = document.querySelectorAll(".product-card__button-cards-item");
 btn2 = document.querySelector(".btn2");
 const colorCard = document.querySelector(".color-card");
@@ -214,9 +206,7 @@ document.getElementById("buttonCountMinus").onclick = function () {
     // отнятие суммые от старой цены
     let priceAllOld = oldPriceCard.textContent;
     priceAllConvertOld = parseInt(String(priceAllOld).replace(/ /g, ""));
-    oldPriceCard.textContent = (priceAllConvertOld - PriceOld + " ₽")
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    oldPriceCard.textContent = (priceAllConvertOld - PriceOld + " ₽").toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 };
 // рассчитывание скидки
@@ -255,7 +245,6 @@ btnFeedBack2.addEventListener("click", () => {
 // зум картинки в слайдере
 	const sliderCardImg = document.querySelectorAll(".product-card__slider-img");
 	const zoomContainer = document.querySelector('.img-zoom-result');
-	const el = document.querySelector('.img-zoom-lens');
 function zoomImgSlider() {
 	sliderCardImg.forEach(item => {
 		item.addEventListener('mousemove', (e) => {
@@ -279,23 +268,6 @@ function zoomImgSlider() {
 if (window.matchMedia("only screen and (min-width: 1024px)").matches) {
 	zoomImgSlider();
 } else {
-	// let touchStartCardX = 0;
-	// let touchEndCardX = 0;
-	// function checkDirection() {
-	// 	if (touchEndCardX < touchStartCardX) {
-	// 		scrollSlideCard(1);
-	// 	}
-	// 	if (touchEndCardX > touchStartCardX) {
-	// 		scrollSlideCard(-1);
-	// 	}
-	// }
-	// sliderLineCard.addEventListener('touchstart', (e) => {
-	// 	touchStartCardX = e.changedTouches[0].screenX;
-	// });
-	// sliderLineCard.addEventListener('touchend', (e) => {
-	// 	touchEndCardX = e.changedTouches[0].screenX;
-	// 	checkDirection();
-	// });
 	let startX = 0,
 	startY = 0,
 	moveX = 0,
@@ -334,6 +306,10 @@ clickImgPopupSlider.forEach((img) => {
 	img.addEventListener('click', (e) => {
 		if (e.target === img) {
 			sliderWrapper.classList.add('popup');
+			sliderWrapper.style.maxHeight = '100%';
+			document.querySelector('.product-card__slider').style.maxHeight = '100%';
+			document.querySelector('.product-card__wrapper-img-slide').style.maxHeight = '100%';
+			document.querySelector('.product-card__slider-line').style.maxHeight = '100%';
 			document.body.style.overflow = 'hidden';
 			zoomContainer.style.backgroundImage = `url("")`;
 			zoomContainer.style.display = 'none';
@@ -349,6 +325,11 @@ popupClose.addEventListener('click', () => {
 	sliderWrapper.classList.remove('popup');
 	document.body.style.overflow = '';
 	popupClose.style.display = 'none';
+	sliderWrapper.style.maxHeight = '100%';
+	document.querySelector('.product-card__slider').style.maxHeight = '658px';
+	document.querySelector('.product-card__wrapper-img-slide').style.maxHeight = '658px';
+	document.querySelector('.product-card__slider-line').style.maxHeight = '658px';
+	document.querySelector('.product-card__dots').style.maxHeight = '658px';
 	moveSlideCard();
 	initCard();
 	if (window.matchMedia("only screen and (min-width: 1024px)").matches) {

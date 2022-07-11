@@ -62,7 +62,6 @@
   }
   .product-card__dots {
     width: calc(50px + (100 - 50) * ((100vw - 768px) / (1277 - 768)));
-    height: calc(321px + (564 - 321) * ((100vw - 768px) / (1277 - 768)));
   }
 }
 @media (max-width: 1250px) {
@@ -276,13 +275,11 @@
   }
   .product-card__dots {
 	width: 15%;
-	height: 685px;
+
   }
 }
 @media (max-width: 638px) {
-	.product-card__dots{
-		height: calc(325px + (685 - 325) * ((100vw - 321px) / (638 - 321)));	
-	}
+
 	.product-card__dots-item{
 		height: calc(60px + (98 - 60) * ((100vw - 321px) / (638 - 321)));
 	}

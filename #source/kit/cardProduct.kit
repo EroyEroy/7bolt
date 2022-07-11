@@ -13,7 +13,7 @@
 	<link rel="apple-touch-icon"
 		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png"
 		type="image/png" />
-	<link rel="preload" href="../fonts/Helvetica/Helvetica-Regular.woff" as="font">
+		<link rel="preload" href="../fonts/Helvetica/Helvetica-Regular.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="css/style.css">
 	<title>Карточка товара</title>
 </head>
@@ -147,25 +147,10 @@
 							</div>
 							<h1 class="product-card__title">
 								Игрушка, Утка в шлеме, с пропеллером и в очках
-							</h1>
-							<p class="product-card__all-products">
-								Количество: <span id="allItemsProducts">87</span>
-							</p>
-							<div class="product-card__wrapper">
-								<div class="product-card__counter">
-									<button class="counter-minus" id="buttonCountMinus">
-										<img src="img/icons/minus-counter.svg" alt="" draggable="false">
-									</button>
-									<input class="counter-result" placeholder="1" type="number" minlength="1"></input>
-									<button class="counter-plus" id="buttonCountPlus">
-										<img src="img/icons/plus-counter.svg" alt="" draggable="false">
-									</button>
-								</div>
-								<p class="counter__buy-info">
-									<img src="img/icons/but_no_mistake.svg" alt="" draggable="false">
-									Покупка без риска
+								<p class="product-card__number">
+									Каталожный номер: <span id="number">HG2244-5545</span>
 								</p>
-							</div>
+							</h1>
 							<p class="product-card__price-text">
 								Цена:
 							</p>
@@ -182,30 +167,11 @@
 								<p class="product-card__liquidation">
 									Ликвидация
 								</p>
+								<p class="counter__buy-info">
+									<img src="img/icons/but_no_mistake.svg" alt="" draggable="false">
+									Покупка без риска
+								</p>
 							</div>
-							<div class="product-card__wrapper">
-								<button class="product-card__basket">
-									Добавить в корзину
-								</button>
-								<button class="product-card__buy">
-									Купить в один клик
-								</button>
-							</div>
-							<p class="product-card__number">
-								Каталожный номер: HG2244-5545
-							</p>
-							<p class="product-card__location">
-								Местоположение: Россия, Самарская область, г. Самара
-							</p>
-							<p class="product-card__human">
-								Продавец:
-								<a href="#">
-									akskar
-								</a>
-							</p>
-							<p class="product-card__delivery">
-								Доставка: 1 день, бесплатно
-							</p>
 							<p class="product-card__color">
 								Вариант:
 								<span class="color-card">11</span>
@@ -245,6 +211,43 @@
 								<div class="product-card__button-cards-item target">
 									<img src="img/cardSlider-1.webp" alt="" draggable="false">
 								</div>
+							</div>
+							<p class="product-card__all-products">
+								Количество: <span id="allItemsProducts">87</span>
+							</p>
+							<div class="product-card__wrapper">
+								<div class="product-card__counter">
+									<button class="counter-minus" id="buttonCountMinus">
+										<img src="img/icons/minus-counter.svg" alt="" draggable="false">
+									</button>
+									<input class="counter-result" placeholder="1" type="number" minlength="1"></input>
+									<button class="counter-plus" id="buttonCountPlus">
+										<img src="img/icons/plus-counter.svg" alt="" draggable="false">
+									</button>
+								</div>
+							</div>
+							<p class="product-card__location">
+								<span class="change-color">Доставка из:</span> Россия, Самарская область, г. Самара
+							</p>
+							<p class="product-card__delivery">
+								<span class="change-color">Доставка:</span> 1 день, бесплатно
+							</p>
+							<p class="product-card__human">
+								<span class="change-color">Продавец:</span>
+								<a href="#">
+									akskar
+								</a>
+							</p>
+							<div class="product-card__wrapper">
+								<button class="product-card__basket">
+									Купить сейчас
+								</button>
+								<button class="product-card__buy">
+									<img class="product-card__heart" src="img/icons/heart_btn.svg" alt="heart">
+									<span class="counter-like">
+										1734
+									</span>
+								</button>
 							</div>
 						</div>
 					</div>
