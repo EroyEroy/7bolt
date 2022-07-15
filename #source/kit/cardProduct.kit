@@ -13,7 +13,7 @@
 	<link rel="apple-touch-icon"
 		href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png"
 		type="image/png" />
-		<link rel="preload" href="../fonts/Helvetica/Helvetica-Regular.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="../fonts/Helvetica/Helvetica-Regular.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="css/style.css">
 	<title>Карточка товара</title>
 </head>
@@ -257,25 +257,31 @@
 			<section class="points">
 				<div class="container">
 					<div class="points__inner">
-						<ul class="points__list">
-							<li class="points__item active points-description">
-								<button class="point__item-btn" id="btn-description">
-									Описание товара
-								</button>
-							</li>
-							<li class="points__item points-feedback">
-								<button class="point__item-btn" id="btn-feedback">
-									Отзывы
-									<span>(214)</span>
-								</button>
-							</li>
-							<!-- <li class="points__item">
-								<button class="point__item-btn">
-									Оценки
-									<span>(26)</span>
-								</button>
-							</li> -->
-						</ul>
+						<div class="point__wrapper">
+							<ul class="points__list">
+								<li class="points__item active points-description">
+									<button class="point__item-btn" id="btn-description">
+										Описание товара
+									</button>
+								</li>
+								<li class="points__item points-feedback">
+									<button class="point__item-btn" id="btn-feedback">
+										Отзывы
+										<span>(214)</span>
+									</button>
+								</li>
+								<li class="points__item points-instruction">
+									<button class="point__item-btn" id="btn-instruction">
+										Инструкция
+									</button>
+								</li>
+								<li class="points__item points-applicability">
+									<button class="point__item-btn" id="btn-applicability">
+										Применяемость (25)
+									</button>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -300,6 +306,59 @@
 						<h2 class="feedback__title">
 							Все отзывы <span>(214)</span>
 						</h2>
+					</div>
+				</div>
+			</section>
+			<!-- секция с применяемостью -->
+			<section class="applicability">
+				<div class="container">
+					<div class="applicability__inner">
+
+					</div>
+				</div>
+			</section>
+			<section class="instruction">
+				<div class="container">
+					<div class="instruction__inner">
+						<div class="instruction__switches">
+							<button class="instruction__btn active" id="photo-instructions">
+								Фотоинструкция
+							</button>
+							<button class="instruction__btn" id="video-instructions">
+								Видеоинструкция
+							</button>
+						</div>
+						<div class="instruction__slider active">
+							<div class="instruction__slider-line">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+								<img class="instruction__slider-img" src="img/sliders/slide-1.webp" alt="" draggable="false" width="100px" height="100px">
+							</div>
+							<button class="instruction__button-slider instruction__slider-prev">
+								<img src="img/icons/arrowCardSlider.svg" alt="">
+							</button>
+							<button class="instruction__button-slider instruction__slider-next">
+								<img src="img/icons/arrowCardSlider.svg" alt="">
+							</button>
+							<div class="instruction__dots-block">
+								
+							</div>
+						</div>
+						<div class="instruction__video">
+							*пример видео*
+						</div>
+						<p class="comment">
+							Вы уже приобрели данный товар? Помогите другим покупателям, 
+							<a class="comment__link" href="#">
+								оставьте свою иснтрукцию
+							</a>
+						</p>
 					</div>
 				</div>
 			</section>
@@ -477,6 +536,7 @@
 	<!-- footer -->
 	<!-- @import "../../components/footer.html" -->
 	</div>
+	<script src="js/catalogDesktopOutput.js"></script>
 	<script src="js/region.js"></script>
 	<script src="js/buttonScrollToTop.js"></script>
 	<script src="js/catalog.js"></script>

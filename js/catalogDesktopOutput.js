@@ -1,5 +1,6 @@
 // левый блок каталога пк версии (сами категории)
 const categories = [
+  // Авто
   {
     name: "Авто",
     linkId: "link-1",
@@ -8,6 +9,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-1",
   },
+  // Мотоциклы
   {
     name: "Мотоциклы",
     linkId: "link-2",
@@ -16,6 +18,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-2",
   },
+  // Снегоходы
   {
     name: "Снегоходы",
     linkId: "link-3",
@@ -24,6 +27,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-3",
   },
+  // Квадроциклы и мотовездеходы
   {
     name: "Квадроциклы и мотовездеходы",
     linkId: "link-4",
@@ -32,6 +36,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-4",
   },
+  // Скутеры
   {
     name: "Скутеры",
     linkId: "link-5",
@@ -40,6 +45,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-5",
   },
+  // Вело
   {
     name: "Вело",
     linkId: "link-6",
@@ -48,6 +54,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-6",
   },
+  // Электротранспорт
   {
     name: "Электротранспорт",
     linkId: "link-7",
@@ -56,6 +63,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-7",
   },
+  // Коммерческий
   {
     name: "Коммерческий",
     linkId: "link-8",
@@ -64,6 +72,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-8",
   },
+  // Водный транспорт
   {
     name: "Водный транспорт",
     linkId: "link-9",
@@ -72,6 +81,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-9",
   },
+  // Спецтехника
   {
     name: "Спецтехника",
     linkId: "link-10",
@@ -80,6 +90,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-10",
   },
+  // Сельхозтехника
   {
     name: "Сельхозтехника",
     linkId: "link-11",
@@ -88,6 +99,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-11",
   },
+  // Электроника
   {
     name: "Электроника",
     linkId: "link-12",
@@ -96,6 +108,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-12",
   },
+  // Бытовая техника
   {
     name: "Бытовая техника",
     linkId: "link-13",
@@ -104,6 +117,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-13",
   },
+  // Электрика
   {
     name: "Электрика",
     linkId: "link-14",
@@ -112,6 +126,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-14",
   },
+  // Инструмент
   {
     name: "Инструмент",
     linkId: "link-15",
@@ -120,6 +135,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-15",
   },
+  // Метизы
   {
     name: "Метизы",
     linkId: "link-16",
@@ -128,6 +144,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-16",
   },
+  // РТИ
   {
     name: "РТИ",
     linkId: "link-17",
@@ -136,6 +153,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-17",
   },
+  // Хобби, спорт и развлечения
   {
     name: "Хобби, спорт и развлечения",
     linkId: "link-18",
@@ -144,6 +162,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-18",
   },
+  // Оборудование
   {
     name: "Оборудование",
     linkId: "link-19",
@@ -152,6 +171,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-19",
   },
+  // Робототехника
   {
     name: "Робототехника",
     linkId: "link-20",
@@ -160,6 +180,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-20",
   },
+  // Оптика
   {
     name: "Оптика",
     linkId: "link-21",
@@ -168,6 +189,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-21",
   },
+  // Авто мото спорт
   {
     name: "Авто мото спорт",
     linkId: "link-22",
@@ -176,6 +198,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-22",
   },
+  // Авиация
   {
     name: "Авиация",
     linkId: "link-23",
@@ -184,6 +207,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-23",
   },
+  // Литература и обучение
   {
     name: "Литература и обучение",
     linkId: "link-24",
@@ -192,6 +216,7 @@ const categories = [
     rightArrowImg: "img/catalog/arrow.svg",
     buttonLink: "mobile-btn-24",
   },
+  // Станки
   {
     name: "Станки",
     linkId: "link-25",
@@ -219,249 +244,253 @@ const categoriesInner = [
             subTitle: "Двигатель",
             href: "#",
             // внутренние ссылки
-            innerLinks: [
-              {
-                innerLinkTitle: "Двигатель",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "IGNITION COIL & SPARK PLUG / GLOW PLUG",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "Блок цилиндров",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "Блок цилиндров в сборе",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "Водяная помпа",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "глушитель",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "головка блока цилиндров",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "двигатель в сборе",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "коленвал и цилиндры",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "коллектор",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "комплект прокладок двигателя",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "крепление двигателя",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "крышка грм, задняя пластина",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "масляный насос",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "масляный фильтр",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "патрубки вентиляции",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "радиатор и патрубки",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "распредвал и клапаны, ремень грм",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "трубки вакуумной системы",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "фильтр воздушный",
-                innerHref: "#",
-              },
-            ],
+            // innerLinks: [
+            //   {
+            //     innerLinkTitle: "Двигатель",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "IGNITION COIL & SPARK PLUG / GLOW PLUG",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "Блок цилиндров",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "Блок цилиндров в сборе",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "Водяная помпа",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "глушитель",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "головка блока цилиндров",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "двигатель в сборе",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "коленвал и цилиндры",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "коллектор",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "комплект прокладок двигателя",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "крепление двигателя",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "крышка грм, задняя пластина",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "масляный насос",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "масляный фильтр",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "патрубки вентиляции",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "радиатор и патрубки",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "распредвал и клапаны, ремень грм",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "трубки вакуумной системы",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "фильтр воздушный",
+            //     innerHref: "#",
+            //   },
+            // ],
           },
           // Трансмиссия
           {
             subTitle: "Трансмиссия",
             href: "#",
             // внутренние ссылки
-            innerLinks: [
-              {
-                innerLinkTitle: "Сцепление",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "коробка передач",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "передача карданная",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "мост передний ведущий",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "мост задний",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "блок переключения передач",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "главный тормозной цилиндр",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "задние пружины и аммортизаторы",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle:
-                  "задняя ось, ступица, тормозные диски и барабаны",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "колесные диски, колпаки",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "педаль тормоза",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "передние приводные валы",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle:
-                  "передние пружины и аммортизаторы, стабилизатор",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "передний рычаг, поворотный кулак",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "передняя ось, ступица, тормозные диски",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "рулевая колонка и вал",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "рулевая рейка",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "рулевое колесо",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "стояночный тормоз",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "тормоза задние дисковые - суппорт, колодки",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "тормоза передние дисковые - суппорт, колодки",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "трансмиссия в сборе, гибридный автомобиль",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "трубки тормозной системы, крепление",
-                innerHref: "#",
-              },
-            ],
+            // innerLinks: [
+            //   {
+            //     innerLinkTitle: "Сцепление",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "коробка передач",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "передача карданная",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "мост передний ведущий",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "мост задний",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "блок переключения передач",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "главный тормозной цилиндр",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "задние пружины и аммортизаторы",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle:
+            //       "задняя ось, ступица, тормозные диски и барабаны",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "колесные диски, колпаки",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "педаль тормоза",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "передние приводные валы",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle:
+            //       "передние пружины и аммортизаторы, стабилизатор",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "передний рычаг, поворотный кулак",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "передняя ось, ступица, тормозные диски",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "рулевая колонка и вал",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "рулевая рейка",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "рулевое колесо",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "стояночный тормоз",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "тормоза задние дисковые - суппорт, колодки",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "тормоза передние дисковые - суппорт, колодки",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "трансмиссия в сборе, гибридный автомобиль",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "трубки тормозной системы, крепление",
+            //     innerHref: "#",
+            //   },
+            // ],
           },
           // Ходовая часть
           {
             subTitle: "Ходовая часть",
             href: "#",
             // внутренние ссылки
-            innerLinks: [
-              {
-                innerLinkTitle: "рама",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "подвеска автомобиля",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "колеса и ступицы",
-                innerHref: "#",
-              },
-            ],
+            // innerLinks: [
+            //   {
+            //     innerLinkTitle: "рама",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "подвеска автомобиля",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "колеса и ступицы",
+            //     innerHref: "#",
+            //   },
+            // ],
           },
           // Механизмы управления
           {
             subTitle: "Механизмы управления",
             href: "#",
             // внутренние ссылки
-            innerLinks: [
-              {
-                innerLinkTitle: "управление рулевое",
-                innerHref: "#",
-              },
-              {
-                innerLinkTitle: "тормоза",
-                innerHref: "#",
-              },
-            ],
+            // innerLinks: [
+            //   {
+            //     innerLinkTitle: "управление рулевое",
+            //     innerHref: "#",
+            //   },
+            //   {
+            //     innerLinkTitle: "тормоза",
+            //     innerHref: "#",
+            //   },
+            // ],
           },
+          // Кузов
           {
             subTitle: "Кузов",
             href: "#",
-			innerLinks: [
-				{
-				  innerLinkTitle: "управление рулевое",
-				  innerHref: "#",
-				},
-				{
-				  innerLinkTitle: "тормоза",
-				  innerHref: "#",
-				},
-			  ],
+            // innerLinks: [
+            // 	{
+            // 	  innerLinkTitle: "управление рулевое",
+            // 	  innerHref: "#",
+            // 	},
+            // 	{
+            // 	  innerLinkTitle: "тормоза",
+            // 	  innerHref: "#",
+            // 	},
+            //   ],
           },
+          // Электрооборудование
           {
             subTitle: "Электрооборудование",
             href: "#",
           },
+          // Топливная система
           {
             subTitle: "Топливная система",
             href: "#",
           },
+          // Климат контроль
           {
             subTitle: "Климат контроль",
             href: "#",
@@ -981,7 +1010,7 @@ const categoriesInner = [
         title: "Запчасти б/у",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти б/у",
             href: "#",
           },
         ],
@@ -1283,7 +1312,7 @@ const categoriesInner = [
         title: "Литература",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Литература",
             href: "#",
           },
         ],
@@ -1293,7 +1322,7 @@ const categoriesInner = [
         title: "WiKi",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "WiKi",
             href: "#",
           },
         ],
@@ -1599,7 +1628,7 @@ const categoriesInner = [
         title: "Литература",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Литература",
             href: "#",
           },
         ],
@@ -1609,7 +1638,7 @@ const categoriesInner = [
         title: "WiKi",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "WiKi",
             href: "#",
           },
         ],
@@ -1805,7 +1834,7 @@ const categoriesInner = [
         title: "Шины",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Шины",
             href: "#",
           },
         ],
@@ -1907,7 +1936,7 @@ const categoriesInner = [
         title: "Мероприятия",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Мероприятия",
             href: "#",
           },
         ],
@@ -1917,7 +1946,7 @@ const categoriesInner = [
         title: "Литература",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Литература",
             href: "#",
           },
         ],
@@ -1927,7 +1956,7 @@ const categoriesInner = [
         title: "WiKi",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "WiKi",
             href: "#",
           },
         ],
@@ -2089,7 +2118,7 @@ const categoriesInner = [
         title: "Шины",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Шины",
             href: "#",
           },
         ],
@@ -2099,7 +2128,7 @@ const categoriesInner = [
         title: "Экипировка",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Экипировка",
             href: "#",
           },
         ],
@@ -2109,7 +2138,7 @@ const categoriesInner = [
         title: "Литература",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Литература",
             href: "#",
           },
         ],
@@ -2119,7 +2148,7 @@ const categoriesInner = [
         title: "WiKi",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "WiKi",
             href: "#",
           },
         ],
@@ -2163,7 +2192,7 @@ const categoriesInner = [
         title: "WiKi",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "WiKi",
             href: "#",
           },
         ],
@@ -2173,7 +2202,7 @@ const categoriesInner = [
         title: "Аксессуары",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Аксессуары",
             href: "#",
           },
         ],
@@ -2183,7 +2212,7 @@ const categoriesInner = [
         title: "Велозапчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Велозапчасти",
             href: "#",
           },
         ],
@@ -2193,7 +2222,7 @@ const categoriesInner = [
         title: "Веломобили",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Веломобили",
             href: "#",
           },
         ],
@@ -2203,7 +2232,7 @@ const categoriesInner = [
         title: "Горные",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Горные",
             href: "#",
           },
         ],
@@ -2213,7 +2242,7 @@ const categoriesInner = [
         title: "Городские",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Городские",
             href: "#",
           },
         ],
@@ -2233,7 +2262,7 @@ const categoriesInner = [
         title: "Запчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти",
             href: "#",
           },
         ],
@@ -2243,7 +2272,7 @@ const categoriesInner = [
         title: "Покрышки",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Покрышки",
             href: "#",
           },
         ],
@@ -2253,7 +2282,7 @@ const categoriesInner = [
         title: "Трюковые",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Трюковые",
             href: "#",
           },
         ],
@@ -2263,7 +2292,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -2273,7 +2302,7 @@ const categoriesInner = [
         title: "Шоссейные",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Шоссейные",
             href: "#",
           },
         ],
@@ -2283,7 +2312,7 @@ const categoriesInner = [
         title: "Экипировка",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Экипировка",
             href: "#",
           },
         ],
@@ -2293,7 +2322,7 @@ const categoriesInner = [
         title: "Электровелосипеды",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электровелосипеды",
             href: "#",
           },
         ],
@@ -2311,7 +2340,7 @@ const categoriesInner = [
         title: "Гироскутеры",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Гироскутеры",
             href: "#",
           },
         ],
@@ -2321,7 +2350,7 @@ const categoriesInner = [
         title: "Детский электротранспорт",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Детский электротранспорт",
             href: "#",
           },
         ],
@@ -2331,7 +2360,7 @@ const categoriesInner = [
         title: "Моноколеса",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Моноколеса",
             href: "#",
           },
         ],
@@ -2341,7 +2370,7 @@ const categoriesInner = [
         title: "Электровелосипеды",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электровелосипеды",
             href: "#",
           },
         ],
@@ -2351,7 +2380,7 @@ const categoriesInner = [
         title: "Электромотоциклы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электромотоциклы",
             href: "#",
           },
         ],
@@ -2361,7 +2390,7 @@ const categoriesInner = [
         title: "Электроролики",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электроролики",
             href: "#",
           },
         ],
@@ -2371,7 +2400,7 @@ const categoriesInner = [
         title: "Электросамокаты",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электросамокаты",
             href: "#",
           },
         ],
@@ -2389,7 +2418,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -2399,7 +2428,7 @@ const categoriesInner = [
         title: "Автолампы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Автолампы",
             href: "#",
           },
         ],
@@ -2409,7 +2438,7 @@ const categoriesInner = [
         title: "Аккумуляторы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Аккумуляторы",
             href: "#",
           },
         ],
@@ -2419,7 +2448,7 @@ const categoriesInner = [
         title: "Аксессуары",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Аксессуары",
             href: "#",
           },
         ],
@@ -2429,7 +2458,7 @@ const categoriesInner = [
         title: "Диски",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Диски",
             href: "#",
           },
         ],
@@ -2439,7 +2468,7 @@ const categoriesInner = [
         title: "Запчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти",
             href: "#",
           },
         ],
@@ -2449,7 +2478,7 @@ const categoriesInner = [
         title: "Запчасти для ТО",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти для ТО",
             href: "#",
           },
         ],
@@ -2459,7 +2488,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -2469,7 +2498,7 @@ const categoriesInner = [
         title: "Шины",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Шины",
             href: "#",
           },
         ],
@@ -2487,7 +2516,7 @@ const categoriesInner = [
         title: "Весельные лодки",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Весельные лодки",
             href: "#",
           },
         ],
@@ -2497,7 +2526,7 @@ const categoriesInner = [
         title: "Гидроциклы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Гидроциклы",
             href: "#",
           },
         ],
@@ -2507,7 +2536,7 @@ const categoriesInner = [
         title: "Двигатели судовые",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Двигатели судовые",
             href: "#",
           },
         ],
@@ -2528,7 +2557,7 @@ const categoriesInner = [
         title: "Катера",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Катера",
             href: "#",
           },
         ],
@@ -2538,7 +2567,7 @@ const categoriesInner = [
         title: "Каяки и Каноэ",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Каяки и Каноэ",
             href: "#",
           },
         ],
@@ -2548,7 +2577,7 @@ const categoriesInner = [
         title: "Комплектующие",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Комплектующие",
             href: "#",
           },
         ],
@@ -2558,7 +2587,7 @@ const categoriesInner = [
         title: "Лодочные моторы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Лодочные моторы",
             href: "#",
           },
         ],
@@ -2568,7 +2597,7 @@ const categoriesInner = [
         title: "Моторные яхты",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Моторные яхты",
             href: "#",
           },
         ],
@@ -2578,7 +2607,7 @@ const categoriesInner = [
         title: "Навигационное оборудование",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Навигационное оборудование",
             href: "#",
           },
         ],
@@ -2588,7 +2617,7 @@ const categoriesInner = [
         title: "Надувные лодки",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Надувные лодки",
             href: "#",
           },
         ],
@@ -2598,7 +2627,7 @@ const categoriesInner = [
         title: "Прицепы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Прицепы",
             href: "#",
           },
         ],
@@ -2608,7 +2637,7 @@ const categoriesInner = [
         title: "Суда",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Суда",
             href: "#",
           },
         ],
@@ -2618,7 +2647,7 @@ const categoriesInner = [
         title: "Суда на воздушной подушке",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Суда на воздушной подушке",
             href: "#",
           },
         ],
@@ -2628,7 +2657,7 @@ const categoriesInner = [
         title: "Такелаж",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Такелаж",
             href: "#",
           },
         ],
@@ -2638,7 +2667,7 @@ const categoriesInner = [
         title: "Яхты",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Яхты",
             href: "#",
           },
         ],
@@ -2656,7 +2685,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -2666,7 +2695,7 @@ const categoriesInner = [
         title: "Аккумуляторы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Аккумуляторы",
             href: "#",
           },
         ],
@@ -2676,7 +2705,7 @@ const categoriesInner = [
         title: "Антифризы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Антифризы",
             href: "#",
           },
         ],
@@ -2686,7 +2715,7 @@ const categoriesInner = [
         title: "Гидравлические жидкости",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Гидравлические жидкости",
             href: "#",
           },
         ],
@@ -2782,7 +2811,7 @@ const categoriesInner = [
         title: "Запчасти для ТО",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти для ТО",
             href: "#",
           },
         ],
@@ -2792,7 +2821,7 @@ const categoriesInner = [
         title: "Моторные масла",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Моторные масла",
             href: "#",
           },
         ],
@@ -2802,7 +2831,7 @@ const categoriesInner = [
         title: "Навесное оборудование",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Навесное оборудование",
             href: "#",
           },
         ],
@@ -2812,7 +2841,7 @@ const categoriesInner = [
         title: "Резинотехнические изделия (РТИ)",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Резинотехнические изделия (РТИ)",
             href: "#",
           },
         ],
@@ -2822,7 +2851,7 @@ const categoriesInner = [
         title: "Смазки",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Смазки",
             href: "#",
           },
         ],
@@ -2832,7 +2861,7 @@ const categoriesInner = [
         title: "Трансмиссионные масла",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Трансмиссионные масла",
             href: "#",
           },
         ],
@@ -2842,7 +2871,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -2852,7 +2881,7 @@ const categoriesInner = [
         title: "Шины",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Шины",
             href: "#",
           },
         ],
@@ -2862,7 +2891,7 @@ const categoriesInner = [
         title: "Целые",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Целые",
             href: "#",
           },
         ],
@@ -2880,7 +2909,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -2890,7 +2919,7 @@ const categoriesInner = [
         title: "Запчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти",
             href: "#",
           },
         ],
@@ -2900,7 +2929,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -2910,7 +2939,7 @@ const categoriesInner = [
         title: "Целые",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Целые",
             href: "#",
           },
         ],
@@ -2928,7 +2957,7 @@ const categoriesInner = [
         title: "Bluetooth гарнитуры",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Bluetooth гарнитуры",
             href: "#",
           },
         ],
@@ -2938,7 +2967,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -2948,7 +2977,7 @@ const categoriesInner = [
         title: "Внешние аккумуляторы (Power Bank)",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Внешние аккумуляторы (Power Bank)",
             href: "#",
           },
         ],
@@ -2969,7 +2998,7 @@ const categoriesInner = [
         title: "Держатели, подставки",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Держатели, подставки",
             href: "#",
           },
         ],
@@ -2979,7 +3008,7 @@ const categoriesInner = [
         title: "Запчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти",
             href: "#",
           },
         ],
@@ -2989,7 +3018,7 @@ const categoriesInner = [
         title: "Кабели для смартфонов и планшетов",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Кабели для смартфонов и планшетов",
             href: "#",
           },
         ],
@@ -2999,7 +3028,7 @@ const categoriesInner = [
         title: "Кабели и зарядки",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Кабели и зарядки",
             href: "#",
           },
         ],
@@ -3009,7 +3038,7 @@ const categoriesInner = [
         title: "Карты памяти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Карты памяти",
             href: "#",
           },
         ],
@@ -3019,7 +3048,7 @@ const categoriesInner = [
         title: "Красота и здорвье",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Красота и здорвье",
             href: "#",
           },
         ],
@@ -3029,7 +3058,7 @@ const categoriesInner = [
         title: "Ноутбуки и компьютеры",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Ноутбуки и компьютеры",
             href: "#",
           },
         ],
@@ -3065,7 +3094,7 @@ const categoriesInner = [
         title: "Рации",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Рации",
             href: "#",
           },
         ],
@@ -3106,7 +3135,7 @@ const categoriesInner = [
         title: "Смарт-часы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Смарт-часы",
             href: "#",
           },
         ],
@@ -3179,7 +3208,7 @@ const categoriesInner = [
         title: "Товары для геймеров",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Товары для геймеров",
             href: "#",
           },
         ],
@@ -3189,7 +3218,7 @@ const categoriesInner = [
         title: "Умный дом и системы безопасности",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Умный дом и системы безопасности",
             href: "#",
           },
         ],
@@ -3199,7 +3228,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -3209,7 +3238,7 @@ const categoriesInner = [
         title: "Электронные книги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электронные книги",
             href: "#",
           },
         ],
@@ -3744,7 +3773,7 @@ const categoriesInner = [
         title: "Аксессуары",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Аксессуары",
             href: "#",
           },
         ],
@@ -3754,7 +3783,7 @@ const categoriesInner = [
         title: "Запчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти",
             href: "#",
           },
         ],
@@ -3764,7 +3793,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -3774,7 +3803,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -3789,10 +3818,10 @@ const categoriesInner = [
     subcategories: [
       //
       {
-        title: "",
+        title: "Электрика",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Электрика",
             href: "#",
           },
         ],
@@ -3810,7 +3839,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -3820,7 +3849,7 @@ const categoriesInner = [
         title: "Аккумуляторный инструмент",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Аккумуляторный инструмент",
             href: "#",
           },
         ],
@@ -3829,8 +3858,9 @@ const categoriesInner = [
       {
         title: "Бензоинструмент",
         subcategory: [
+			// Бензоинструмент
           {
-            subTitle: "",
+            subTitle: "Бензоинструмент",
             href: "#",
           },
         ],
@@ -3850,7 +3880,7 @@ const categoriesInner = [
         title: "Генераторы",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Генераторы",
             href: "#",
           },
         ],
@@ -3860,7 +3890,7 @@ const categoriesInner = [
         title: "Запчасти",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Запчасти",
             href: "#",
           },
         ],
@@ -3870,7 +3900,7 @@ const categoriesInner = [
         title: "Инструмент для автосервиса и гаража",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Инструмент для автосервиса и гаража",
             href: "#",
           },
         ],
@@ -3880,7 +3910,7 @@ const categoriesInner = [
         title: "Пневмоинструмент",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Пневмоинструмент",
             href: "#",
           },
         ],
@@ -3890,7 +3920,7 @@ const categoriesInner = [
         title: "Ручной инструмент",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Ручной инструмент",
             href: "#",
           },
         ],
@@ -3916,7 +3946,7 @@ const categoriesInner = [
         title: "Услуги",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -3940,14 +3970,702 @@ const categoriesInner = [
     nameArrow: "img/catalog/arrow__title.svg",
     linkId: "categories-link-16",
     subcategories: [
-      //
+      // Анкерный крепеж
       {
-        title: "",
+        title: "Анкерный крепеж",
         subcategory: [
+			// Анкер болт
           {
-            subTitle: "",
+            subTitle: "Анкер болт",
             href: "#",
           },
+		  	// Анкер регулируемый по высоте
+          {
+            subTitle: "Анкер регулируемый по высоте",
+            href: "#",
+          },
+		  	// Анкер с гайкой
+          {
+            subTitle: "Анкер с гайкой",
+            href: "#",
+          },
+		  	// Анкер с крюком и кольцом
+		  {
+            subTitle: "Анкер с крюком и кольцом",
+            href: "#",
+          },
+		  	// Анкер клин
+		  {
+            subTitle: "Анкер клин",
+            href: "#",
+          },
+		  	// Забивной анкер
+		  {
+            subTitle: "Забивной анкер",
+            href: "#",
+          },
+		  	// По бетону
+		  {
+            subTitle: "По бетону",
+            href: "#",
+          },
+		  	// Рамный анкер
+		  {
+            subTitle: "Рамный анкер",
+            href: "#",
+          },
+		  	// Складные и пружинные анкеры
+		  {
+            subTitle: "Складные и пружинные анкеры",
+            href: "#",
+          },
+		  	// Фасадные
+		  {
+            subTitle: "Фасадные",
+            href: "#",
+          },
+		  	// Шурупы
+		  {
+            subTitle: "Шурупы",
+            href: "#",
+          },
+		  	// Химические анкера
+		  {
+            subTitle: "Химические анкера",
+            href: "#",
+          },
+		  	// Очистка засверленных отверстий
+		  {
+            subTitle: "Очистка засверленных отверстий",
+            href: "#",
+          },
+		  	// Установочный инструмент
+		  {
+            subTitle: "Установочный инструмент",
+            href: "#",
+          },
+        ],
+      },
+	  // Болты, винты, гайки
+	  {
+        title: "Болты, винты, гайки",
+        subcategory: [
+			// Болты
+          {
+            subTitle: "Болты",
+            href: "#",
+          },
+		  	// Гайки
+          {
+            subTitle: "Гайки",
+            href: "#",
+          },
+		  	// Винты
+          {
+            subTitle: "Винты",
+            href: "#",
+          },
+		  	// Резьбовые шпильки
+		  {
+            subTitle: "Резьбовые шпильки",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Саморезы
+	  {
+        title: "Саморезы",
+        subcategory: [
+			// Саморезы кровельные
+          {
+            subTitle: "Саморезы кровельные",
+            href: "#",
+          },
+		  	// Саморезы по дереву
+          {
+            subTitle: "Саморезы по дереву",
+            href: "#",
+          },
+		  	// Саморезы оконные
+          {
+            subTitle: "Саморезы оконные",
+            href: "#",
+          },
+		  	// Саморезы по металлу
+		  {
+            subTitle: "Саморезы по металлу",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Хомуты
+	  {
+        title: "Хомуты",
+        subcategory: [
+			// Хомут пластиковый
+          {
+            subTitle: "Хомут пластиковый",
+            href: "#",
+          },
+		  	// u-образные
+          {
+            subTitle: "u-образные",
+            href: "#",
+          },
+		  	// Для спринклерных систем
+          {
+            subTitle: "Для спринклерных систем",
+            href: "#",
+          },
+		  	// Крепежные хомуты для котельного оборудования
+		  {
+            subTitle: "Крепежные хомуты для котельного оборудования",
+            href: "#",
+          },
+		   	// Стальные стяжки
+		  {
+            subTitle: "Стальные стяжки",
+            href: "#",
+          },
+		    // Хомуты заземления
+		  {
+            subTitle: "Хомуты заземления",
+            href: "#",
+          },
+		    // Хомуты сантехнические
+		  {
+            subTitle: "Хомуты сантехнические",
+            href: "#",
+          },
+		    // Хомуты червячные
+		  {
+            subTitle: "Хомуты червячные",
+            href: "#",
+          },
+		    // Хомуты шарнирные
+		  {
+            subTitle: "Хомуты шарнирные",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Такелаж
+	  {
+        title: "Такелаж",
+        subcategory: [
+			// Стропы
+          {
+            subTitle: "Стропы",
+            href: "#",
+          },
+		  	// Рым болты
+          {
+            subTitle: "Рым болты",
+            href: "#",
+          },
+		  	// Рым гайки
+          {
+            subTitle: "Рым гайки",
+            href: "#",
+          },
+		  	// Талрепы
+		  {
+            subTitle: "Талрепы",
+            href: "#",
+          },
+		   	// Зажимы для троса
+		  {
+            subTitle: "Зажимы для троса",
+            href: "#",
+          },
+		    // Коуши
+		  {
+            subTitle: "Коуши",
+            href: "#",
+          },
+		    // Блоки
+		  {
+            subTitle: "Блоки",
+            href: "#",
+          },
+		    // Карабины
+		  {
+            subTitle: "Карабины",
+            href: "#",
+          },
+		    // Соединители цепи
+		  {
+            subTitle: "Соединители цепи",
+            href: "#",
+          },
+		  	// Стальные тросы
+		  {
+            subTitle: "Стальные тросы",
+            href: "#",
+          },
+		  	// Стальные цепи
+		  {
+            subTitle: "Стальные цепи",
+            href: "#",
+          },
+		  	// Захват для груза 
+		  {
+            subTitle: "Захват для груза ",
+            href: "#",
+          },
+		  	// Вертлюги
+		  {
+            subTitle: "Вертлюги",
+            href: "#",
+          },
+		  	// Такелажные рейки
+		  {
+            subTitle: "Такелажные рейки",
+            href: "#",
+          },
+		  	// Кольца
+		  {
+            subTitle: "Кольца",
+            href: "#",
+          },
+		  	// Скобы соединительные 
+		  {
+            subTitle: "Скобы соединительные ",
+            href: "#",
+          },
+		  	// Петли грузовые приварные
+		  {
+            subTitle: "Петли грузовые приварные",
+            href: "#",
+          },
+		  	// Пальца
+		  {
+            subTitle: "Пальца",
+            href: "#",
+          },
+		  	// Грузовые крюки
+		  {
+            subTitle: "Грузовые крюки",
+            href: "#",
+          },
+		  	// Шпагаты
+		  {
+            subTitle: "Шпагаты",
+            href: "#",
+          },
+		  	// Веревки
+		  {
+            subTitle: "Веревки",
+            href: "#",
+          },
+		  	// Скобы такелажные
+		  {
+            subTitle: "Скобы такелажные",
+            href: "#",
+          },
+		  	// S-образные крюки
+		  {
+            subTitle: "S-образные крюки",
+            href: "#",
+          },
+		  	// Петли грузовые
+		  {
+            subTitle: "Петли грузовые",
+            href: "#",
+          },
+		  	// Фалы
+		  {
+            subTitle: "Фалы",
+            href: "#",
+          },
+		  	// Разное
+		  {
+            subTitle: "Разное",
+            href: "#",
+          },
+		  	// Грузоподъемное оборудование
+		  {
+            subTitle: "Грузоподъемное оборудование",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Дюбели
+	  {
+        title: "Дюбели",
+        subcategory: [
+			// Дюбель-гвозди
+          {
+            subTitle: "Дюбель-гвозди",
+            href: "#",
+          },
+		  	// Распорные
+          {
+            subTitle: "Распорные",
+            href: "#",
+          },
+		  	// Штукатурные маяки
+          {
+            subTitle: "Штукатурные маяки",
+            href: "#",
+          },
+		  	// Монтажные
+		  {
+            subTitle: "Монтажные",
+            href: "#",
+          },
+		   	// Для газобетона и пенобетона
+		  {
+            subTitle: "Для газобетона и пенобетона",
+            href: "#",
+          },
+		    // Для гипсокартона и ГВЛ
+		  {
+            subTitle: "Для гипсокартона и ГВЛ",
+            href: "#",
+          },
+		    // Дюбель бабочка
+		  {
+            subTitle: "Дюбель бабочка",
+            href: "#",
+          },
+		    // Для теплоизоляции (гриб)
+		  {
+            subTitle: "Для теплоизоляции (гриб)",
+            href: "#",
+          },
+		    // Фасадные
+		  {
+            subTitle: "Фасадные",
+            href: "#",
+          },
+		  	// Дюбель хомут
+		  {
+            subTitle: "Дюбель хомут",
+            href: "#",
+          },
+		  	// Монтажные патроны
+		  {
+            subTitle: "Монтажные патроны",
+            href: "#",
+          },
+		  	// Мебельные
+		  {
+            subTitle: "Мебельные",
+            href: "#",
+          },
+		  	// Крюковые дюбели
+		  {
+            subTitle: "Крюковые дюбели",
+            href: "#",
+          },
+		  	// Кровельные
+		  {
+            subTitle: "Кровельные",
+            href: "#",
+          },
+		  	// Шканты мебельные
+		  {
+            subTitle: "Шканты мебельные",
+            href: "#",
+          },
+		  	// Рамный анкер
+		  {
+            subTitle: "Рамный анкер",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Метрический крепеж
+	  {
+        title: "Метрический крепеж",
+        subcategory: [
+			// Болты
+          {
+            subTitle: "Болты",
+            href: "#",
+          },
+		  	// Винты
+          {
+            subTitle: "Винты",
+            href: "#",
+          },
+		  	// Гайки
+          {
+            subTitle: "Гайки",
+            href: "#",
+          },
+		  	// Крюки и кольца с резьбой
+		  {
+            subTitle: "Крюки и кольца с резьбой",
+            href: "#",
+          },
+		   	// Пробки резьбовые
+		  {
+            subTitle: "Пробки резьбовые",
+            href: "#",
+          },
+		    // Резьбовые втулки
+		  {
+            subTitle: "Резьбовые втулки",
+            href: "#",
+          },
+		    // Резьбовые переходники
+		  {
+            subTitle: "Резьбовые переходники",
+            href: "#",
+          },
+		    // Складские ящики и лотки
+		  {
+            subTitle: "Складские ящики и лотки",
+            href: "#",
+          },
+		    // Шайбы
+		  {
+            subTitle: "Шайбы",
+            href: "#",
+          },
+		  	// Шпильки
+		  {
+            subTitle: "Шпильки",
+            href: "#",
+          },
+		  	// Шпильки сантехнические
+		  {
+            subTitle: "Шпильки сантехнические",
+            href: "#",
+          },
+		  	// Шплинты
+		  {
+            subTitle: "Шплинты",
+            href: "#",
+          },
+		  	// Шпонки
+		  {
+            subTitle: "Шпонки",
+            href: "#",
+          },
+		  	// Штифты
+		  {
+            subTitle: "Штифты",
+            href: "#",
+          },
+		  	// Штифты под шплинт
+		  {
+            subTitle: "Штифты под шплинт",
+            href: "#",
+          },
+		  	// Ящики-органайзеры
+		  {
+            subTitle: "Ящики-органайзеры",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Дюймовый крепеж
+	  {
+        title: "Дюймовый крепеж",
+        subcategory: [
+			// Болты
+          {
+            subTitle: "Болты",
+            href: "#",
+          },
+		  	// Винты
+          {
+            subTitle: "Винты",
+            href: "#",
+          },
+		  	// Гайки
+          {
+            subTitle: "Гайки",
+            href: "#",
+          },
+		  	// Шайбы
+		  {
+            subTitle: "Шайбы",
+            href: "#",
+		  }
+        ],
+      }, 
+	  // Заклепки для заклепочника
+	  {
+        title: "Заклепки для заклепочника",
+        subcategory: [
+			// Втулки ограничительные
+          {
+            subTitle: "Втулки ограничительные",
+            href: "#",
+          },
+		  	// Вытяжные
+          {
+            subTitle: "Вытяжные",
+            href: "#",
+          },
+		  	// Под молоток
+          {
+            subTitle: "Под молоток",
+            href: "#",
+          },
+		  	// Резьбовые
+		  {
+            subTitle: "Резьбовые",
+            href: "#",
+		  }
+        ],
+      },
+	  // Наборы крепежа
+	  {
+        title: "Наборы крепежа",
+        subcategory: [
+			// Наборы крепежа
+          {
+            subTitle: "Наборы крепежа",
+            href: "#",
+          },
+        ],
+      }, 
+	  // Перфорированный крепеж
+	  {
+        title: "Перфорированный крепеж",
+        subcategory: [
+			// DIN рейки
+          {
+            subTitle: "DIN рейки",
+            href: "#",
+          },
+		  	// Кронштейны
+          {
+            subTitle: "Кронштейны",
+            href: "#",
+          },
+		  	// Опоры
+          {
+            subTitle: "Опоры",
+            href: "#",
+          },
+		  	// Пластины
+		  {
+            subTitle: "Пластины",
+            href: "#",
+		  },
+		  	// Подвесы для профиля
+		  {
+            subTitle: "Подвесы для профиля",
+            href: "#",
+		  },
+		  	// Профиль
+		  {
+            subTitle: "Профиль",
+            href: "#",
+		  },
+		  	// Прочая перфорация
+		  {
+            subTitle: "Прочая перфорация",
+            href: "#",
+		  },
+		  	// Уголки
+		  {
+            subTitle: "Уголки",
+            href: "#",
+		  },
+        ],
+      },
+	  // Проволока
+	  {
+        title: "Проволока",
+        subcategory: [
+			// Латунная проволока
+          {
+            subTitle: "Латунная проволока",
+            href: "#",
+          },
+		  	// Медная проволока
+          {
+            subTitle: "Медная проволока",
+            href: "#",
+          },
+		  	// Пломбировочная
+          {
+            subTitle: "Пломбировочная",
+            href: "#",
+          },
+		  	// Проволока вязальная
+		  {
+            subTitle: "Проволока вязальная",
+            href: "#",
+		  },
+		  	// Стальная проволока
+		  {
+            subTitle: "Стальная проволока",
+            href: "#",
+		  },
+        ],
+      },
+	  // Гвозди
+	  {
+        title: "Гвозди",
+        subcategory: [
+			// Финишные гвозди
+          {
+            subTitle: "Финишные гвозди",
+            href: "#",
+          },
+		  	// Гвозди с потайной головкой
+          {
+            subTitle: "Гвозди с потайной головкой",
+            href: "#",
+          },
+		  	// Винтовые гвозди
+          {
+            subTitle: "Винтовые гвозди",
+            href: "#",
+          },
+		  	// Строительные гвозди
+		  {
+            subTitle: "Строительные гвозди",
+            href: "#",
+		  },
+		  	// Кровельные
+		  {
+            subTitle: "Кровельные",
+            href: "#",
+		  },
+		    // Ершеные гвозди
+		  {
+            subTitle: "Ершеные гвозди",
+            href: "#",
+		  },
+		    // Гвозди, штифты
+		  {
+            subTitle: "Гвозди, штифты",
+            href: "#",
+		  },
+		    // Декоративные обивочные
+		  {
+            subTitle: "Декоративные обивочные",
+            href: "#",
+		  },
+		    // Быстрофиксирующие гвозди
+		  {
+            subTitle: "Быстрофиксирующие гвозди",
+            href: "#",
+		  },
+		    // Скобы строительные
+		  {
+            subTitle: "Скобы строительные",
+            href: "#",
+		  },
+		    // Для фиксации правила
+		  {
+            subTitle: "Для фиксации правила",
+            href: "#",
+		  },
+		    // Монтажные
+		  {
+            subTitle: "Монтажные",
+            href: "#",
+		  },
         ],
       },
     ],
@@ -3963,7 +4681,7 @@ const categoriesInner = [
         title: "Wiki",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Wiki",
             href: "#",
           },
         ],
@@ -3993,8 +4711,9 @@ const categoriesInner = [
       {
         title: "Кольца стопорные",
         subcategory: [
+			// Кольца стопорные
           {
-            subTitle: "",
+            subTitle: "Кольца стопорные",
             href: "#",
           },
         ],
@@ -4003,8 +4722,9 @@ const categoriesInner = [
       {
         title: "Пневматика",
         subcategory: [
+			// Пневматика
           {
-            subTitle: "",
+            subTitle: "Пневматика",
             href: "#",
           },
         ],
@@ -4237,8 +4957,9 @@ const categoriesInner = [
       {
         title: "РТИ для подвижного состава РЖД",
         subcategory: [
+			// РТИ для подвижного состава РЖД
           {
-            subTitle: "",
+            subTitle: "РТИ для подвижного состава РЖД",
             href: "#",
           },
         ],
@@ -4320,8 +5041,9 @@ const categoriesInner = [
       {
         title: "Услуги",
         subcategory: [
+			// Услуги
           {
-            subTitle: "",
+            subTitle: "Услуги",
             href: "#",
           },
         ],
@@ -4382,7 +5104,7 @@ const categoriesInner = [
         title: "Цепи роликовые",
         subcategory: [
           {
-            subTitle: "",
+            subTitle: "Цепи роликовые",
             href: "#",
           },
         ],
@@ -4460,8 +5182,9 @@ const categoriesInner = [
       {
         title: "Агропромышленное",
         subcategory: [
+			// Агропромышленное
           {
-            subTitle: "",
+            subTitle: "Агропромышленное",
             href: "#",
           },
         ],
@@ -4470,8 +5193,9 @@ const categoriesInner = [
       {
         title: "Видеооборудование",
         subcategory: [
+			// Видеооборудование
           {
-            subTitle: "",
+            subTitle: "Видеооборудование",
             href: "#",
           },
         ],
@@ -4480,8 +5204,9 @@ const categoriesInner = [
       {
         title: "Для СТО",
         subcategory: [
+			// Для СТО
           {
-            subTitle: "",
+            subTitle: "Для СТО",
             href: "#",
           },
         ],
@@ -4490,8 +5215,9 @@ const categoriesInner = [
       {
         title: "Измерительное",
         subcategory: [
+			// Измерительное
           {
-            subTitle: "",
+            subTitle: "Измерительное",
             href: "#",
           },
         ],
@@ -4500,8 +5226,9 @@ const categoriesInner = [
       {
         title: "Кинооборудование",
         subcategory: [
+			// Кинооборудование
           {
-            subTitle: "",
+            subTitle: "Кинооборудование",
             href: "#",
           },
         ],
@@ -4510,8 +5237,9 @@ const categoriesInner = [
       {
         title: "Медицинское",
         subcategory: [
+			// Медицинское
           {
-            subTitle: "",
+            subTitle: "Медицинское",
             href: "#",
           },
         ],
@@ -4520,8 +5248,9 @@ const categoriesInner = [
       {
         title: "Научное",
         subcategory: [
+			// Научное
           {
-            subTitle: "",
+            subTitle: "Научное",
             href: "#",
           },
         ],
@@ -4530,8 +5259,9 @@ const categoriesInner = [
       {
         title: "Отопительное",
         subcategory: [
+			// Отопительное
           {
-            subTitle: "",
+            subTitle: "Отопительное",
             href: "#",
           },
         ],
@@ -4540,8 +5270,9 @@ const categoriesInner = [
       {
         title: "Производственное",
         subcategory: [
+			// Производственное
           {
-            subTitle: "",
+            subTitle: "Производственное",
             href: "#",
           },
         ],
@@ -4550,8 +5281,9 @@ const categoriesInner = [
       {
         title: "Промышленное",
         subcategory: [
+			// Промышленное
           {
-            subTitle: "",
+            subTitle: "Промышленное",
             href: "#",
           },
         ],
@@ -4560,8 +5292,9 @@ const categoriesInner = [
       {
         title: "Фотооборудование",
         subcategory: [
+			// Фотооборудование
           {
-            subTitle: "",
+            subTitle: "Фотооборудование",
             href: "#",
           },
         ],
@@ -4570,8 +5303,9 @@ const categoriesInner = [
       {
         title: "Швейное",
         subcategory: [
+			// Швейное
           {
-            subTitle: "",
+            subTitle: "Швейное",
             href: "#",
           },
         ],
@@ -4588,8 +5322,9 @@ const categoriesInner = [
       {
         title: "Бытовые роботы",
         subcategory: [
+			// Бытовые роботы
           {
-            subTitle: "",
+            subTitle: "Бытовые роботы",
             href: "#",
           },
         ],
@@ -4598,8 +5333,9 @@ const categoriesInner = [
       {
         title: "Промышленные роботы",
         subcategory: [
+			// Промышленные роботы
           {
-            subTitle: "",
+            subTitle: "Промышленные роботы",
             href: "#",
           },
         ],
@@ -4608,8 +5344,9 @@ const categoriesInner = [
       {
         title: "Робототехника",
         subcategory: [
+			// Робототехника
           {
-            subTitle: "",
+            subTitle: "Робототехника",
             href: "#",
           },
         ],
@@ -4618,8 +5355,9 @@ const categoriesInner = [
       {
         title: "Спортивная робототехника",
         subcategory: [
+			// Спортивная робототехника
           {
-            subTitle: "",
+            subTitle: "Спортивная робототехника",
             href: "#",
           },
         ],
@@ -4628,8 +5366,9 @@ const categoriesInner = [
       {
         title: "Учебная робототехника",
         subcategory: [
+			// Учебная робототехника
           {
-            subTitle: "",
+            subTitle: "Учебная робототехника",
             href: "#",
           },
         ],
@@ -4638,8 +5377,9 @@ const categoriesInner = [
       {
         title: "Экзоскелеты",
         subcategory: [
+			// Экзоскелеты
           {
-            subTitle: "",
+            subTitle: "Экзоскелеты",
             href: "#",
           },
         ],
@@ -4656,8 +5396,9 @@ const categoriesInner = [
       {
         title: "Зрительные трубы",
         subcategory: [
+			// Зрительные трубы
           {
-            subTitle: "",
+            subTitle: "Зрительные трубы",
             href: "#",
           },
         ],
@@ -4666,8 +5407,9 @@ const categoriesInner = [
       {
         title: "Лазеры",
         subcategory: [
+			// Лазеры
           {
-            subTitle: "",
+            subTitle: "Лазеры",
             href: "#",
           },
         ],
@@ -4676,8 +5418,9 @@ const categoriesInner = [
       {
         title: "Микроскопы",
         subcategory: [
+			// Микроскопы
           {
-            subTitle: "",
+            subTitle: "Микроскопы",
             href: "#",
           },
         ],
@@ -4686,8 +5429,9 @@ const categoriesInner = [
       {
         title: "Оптический прицелы",
         subcategory: [
+			// Оптический прицелы
           {
-            subTitle: "",
+            subTitle: "Оптический прицелы",
             href: "#",
           },
         ],
@@ -4696,8 +5440,9 @@ const categoriesInner = [
       {
         title: "Приборы ночного видения",
         subcategory: [
+			// Приборы ночного видения
           {
-            subTitle: "",
+            subTitle: "Приборы ночного видения",
             href: "#",
           },
         ],
@@ -4706,14 +5451,16 @@ const categoriesInner = [
       {
         title: "Телескопы",
         subcategory: [
+			// Телескопы
           {
-            subTitle: "",
+            subTitle: "Телескопы",
             href: "#",
           },
         ],
       },
     ],
   },
+  // Категория Авто мото спорт
   {
     name: "Авто мото спорт",
     nameArrow: "img/catalog/arrow__title.svg",
@@ -4723,14 +5470,16 @@ const categoriesInner = [
       {
         title: "Картинг",
         subcategory: [
+			// Картинг
           {
-            subTitle: "",
+            subTitle: "Картинг",
             href: "#",
           },
         ],
       },
     ],
   },
+  // Категория авиция
   {
     name: "Авиация",
     nameArrow: "img/catalog/arrow__title.svg",
@@ -4748,6 +5497,7 @@ const categoriesInner = [
       },
     ],
   },
+  // Категория Литература и обучение
   {
     name: "Литература и обучение",
     nameArrow: "img/catalog/arrow__title.svg",
@@ -4765,6 +5515,7 @@ const categoriesInner = [
       },
     ],
   },
+  // Категория Станки
   {
     name: "Станки",
     nameArrow: "img/catalog/arrow__title.svg",
@@ -4783,7 +5534,7 @@ const categoriesInner = [
     ],
   },
 ];
-// блок, в который будет вставляться разметка
+// блоки, в которые будет вставляться разметка
 const rootWrapper = document.getElementById("catalog-list"),
   modalWrapper = document.querySelector(".output"),
   mobileWrapperCategories = document.querySelector("#main-box"),
@@ -4928,5 +5679,6 @@ class Output {
     accordionWrapper.innerHTML = htmlCatalogInner;
   }
 }
+// сам вывод информации в каталог
 const outputPage = new Output();
 outputPage.render();
